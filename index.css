@@ -46,6 +46,10 @@
        margin-right: 8px;
    }
 
+   .about-img {
+       margin-top: -70px;
+   }
+
    .nav-icon {
        color: var(--accent-color);
        font-size: 1.5rem;
