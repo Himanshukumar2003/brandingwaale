@@ -7,195 +7,261 @@
     <title>Contact Us </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            min-height: 100vh;
-        }
 
-        .contact-info {
-            color: white;
-            padding: 40px;
-            height: 100%;
-        }
+    <style>
+
     </style>
 </head>
 
 <body>
-    <div class="glow-effect glow-1"></div>
-    <div class="glow-effect glow-2"></div>
-
-    <section class="contact-section">
+    <nav class="navbar navbar-expand-md bg-white border-bottom border-warning ">
         <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Have questions or need assistance? We're here to help. Fill out the form below and we'll get back to
-                    you as soon as possible.</p>
-            </div>
+            <!-- Branding -->
+            <a href="#" class="d-flex align-items-center text-decoration-none">
+                <img src="img/log.gif" class="logo">
+            </a>
 
-            <div class="contact-card">
-                <div class="row g-0">
-                    <div class="col-lg-8">
-                        <div class="contact-form">
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="First Name" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control" placeholder="Last Name" required>
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#">
+                            <i class="bi bi-house-door nav-icon mb-1"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#">
+                            <i class="bi bi-person nav-icon mb-1"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#">
+                            <i class="bi bi-briefcase nav-icon mb-1"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#">
+                            <i class="bi bi-gear nav-icon mb-1"></i>
+                            Service
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="#">
+
+
+                            <i class="bi bi-envelope nav-icon mb-1"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="section bg-light">
+        <div class="container">
+            <div class="container main-container">
+                <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-md-6 left-section">
+                        <h1>Connect <span>with Our Team of Experts</span></h1>
+                        <p>Contact our team of excellence-driven experts today to bring your project to life.</p>
+
+                        <div class="contact-info">
+                            <a href="tel:7135953200">
+                                <i class="bi bi-telephone-fill"></i> 7135953200
+                            </a>
+                            <a href="tel:98183 15966">
+                                <i class="bi bi-telephone-fill"></i> 98183 15966
+                            </a>
+                            <a href="mailto:">
+                                <i class="bi bi-envelope"></i> sales@brandingwaale.com
+                            </a>
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> SCF 147, Second Floor, Huda Market,
+                                Sector 37, Faridabad, Haryana 121003
+                            </a>
+                        </div>
+
+
+
+                        <div class="content-card">
+                            <div class="row justify-content center align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Want to Join Our Talented Team?</h3>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <img src="img/download.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Right Section - Form -->
+                    <div class=" col-md-6">
+                        <div class="form-section">
+                            <form>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="email" class="form-control" placeholder="Email Address" required>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="Full Name">
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="tel" class="form-control" placeholder="Phone Number">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
                                     </div>
                                 </div>
-                                <select class="form-control">
-                                    <option selected disabled>How can we help?</option>
-                                    <option>General Inquiry</option>
-                                    <option>Technical Support</option>
-                                    <option>Sales</option>
-                                    <option>Partnerships</option>
-                                    <option>Other</option>
-                                </select>
-                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                                <div class="text-end">
-                                    <button type="submit" class="btn btn-submit">SEND MESSAGE</button>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Location">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="expertise" class="form-label">What Expertise You're
+                                        Interested
+                                        In</label>
+                                    <select class="form-select" id="expertise">
+                                        <option selected>Select</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="mobile">Mobile Development</option>
+                                        <option value="design">UI/UX Design</option>
+                                        <option value="marketing">Digital Marketing</option>
+                                        <option value="consulting">Business Consulting</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Tell Us About Your
+                                        Project</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Leave your message here"></textarea>
+                                </div>
+
+                                <div class="text-start">
+                                    <button type="submit" class="btn-submit">SUBMIT</button>
                                 </div>
                             </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="contact-info h-100">
-                            <h3>Contact Information</h3>
-                            <div class="contact-info-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <div>
-                                    <h5>Our Location</h5>
-                                    <p>123 Business Avenue, New York, NY 10001</p>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="bi bi-telephone"></i>
-                                <div>
-                                    <h5>Phone Number</h5>
-                                    <p>+1 (555) 123-4567</p>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="bi bi-envelope"></i>
-                                <div>
-                                    <h5>Email Address</h5>
-                                    <p>info@yourcompany.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="bi bi-clock"></i>
-                                <div>
-                                    <h5>Working Hours</h5>
-                                    <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
-                                </div>
-                            </div>
-                            <div class="social-links">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7013.946780935371!2d77.310593!3d28.480348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7a4ff585d17%3A0xbc1058e4b74d697!2sBrandingwaale%20Webtech!5e0!3m2!1sen!2sin!4v1747743148692!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <div class="d-flex justify-content-start">
+                        <div class="footer-logo">
+                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our
+                        Company.
+                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with Our Digital
+                        Solutions.
+
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Our Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98677 37785<br>+91 98183 19568</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@brandingwaale.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana 121003</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // GSAP animations
-            gsap.from(".glow-effect", {
-                duration: 2,
-                scale: 0,
-                opacity: 0,
-                stagger: 0.5,
-                ease: "power3.out"
-            });
 
-            gsap.from(".section-title", {
-                duration: 1,
-                y: -50,
-                opacity: 0,
-                ease: "power3.out"
-            });
-
-            gsap.from(".contact-card", {
-                duration: 1.2,
-                y: 100,
-                opacity: 0,
-                delay: 0.3,
-                ease: "power3.out"
-            });
-
-            gsap.from(".contact-form", {
-                duration: 1,
-                x: -50,
-                opacity: 0,
-                delay: 0.8,
-                ease: "power3.out"
-            });
-
-            gsap.from(".contact-info", {
-                duration: 1,
-                x: 50,
-                opacity: 0,
-                delay: 0.8,
-                ease: "power3.out"
-            });
-
-            gsap.from("#contactForm .form-control", {
-                duration: 0.8,
-                y: 20,
-                opacity: 0,
-                stagger: 0.1,
-                delay: 1.2,
-                ease: "power3.out"
-            });
-
-            gsap.from(".btn-submit", {
-                duration: 0.8,
-                scale: 0.5,
-                opacity: 0,
-                delay: 2,
-                ease: "back.out(1.7)"
-            });
-
-            gsap.from(".contact-info-item", {
-                duration: 0.8,
-                x: 30,
-                opacity: 0,
-                stagger: 0.2,
-                delay: 1.2,
-                ease: "power3.out"
-            });
-
-            gsap.from(".social-links a", {
-                duration: 0.5,
-                scale: 0,
-                opacity: 0,
-                stagger: 0.1,
-                delay: 2,
-                ease: "back.out(1.7)"
-            });
-        });
-    </script>
 </body>
 
 </html>

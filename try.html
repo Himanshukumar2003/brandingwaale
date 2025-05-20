@@ -2,379 +2,213 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP Stacked Cards</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Our Team of Experts</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .cards {
+        body {
+            background-color: #e6f7ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .left-section h1 {
+            color: #0077cc;
+            font-weight: bold;
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        .left-section h1 span {
+            color: #001f3f;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info i {
+            color: #0077cc;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .team-card {
+            background-color: #a8d0f0;
+            border-radius: 10px;
+            padding: 1.5rem;
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 70vh;
-            margin-bottom: 90px;
+            margin-top: 2rem;
         }
 
-        .custom-card {
+        .team-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .team-card-content {
+            padding: 1rem 0;
+        }
+
+        .team-card-content h3 {
+            color: #001f3f;
+            font-size: 1.5rem;
+        }
+
+        .team-card-content p {
+            color: #001f3f;
+        }
+
+        .team-card-badge {
             position: absolute;
-            width: 100%;
-            top: 0px;
-            height: 70vh;
-            /* background: -webkit-linear-gradient(130deg,
-                    #d754ad 0%,
-                    #f96785 67%,
-                    #fe7333 100%);
-            background: linear-gradient(-40deg, #d754ad 0%, #f96785 67%, #fe7333 100%); */
-            color: #fff;
-            margin-bottom: 50px;
-            background-color: black;
+            top: -15px;
+            left: 20px;
+            background-color: #001f3f;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            border-radius: 50px;
-            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+            justify-content: center;
         }
 
-        .card1 {}
-
-        .card2 {
-            top: 30px;
-        }
-
-        .card3 {
-            top: 60px;
-        }
-
-        .card4 {
-            top: 90px;
-        }
-
-        .opacity {
-            -moz-transition: 0.4s ease;
-            -ms-transition: 0.4s ease;
-            -o-transition: 0.4s ease;
-            transition: 0.4s ease;
-            -webkit-transition: 0.4s ease;
-            opacity: 0.6;
-        }
-
-        .scale {
-            moz-transition: 0.4s ease;
-            -ms-transition: 0.4s ease;
-            -o-transition: 0.4s ease;
-            transition: 0.4s ease;
-            -webkit-transition: 0.4s ease;
-            width: 95%;
-        }
-
-        .sticky-card {
-            position: sticky;
-            top: 0;
-            padding-top: calc(var(--index) * var(--sticky-cardTopPadding));
-        }
-
-        .what-we-do {
-            padding: 30px;
-
-        }
-
-
-
-        .sticky-card-body {
-            box-sizing: border-box;
-            border-radius: 50px;
-            overflow: hidden;
-
-            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-            height: var(--sticky-cardHeight);
-            background-color: var(--dark-bg);
-            line-height: 30px;
-            transition: all 0.8s;
-        }
-
-        .sticky-card-body p {
+        .form-section {
+            background-color: #001f3f;
+            border-radius: 10px;
+            padding: 2rem;
             color: white;
         }
 
-        .line {
-            width: 60px;
-            height: 5px;
-            margin-bottom: 20px;
-
-            background-color: green;
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
         }
 
-        .sticky-card-body h2 {
-            font-size: 2em;
-            margin: 0;
-            color: white;
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 1rem;
         }
 
-
-        .sticky-card ul {
-            list-style: none;
-            color: white;
-            padding: 0;
+        .submit-btn {
+            background-color: #00ccff;
+            border: none;
+            padding: 0.5rem 2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #001f3f;
         }
 
-        .sticky-card-img {
-            width: 100%;
-            height: 100%;
+        .submit-btn:hover {
+            background-color: #0099cc;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="container">
+    <div class="container main-container">
         <div class="row">
-            <div class="col-12">
-                <div class="cards">
-                    <div class="custom-card card1" id="1">
-                        <div class="sticky-card-body">
-                            <div class="row">
+            <!-- Left Section -->
+            <div class="col-md-5 left-section">
+                <h1>Connect <span>with Our Team of Experts</span></h1>
+                <p>Contact our team of excellence-driven experts today to bring your project to life.</p>
 
-                                <div class="col-md-6">
-                                    <div class="what-we-do">
+                <div class="contact-info">
+                    <a href="tel:7135953200">
+                        <i class="fas fa-phone"></i> 7135953200
+                    </a>
+                    <a href="mailto:live@jo.com">
+                        <i class="fas fa-envelope"></i> live@jo.com
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-map-marker-alt"></i> See Our Locations
+                    </a>
+                </div>
 
-                                        <h2>Web Development
-                                        </h2>
-                                        <p> Build fast, sleek websites that impress every visitor.</p>
-                                        <div class="line"></div>
-                                        <ul>
-                                            <li>- Custom Web Solutions
-                                            </li>
-                                            <li>- Performance & Speed
-                                            </li>
-                                            <li>- Responsive & Scalable
-                                            </li>
-                                            <li>- SEO & Security Integration
-                                            </li>
+                <div class="team-card">
+                    <div class="team-card-badge">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-NNVuWYH2vF8QTWRCwTimUkzdSEHMuz.png"
+                        alt="Team member smiling" class="img-fluid">
+                    <div class="team-card-content">
+                        <h3>Want to Join Our Talented Team?</h3>
+                        <p>Visit our job board <i class="fas fa-circle text-info small"></i></p>
+                    </div>
+                </div>
+            </div>
 
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                        class="sticky-card-img w-100">
-                                </div>
-
+            <!-- Right Section - Form -->
+            <div class="col-md-7">
+                <div class="form-section">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email Address">
                             </div>
                         </div>
 
-                    </div>
-                    <div class="custom-card card2" id="2">
-                        <div class="sticky-card-body">
-                            <div class="row">
-
-                                <div class="col-md-6">
-                                    <div class="what-we-do">
-
-                                        <h2>Web Development
-                                        </h2>
-                                        <p> Build fast, sleek websites that impress every visitor.</p>
-                                        <div class="line"></div>
-                                        <ul>
-                                            <li>- Custom Web Solutions
-                                            </li>
-                                            <li>- Performance & Speed
-                                            </li>
-                                            <li>- Responsive & Scalable
-                                            </li>
-                                            <li>- SEO & Security Integration
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                        class="sticky-card-img w-100">
-                                </div>
-
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Location">
                             </div>
                         </div>
-                    </div>
-                    <div class="custom-card card3" id="3">
-                        <div class="sticky-card-body">
-                            <div class="row">
 
-                                <div class="col-md-6">
-                                    <div class="what-we-do">
-
-                                        <h2>Web Development
-                                        </h2>
-                                        <p> Build fast, sleek websites that impress every visitor.</p>
-                                        <div class="line"></div>
-                                        <ul>
-                                            <li>- Custom Web Solutions
-                                            </li>
-                                            <li>- Performance & Speed
-                                            </li>
-                                            <li>- Responsive & Scalable
-                                            </li>
-                                            <li>- SEO & Security Integration
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                        class="sticky-card-img w-100">
-                                </div>
-
-                            </div>
+                        <div class="mb-3">
+                            <label for="expertise" class="form-label">What Expertise You're Interested In</label>
+                            <select class="form-select" id="expertise">
+                                <option selected>Select</option>
+                                <option value="web">Web Development</option>
+                                <option value="mobile">Mobile Development</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="consulting">Business Consulting</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="custom-card card4" id="4">
-                        <div class="sticky-card-body">
-                            <div class="row">
 
-                                <div class="col-md-6">
-                                    <div class="what-we-do">
-
-                                        <h2>Web Development
-                                        </h2>
-                                        <p> Build fast, sleek websites that impress every visitor.</p>
-                                        <div class="line"></div>
-                                        <ul>
-                                            <li>- Custom Web Solutions
-                                            </li>
-                                            <li>- Performance & Speed
-                                            </li>
-                                            <li>- Responsive & Scalable
-                                            </li>
-                                            <li>- SEO & Security Integration
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                        class="sticky-card-img w-100">
-                                </div>
-
-                            </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Tell Us About Your Project</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="Leave your message here"></textarea>
                         </div>
-                    </div>
+
+                        <div class="text-start">
+                            <button type="submit" class="submit-btn">SUBMIT</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".cards",
-                pin: true,
-                pinSpacing: true,
-                markers: false,
-                start: "top-=50px top", // when the top of the trigger hits the top of the viewport
-                end: "+=2000", // end after scrolling 1000px beyond the start
-                scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-            }
-        });
-
-        // Animation for card 1
-        tl.addLabel("card1");
-        tl.to('.card1', {
-            yPercent: 0,
-            opacity: 1
-        })
-
-        // Animation for card 2
-        tl.from('.card2', {
-            yPercent: 75,
-            opacity: 0,
-        })
-        tl.addLabel("card2");
-        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 1 : 0), "-=0.15");
-        tl.to('.card1', {
-            scale: 0.925,
-            yPercent: -0.75,
-            opacity: 1
-        }, "-=0.3")
-        tl.to('.card2', {
-            yPercent: 0,
-            opacity: 1
-        })
-
-        // Animation for card 3
-        tl.from('.card3', {
-            yPercent: 75,
-            opacity: 0,
-        })
-        tl.addLabel("card3");
-        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 2 : 1), "-=0.15");
-        tl.to('.card2', {
-            scale: 0.95,
-            yPercent: -0.5,
-            opacity: 1
-        }, "-=0.3")
-        tl.to('.card3', {
-            yPercent: 0,
-            opacity: 1
-        })
-
-        // Animation for card 4
-        tl.from('.card4', {
-            yPercent: 75,
-            opacity: 0,
-        })
-        tl.addLabel("card4");
-        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 3 : 2), "-=0.15");
-        tl.to('.card3', {
-            scale: 0.98,
-            yPercent: -0.4,
-            opacity: 1
-        }, "-=0.3")
-        tl.to('.card4', {
-            yPercent: 0,
-            opacity: 1
-        })
-
-        // Additional animations for scaling down previous cards
-        tl.to('.card1', {
-            scale: 0.925,
-            yPercent: -1.5,
-            opacity: 0.9
-        }, "-=0.3")
-
-        tl.to('.card2', {
-            scale: 0.95,
-            yPercent: -1.125,
-            opacity: 0.9
-        }, "-=0.3")
-
-        tl.to('.card3', {
-            scale: 0.98,
-            yPercent: -0.85,
-            opacity: 0.9
-        }, "-=0.3")
-
-        // Without the .nav .circle elements, we don't need to handle setActiveNav function
-        /* gsap.utils.toArray(".nav .circle").forEach((circle, i) => {
-          circle.classList[i === index ? "add" : "remove"]("active");
-        }); */
-
-        function labelToScroll(timeline, label) {
-            let st = timeline.scrollTrigger,
-                progress = timeline.labels[label] / timeline.duration();
-            return st.start + (st.end - st.start) * progress;
-        }
-
-    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
