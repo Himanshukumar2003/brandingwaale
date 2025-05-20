@@ -1835,10 +1835,6 @@ ul {
 
 
 
-.portfolio-grid {
-    padding: 4rem 0;
-}
-
 .portfolio-item {
     margin-bottom: 30px;
     position: relative;
@@ -1885,13 +1881,11 @@ ul {
 }
 
 .view-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+
     text-align: center;
     text-decoration: none;
-    color: white;
-    transform: translate(-50%, -50%) scale(0);
+    color: white !important;
+    /* transform: translate(-50%, -50%) scale(0); */
     background-color: var(--accent-color);
     color: var(--darker-bg);
     border: none;
@@ -1899,13 +1893,26 @@ ul {
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
-.portfolio-item:hover .view-btn {
+
+.name-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-section P {
+    /* background-color: var(--accent-color); */
+    border-radius: 20px;
+    color: var(--accent-color);
+}
+
+
+/* .portfolio-item:hover .view-btn {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
-}
+} */
 
 
 .portfolio-overlay {
@@ -2116,18 +2123,7 @@ ul {
     border-radius: 8px;
 }
 
-.mobile-frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% / 3);
-    /* match one slide width */
-    height: 100%;
-    z-index: 1;
-    object-fit: contain;
-    z-index: -1;
-    pointer-events: none;
-}
+
 
 .swiper.apps {
     position: relative;
@@ -2222,9 +2218,9 @@ ul {
 .mobile-img img {
     position: absolute;
     z-index: 2;
-    width: 463px;
-    left: 280px;
-    top: -37px;
+    width: 400px;
+    left: 235px;
+    top: -33px;
 }
 
 .main-container {
@@ -2355,4 +2351,25 @@ label {
     width: 100%;
     margin-top: -200px;
 
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
 }
