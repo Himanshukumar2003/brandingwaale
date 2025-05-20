@@ -2088,3 +2088,20 @@
        bottom: 10%;
        right: 15%;
    }
+
+
+   .mobile {
+       border: 10px solid black;
+       border-radius: 40px;
+       overflow: hidden;
+       position: relative;
+   }
+
+   .mobile:hover .view-btn {
+       transform: translate(-50%, -50%) scale(1);
+       opacity: 1;
+   }
+
+   .mobile img {
+       width: 100%;
+   }
