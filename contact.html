@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .contact-info {
+            color: white;
+            padding: 40px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions or need assistance? We're here to help. Fill out the form below and we'll get back to
+                    you as soon as possible.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="row g-0">
+                    <div class="col-lg-8">
+                        <div class="contact-form">
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="First Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <select class="form-control">
+                                    <option selected disabled>How can we help?</option>
+                                    <option>General Inquiry</option>
+                                    <option>Technical Support</option>
+                                    <option>Sales</option>
+                                    <option>Partnerships</option>
+                                    <option>Other</option>
+                                </select>
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-submit">SEND MESSAGE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-info h-100">
+                            <h3>Contact Information</h3>
+                            <div class="contact-info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h5>Our Location</h5>
+                                    <p>123 Business Avenue, New York, NY 10001</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="bi bi-telephone"></i>
+                                <div>
+                                    <h5>Phone Number</h5>
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="bi bi-envelope"></i>
+                                <div>
+                                    <h5>Email Address</h5>
+                                    <p>info@yourcompany.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="bi bi-clock"></i>
+                                <div>
+                                    <h5>Working Hours</h5>
+                                    <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // GSAP animations
+            gsap.from(".glow-effect", {
+                duration: 2,
+                scale: 0,
+                opacity: 0,
+                stagger: 0.5,
+                ease: "power3.out"
+            });
+
+            gsap.from(".section-title", {
+                duration: 1,
+                y: -50,
+                opacity: 0,
+                ease: "power3.out"
+            });
+
+            gsap.from(".contact-card", {
+                duration: 1.2,
+                y: 100,
+                opacity: 0,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+
+            gsap.from(".contact-form", {
+                duration: 1,
+                x: -50,
+                opacity: 0,
+                delay: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from(".contact-info", {
+                duration: 1,
+                x: 50,
+                opacity: 0,
+                delay: 0.8,
+                ease: "power3.out"
+            });
+
+            gsap.from("#contactForm .form-control", {
+                duration: 0.8,
+                y: 20,
+                opacity: 0,
+                stagger: 0.1,
+                delay: 1.2,
+                ease: "power3.out"
+            });
+
+            gsap.from(".btn-submit", {
+                duration: 0.8,
+                scale: 0.5,
+                opacity: 0,
+                delay: 2,
+                ease: "back.out(1.7)"
+            });
+
+            gsap.from(".contact-info-item", {
+                duration: 0.8,
+                x: 30,
+                opacity: 0,
+                stagger: 0.2,
+                delay: 1.2,
+                ease: "power3.out"
+            });
+
+            gsap.from(".social-links a", {
+                duration: 0.5,
+                scale: 0,
+                opacity: 0,
+                stagger: 0.1,
+                delay: 2,
+                ease: "back.out(1.7)"
+            });
+        });
+    </script>
+</body>
+
+</html>
