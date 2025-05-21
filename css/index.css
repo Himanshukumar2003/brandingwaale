@@ -197,6 +197,9 @@ h6 {
     width: 80px;
 }
 
+
+
+
 .tagline {
     margin: 1rem 0;
 }
@@ -1981,6 +1984,10 @@ ul {
     box-shadow: 0 10px 20px rgba(187, 134, 252, 0.3);
 }
 
+.dark-btn {
+    background-color: var(--dark-bg);
+}
+
 
 .contact-info h3 {
     font-weight: 700;
@@ -2069,6 +2076,8 @@ ul {
     width: 80%;
 
 }
+
+
 
 .mobile:hover .view-btn {
     transform: translate(-50%, -50%) scale(1);
@@ -2277,6 +2286,7 @@ ul {
 .form-section {
     background-color: var(--accent-color);
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     padding: 2rem;
     color: white;
     position: relative;
@@ -2366,4 +2376,281 @@ label {
 .swiper-button-next:after,
 .swiper-button-prev:after {
     font-size: 20px;
+}
+
+
+.main-img {
+    max-height: 450px;
+    border-radius: 50px;
+    border: 10px solid black;
+    margin-bottom: 20px;
+}
+
+
+.home-img {
+    border-radius: 50px;
+}
+
+.portfolioCard {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+
+
+
+
+.app-home img {
+    width: 100%;
+    z-index: 1;
+}
+
+.app-home img {
+    max-height: 500px;
+
+}
+
+
+.mobile-section-img {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+}
+
+
+/* clinets */
+
+
+
+
+.companies-logo {
+    padding: 40px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    background-color: var(--primary-color);
+
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+.section-title span {
+    color: #ffa03a;
+}
+
+.clint-img {
+    margin: 10px;
+    transition: all 0.5s linear;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    height: 100px;
+}
+
+.clint-img img {
+    max-height: 60px;
+    max-width: 100%;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+}
+
+.logo-section1 .slick-next,
+.logo-section1 .slick-prev,
+.logo-section1 .slick-next,
+.logo-section1 .slick-prev {
+    display: none !important;
+}
+
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper::before,
+.slider-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* .slider-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.slider-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+} */
+
+
+
+/*  */
+
+
+.process-card {
+    background: #fff;
+    border-radius: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 460px;
+}
+
+.process-card-body {
+    padding: 40px 40px 30px 40px;
+    background-color: white;
+    margin: -30px 20px 20px 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.process-container {
+    padding: 40px 0;
+}
+
+.process-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 5px;
+    font-weight: 500;
+    padding: 0;
+    transition: ease 0.5s;
+}
+
+h3 {
+    position: relative;
+}
+
+h3::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 80px;
+    bottom: -10px;
+    padding: 2px;
+    background: #F57C00;
+}
+
+.process-step {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: #FF9800;
+    line-height: 1;
+    margin-right: 15px;
+    min-width: 70px;
+}
+
+.step-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-description {
+    color: #666;
+    font-size: 16px;
+}
+
+.process-card-body h3 {
+    color: #F57C00;
+}
+
+.active-step {
+    background-color: #FF9800;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.active-step .step-number,
+.active-step .step-title,
+.active-step .step-description {
+    color: white;
+}
+
+.active-step:hover {
+    background-color: #F57C00;
+}
+
+.process-step:hover .step-title,
+.process-step:hover .step-description {
+    color: white;
+}
+
+.process-card-body ul li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #494949;
+    line-height: 1.5;
+}
+
+.process-card-body ul {
+    padding: 0 !important;
+}
+
+.process-card-body ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #F57C00;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.process-card-body ul li:hover {
+    transform: translateX(20px);
+    color: #F57C00;
+}
+
+/* Animation for cards container */
+.card-animate-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-animate-enter-active {
+    opacity: 1;
+    transform: translateY(0);
 }

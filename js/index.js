@@ -203,3 +203,197 @@ tabs.forEach((tab) => {
     if (activeContent) activeContent.classList.add("active");
   });
 });
+
+var swiperThree = new Swiper(".app-home", {
+  loop: true,
+  pagination: false,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  grabCursor: true,
+});
+
+$(".logo-section1")
+  .eq(0)
+  .slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+
+$(".logo-section1")
+  .eq(1)
+  .slick({
+    rtl: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".process-step");
+  const leftHeading = document.getElementById("left-heading");
+  const leftList = document.getElementById("left-list");
+
+  // Data for left card content corresponding to each tab on the right
+  const contentData = [
+    {
+      heading: "Development",
+      items: [
+        "Website Designing & Development",
+        "Web Application Development",
+        "Web Portals Development",
+        "Customized CRM Development",
+        "Customized Lead Management System",
+        "Mobile Application Development",
+        "E-commerce Development",
+      ],
+    },
+    {
+      heading: "Marketing",
+      items: [
+        "SMM | SEO | SEM | SMO",
+        "Google My Business (GMB) Optimization",
+        "WhatsApp Marketing & Automation",
+        "WhatsApp API Integration",
+        "WhatsApp Blue Tick Verification",
+        "Personal Branding",
+        "UGC Ads",
+        "ATL, BTL, TTL Marketing",
+      ],
+    },
+    {
+      heading: "PR & Advertising",
+      items: [
+        "Design• Media Buying",
+        "Outdoor Advertising",
+        "Print Media Advertising",
+        "Digital & Mobile Advertising",
+        "Cinema Advertising",
+        "Radio Advertising",
+        "Wikipedia Page Creation",
+        "Google Knowledge Panel Creation",
+      ],
+    },
+    {
+      heading: "Creative Design & Video",
+      items: [
+        "Logo Designing",
+        "Graphic Designing",
+        "Animation",
+        "Video Editing",
+        "Collateral Design",
+        "Brochure/Catalogue Design",
+        "Company Profile Design",
+      ],
+    },
+  ];
+
+  // Function to animate content change
+  function animateContentChange(index) {
+    const card = document.querySelector(".process-card");
+
+    // Add animation classes to card container
+    card.classList.add("card-animate-enter");
+
+    // After a short delay, update the content
+    setTimeout(() => {
+      // Update heading
+      leftHeading.textContent = contentData[index].heading;
+
+      // Update list items
+      leftList.innerHTML = "";
+      contentData[index].items.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        leftList.appendChild(li);
+      });
+
+      // Trigger animation active state on next frame
+      requestAnimationFrame(() => {
+        card.classList.add("card-animate-enter-active");
+      });
+
+      // Remove animation classes after animation completes (0.5s)
+      setTimeout(() => {
+        card.classList.remove("card-animate-enter");
+        card.classList.remove("card-animate-enter-active");
+      }, 500);
+    }, 200);
+  }
+
+  steps.forEach((step) => {
+    step.addEventListener("click", function () {
+      // Remove active class from all
+      steps.forEach((s) => s.classList.remove("active-step"));
+
+      // Add active class to clicked tab
+      this.classList.add("active-step");
+
+      // Get index of clicked tab
+      const index = parseInt(this.getAttribute("data-index"), 10);
+
+      // Animate content update
+      animateContentChange(index);
+    });
+  });
+
+  // Initialize with first tab content
+  animateContentChange(0);
+});
