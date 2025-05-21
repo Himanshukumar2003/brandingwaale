@@ -85,7 +85,8 @@
             <div class="d-flex justify-content-center">
                 <div class="main-contanet">
                     <div class="search-container">
-                        <div class="search-box">
+                        <a href="https://www.google.com/search?q=brandingwaale&rlz=1C1GCEU_enIN1160IN1160&oq=brandingwaale&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORiABBiiBDIGCAEQRRg8MgYIAhBFGDwyDQgDEC4YrwEYxwEYgAQyBggEEAAYHjIKCAUQABiiBBiJBTIGCAYQRRg8MgYIBxBFGDzSAQgzODU1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                            target="_blank" class="search-box">
                             <div class="search-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-search" viewBox="0 0 16 16">
@@ -96,7 +97,7 @@
                             <div class="search-text" id="typewriter">Looking for a partner that transforms your business
                                 into a
                                 brand?</div>
-                        </div>
+                        </a>
                     </div>
 
 
@@ -183,9 +184,10 @@
         </div>
     </div>
 
-    <div class="section what-we-d0-section">
+    <div class="section what-we-do-section">
+        <h2 class="text-white text-center mb-4">INDUSTRIES WE SERVE</h2>
+
         <div class="container">
-            <h2 class="text-white text-center">INDUSTRIES WE SERVE</h2>
 
             <div class="row justify-content-center">
                 <div class="col-md-10">
@@ -755,43 +757,47 @@
                                     </div>
 
                                     <div class="col-md-5 text-center">
-                                        <div class="position-relative position-relative">
-                                            <div class="swiper app-home">
-                                                <img src="img/mobile.png" class="img-fluid mobile-section-img">
+                                        <div class="">
+                                            <div class="frame-wrapper">
+                                                <img src=" img/mobile.png" class="img-fluid mobile-section-img">
+                                                <div class="swiper app-home py-2">
 
-                                                <div class="swiper-wrapper">
-                                                    <!-- Slide 1 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 1"
-                                                            class="img-fluid home-img">
+                                                    <div class="swiper-wrapper position-relative">
+
+                                                        <!-- Slide 1 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 1"
+                                                                class="img-fluid home-img">
+                                                        </div>
+                                                        <!-- Slide 2 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 2"
+                                                                class="img-fluid">
+                                                        </div>
+                                                        <!-- Slide 3 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 3"
+                                                                class="img-fluid">
+                                                        </div>
+                                                        <!-- Slide 4 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 4">
+                                                        </div>
+                                                        <!-- Slide 5 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 5">
+                                                        </div>
+                                                        <!-- Slide 6 -->
+                                                        <div class="swiper-slide">
+                                                            <img src="img/mobilerrr.png" alt="App Screenshot 6">
+                                                        </div>
                                                     </div>
-                                                    <!-- Slide 2 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 2"
-                                                            class="img-fluid">
-                                                    </div>
-                                                    <!-- Slide 3 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 3"
-                                                            class="img-fluid">
-                                                    </div>
-                                                    <!-- Slide 4 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 4">
-                                                    </div>
-                                                    <!-- Slide 5 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 5">
-                                                    </div>
-                                                    <!-- Slide 6 -->
-                                                    <div class="swiper-slide">
-                                                        <img src="img/mobilerrr.png" alt="App Screenshot 6">
-                                                    </div>
+
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-button-next"></div>
                                                 </div>
-
-                                                <div class="swiper-button-prev"></div>
-                                                <div class="swiper-button-next"></div>
                                             </div>
+
                                         </div>
                                     </div>
 
@@ -977,12 +983,6 @@
             </div>
         </div>
     </div>
-    <script>
-        function openViewer(url) {
-            const viewerUrl = 'viewer.html?url=' + encodeURIComponent(url);
-            window.open(viewerUrl, '_blank');
-        }
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -992,6 +992,7 @@
 
 
     <script src="js/scroll.js"></script>
+    <script src="js/tabs.js"></script>
 
 
     <script src="js/index.js"></script>

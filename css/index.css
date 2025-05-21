@@ -1217,6 +1217,9 @@ h6 {
     height: 100%;
 }
 
+.custom-card .what-we-do h2 {
+    transition: opacity 0.3s ease;
+}
 
 /*  */
 
@@ -1656,10 +1659,12 @@ h6 {
 
 
 
+a {
+    text-decoration: none;
+}
 
 
-
-.what-we-d0-section {
+.what-we-do-section {
     background-color: var(--darker-bg);
 }
 
@@ -1735,7 +1740,7 @@ h6 {
 
 
 .what-we-do {
-    padding: 30px;
+    padding: 80px 40px;
 }
 
 
@@ -1746,7 +1751,6 @@ h6 {
     overflow: hidden;
 
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-    height: var(--sticky-cardHeight);
     background-color: #383434;
     line-height: 30px;
     transition: all 0.8s;
@@ -1860,7 +1864,6 @@ ul {
 
 .portfolio-item img {
     width: 100%;
-    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     transition: all 0.5s ease;
@@ -2218,12 +2221,13 @@ ul {
 }
 
 
-.mobile-img img {
+.mobile-img-case {
     position: absolute;
-    z-index: 2;
-    width: 400px;
-    left: 235px;
-    top: -33px;
+    z-index: 1;
+    width: 510px;
+    height: 210px;
+    left: 250px;
+    top: -46px
 }
 
 .main-container {
@@ -2427,7 +2431,7 @@ label {
 
 
 .companies-logo {
-    padding: 40px 20px;
+    padding: 60px;
     border-radius: 10px;
     overflow: hidden;
 
@@ -2538,18 +2542,19 @@ ul li {
     transition: ease 0.5s;
 }
 
-h3 {
+.process-card h3 {
     position: relative;
+    font-style: italic;
 }
 
-h3::after {
+.process-card h3::after {
     position: absolute;
     content: "";
     left: 0;
     width: 80px;
     bottom: -10px;
     padding: 2px;
-    background: #F57C00;
+    background: var(--accent-color);
 }
 
 .process-step {
@@ -2570,7 +2575,7 @@ h3::after {
 .step-number {
     font-size: 60px;
     font-weight: bold;
-    color: #FF9800;
+    color: var(--highlight-color);
     line-height: 1;
     margin-right: 15px;
     min-width: 70px;
@@ -2589,11 +2594,11 @@ h3::after {
 }
 
 .process-card-body h3 {
-    color: #F57C00;
+    color: var(--accent-color);
 }
 
 .active-step {
-    background-color: #FF9800;
+    background-color: var(--highlight-color);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -2606,7 +2611,7 @@ h3::after {
 }
 
 .active-step:hover {
-    background-color: #F57C00;
+    background-color: var(--accent-color);
 }
 
 .process-step:hover .step-title,
@@ -2619,6 +2624,7 @@ h3::after {
     padding-left: 1.8rem;
     margin-bottom: 0.8rem;
     font-size: 1rem;
+    font-style: italic;
     color: #494949;
     line-height: 1.5;
 }
@@ -2633,14 +2639,14 @@ h3::after {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    color: #F57C00;
+    color: var(--accent-color);
     font-weight: 700;
     font-size: 1.1rem;
 }
 
 .process-card-body ul li:hover {
     transform: translateX(20px);
-    color: #F57C00;
+    color: var(--accent-color);
 }
 
 /* Animation for cards container */
