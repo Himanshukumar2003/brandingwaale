@@ -269,113 +269,54 @@ $(".logo-section1")
   });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const steps = document.querySelectorAll(".process-step");
-  const leftHeading = document.getElementById("left-heading");
-  const leftList = document.getElementById("left-list");
+  // Get all process steps and cards
+  const processSteps = document.querySelectorAll(".process-step");
+  const processCards = document.querySelectorAll(".process-card");
 
-  // Data for left card content corresponding to each tab on the right
-  const contentData = [
-    {
-      heading: "Development",
-      items: [
-        "Website Designing & Development",
-        "Web Application Development",
-        "Web Portals Development",
-        "Customized CRM Development",
-        "Customized Lead Management System",
-        "Mobile Application Development",
-        "E-commerce Development",
-      ],
-    },
-    {
-      heading: "Marketing",
-      items: [
-        "SMM | SEO | SEM | SMO",
-        "Google My Business (GMB) Optimization",
-        "WhatsApp Marketing & Automation",
-        "WhatsApp API Integration",
-        "WhatsApp Blue Tick Verification",
-        "Personal Branding",
-        "UGC Ads",
-        "ATL, BTL, TTL Marketing",
-      ],
-    },
-    {
-      heading: "PR & Advertising",
-      items: [
-        "Design• Media Buying",
-        "Outdoor Advertising",
-        "Print Media Advertising",
-        "Digital & Mobile Advertising",
-        "Cinema Advertising",
-        "Radio Advertising",
-        "Wikipedia Page Creation",
-        "Google Knowledge Panel Creation",
-      ],
-    },
-    {
-      heading: "Creative Design & Video",
-      items: [
-        "Logo Designing",
-        "Graphic Designing",
-        "Animation",
-        "Video Editing",
-        "Collateral Design",
-        "Brochure/Catalogue Design",
-        "Company Profile Design",
-      ],
-    },
-  ];
+  // Add click event listeners to process steps
+  processSteps.forEach((step) => {
+    step.addEventListener("click", function (e) {
+      e.preventDefault();
 
-  // Function to animate content change
-  function animateContentChange(index) {
-    const card = document.querySelector(".process-card");
+      // Get the target card ID from the href attribute
+      const targetId = this.getAttribute("href");
+      const targetCard = document.querySelector(targetId);
 
-    // Add animation classes to card container
-    card.classList.add("card-animate-enter");
+      // Scroll to the target card with smooth behavior
+      targetCard.scrollIntoView({ behavior: "smooth" });
 
-    // After a short delay, update the content
-    setTimeout(() => {
-      // Update heading
-      leftHeading.textContent = contentData[index].heading;
-
-      // Update list items
-      leftList.innerHTML = "";
-      contentData[index].items.forEach((item) => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        leftList.appendChild(li);
-      });
-
-      // Trigger animation active state on next frame
-      requestAnimationFrame(() => {
-        card.classList.add("card-animate-enter-active");
-      });
-
-      // Remove animation classes after animation completes (0.5s)
-      setTimeout(() => {
-        card.classList.remove("card-animate-enter");
-        card.classList.remove("card-animate-enter-active");
-      }, 500);
-    }, 200);
-  }
-
-  steps.forEach((step) => {
-    step.addEventListener("click", function () {
-      // Remove active class from all
-      steps.forEach((s) => s.classList.remove("active-step"));
-
-      // Add active class to clicked tab
+      // Update active class
+      processSteps.forEach((s) => s.classList.remove("active-step"));
       this.classList.add("active-step");
-
-      // Get index of clicked tab
-      const index = parseInt(this.getAttribute("data-index"), 10);
-
-      // Animate content update
-      animateContentChange(index);
     });
   });
 
-  // Initialize with first tab content
-  animateContentChange(0);
+  // Implement scrollspy functionality
+  window.addEventListener("scroll", function () {
+    // Get current scroll position
+    const scrollPosition = window.scrollY;
+
+    // Check which card is currently in view
+    processCards.forEach((card, index) => {
+      const cardTop = card.offsetTop;
+      const cardHeight = card.offsetHeight;
+
+      // If the card is in the viewport
+      if (
+        scrollPosition >= cardTop - 200 &&
+        scrollPosition < cardTop + cardHeight - 200
+      ) {
+        // Remove active class from all steps
+        processSteps.forEach((step) => {
+          step.classList.remove("active-step");
+        });
+
+        // Add active class to the corresponding step
+        processSteps[index].classList.add("active-step");
+      }
+    });
+  });
+
+  // Trigger scroll event on page load to set initial active state
+  window.dispatchEvent(new Event("scroll"));
 });

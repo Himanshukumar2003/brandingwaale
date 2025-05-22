@@ -1431,15 +1431,14 @@ h6 {
     transform: scale(1.05);
 }
 
-.country-dot {
-    width: 12px;
-    height: 12px;
-    background-color: var(--accent-color);
-    border-radius: 50%;
+.country-item i {
+
+    color: var(--accent-color);
+
 }
 
-.country-item:hover .country-dot {
-    background-color: var(--accent-color);
+.country-item:hover i {
+    color: var(--dark-bg);
 }
 
 
@@ -2395,13 +2394,13 @@ label {
     border-radius: 50px;
 }
 
-.portfolioCard {
+/* .portfolioCard {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     padding: 40px;
 }
-
+ */
 
 
 
@@ -2508,22 +2507,49 @@ label {
 
 
 /*  */
+:root {
 
+    --space-unit: 1em;
+
+    --space-md: calc(1.25 * var(--space-unit));
+    --primary-color: #f5e6d0;
+    --accent-color: #EDAC18;
+    --text-color: #333333;
+    --highlight-color: #f5a623;
+    /* --primary-color: #ffd700; */
+    --dark-bg: #0f0f0f;
+    --darker-bg: #050505;
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+    --border-color: #333;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+
+    --cards: 4;
+    --cardHeight: 87vh;
+    --cardTopPadding: 1.5em;
+    --cardMargin: 4vw;
+    --sticky-cardHeight: 350px;
+    --sticky-cardMargin: 60px;
+    --sticky-cardTopPadding: 60px;
+    --sticky-cards: 4;
+
+}
 
 .process-card {
-    background: #fff;
-    border-radius: 1.25rem;
+    background: var(--text-light);
+    border-radius: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    min-height: 460px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    scroll-margin-top: 20px;
+    border: none;
 }
 
 .process-card-body {
-    padding: 40px 40px 30px 40px;
-    background-color: white;
-    margin: -30px 20px 20px 20px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    padding: 20px;
 }
 
 .process-container {
@@ -2532,78 +2558,123 @@ label {
 
 .process-image img {
     width: 100%;
-    border-radius: 20px;
-}
-
-ul li {
-    list-style-type: none;
-    position: relative;
-    margin-bottom: 5px;
-    font-weight: 500;
-    padding: 0;
-    transition: ease 0.5s;
+    border-radius: 10px;
 }
 
 .process-card h3 {
     position: relative;
-    font-style: italic;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .process-card h3::after {
-    position: absolute;
     content: "";
-    left: 0;
-    width: 80px;
-    bottom: -10px;
+    position: absolute;
     padding: 2px;
-    background: var(--accent-color);
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    background-color: var(--accent-color);
+}
+
+.process-card ul {
+    padding: 0;
+    font-style: italic;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.process-card ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    transition: ease 0.3s;
+    width: calc(50% - 10px);
+    color: #494949;
+}
+
+.process-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color);
+    /* Green checkmark color */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.process-card ul li:hover {
+    transform: translateX(20px);
+    color: var(--accent-color);
+}
+
+/* Tabs styling to match the second image */
+#process-tabs-container {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
 }
 
 .process-step {
+    display: block;
+    text-decoration: none;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     transition: all 0.3s ease;
     cursor: pointer;
     user-select: none;
+    color: var(--text-color);
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .process-step:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
     background-color: #333;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+
+}
+
+.process-step:hover .step-title,
+.process-step:hover .step-description {
+    color: white;
 }
 
 .step-number {
     font-size: 60px;
     font-weight: bold;
-    color: var(--highlight-color);
+    color: var(--accent-color);
     line-height: 1;
     margin-right: 15px;
     min-width: 70px;
 }
 
 .step-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #333;
 }
 
 .step-description {
-    color: #666;
-    font-size: 16px;
+    color: var(--text-muted);
+    font-size: 15px;
 }
 
-.process-card-body h3 {
-    color: var(--accent-color);
-}
-
+/* Active step styling to match the orange background in the second image */
 .active-step {
-    background-color: var(--highlight-color);
+    background-color: var(--accent-color);
     color: white;
-    padding: 30px;
-    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 152, 0, 0.2);
 }
 
 .active-step .step-number,
@@ -2613,42 +2684,8 @@ ul li {
 }
 
 .active-step:hover {
-    background-color: var(--accent-color);
-}
-
-.process-step:hover .step-title,
-.process-step:hover .step-description {
-    color: white;
-}
-
-.process-card-body ul li {
-    position: relative;
-    padding-left: 1.8rem;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-    font-style: italic;
-    color: #494949;
-    line-height: 1.5;
-}
-
-.process-card-body ul {
-    padding: 0 !important;
-}
-
-.process-card-body ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--accent-color);
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.process-card-body ul li:hover {
-    transform: translateX(20px);
-    color: var(--accent-color);
+    background-color: #F57C00;
+    /* Darker orange on hover */
 }
 
 /* Animation for cards container */
@@ -2661,4 +2698,9 @@ ul li {
 .card-animate-enter-active {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
