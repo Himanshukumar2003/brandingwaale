@@ -2149,7 +2149,7 @@ ul {
 
 .frame-wrapper {
     position: relative;
-    max-width: 1100px;
+    /* max-width: 1100px; */
     margin: auto;
 }
 
@@ -2419,9 +2419,11 @@ label {
 
 .mobile-section-img {
     position: absolute;
-    top: 0;
+    top: 10px;
     z-index: 1;
     left: 0;
+    width: 100%;
+    max-height: 500px;
 }
 
 
