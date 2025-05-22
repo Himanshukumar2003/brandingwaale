@@ -4,800 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8 Different Card UI Designs</title>
+    <title>About and CTA Sections</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <style>
-        /* Common styles for all cards */
-        .process-card {
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
+        /* Custom colors and styles */
+        :root {
+            --neon-yellow: #d9ff00;
         }
 
-        .process-card:hover {
-            transform: translateY(-5px);
+        body {
+            font-family: 'Arial', sans-serif;
         }
 
-        .process-card ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+        /* About section styles */
 
-        .process-card li {
-            margin-bottom: 8px;
-        }
 
-        /* Card 1: Modern with shadow and border radius */
-        .card-modern {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background-color: white;
-        }
 
-        .card-modern .process-image {
-            height: 200px;
-            overflow: hidden;
-        }
 
-        .card-modern .process-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .card-modern:hover .process-image img {
-            transform: scale(1.05);
-        }
-
-        .card-modern .process-card-body {
-            padding: 20px;
-        }
-
-        .card-modern h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .card-modern li {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .card-modern li i {
-            margin-right: 10px;
-            margin-top: 5px;
-        }
-
-        /* Card 2: Gradient background with white text */
-        .card-gradient {
-            border-radius: 8px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #8a4baf 0%, #4c6ef5 100%);
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-gradient .process-image {
-            padding: 15px;
-        }
-
-        .card-gradient .image-container {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 8px;
-        }
-
-        .card-gradient .process-image img {
-            border-radius: 6px;
-            height: 160px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-gradient .process-card-body {
-            padding: 20px;
-        }
-
-        .card-gradient h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .card-gradient li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .card-gradient .number-circle {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.75rem;
-        }
-
-        /* Card 3: Bordered with accent color */
-        .card-bordered {
-            border: 2px solid #20c997;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .card-bordered:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-bordered .process-image {
-            background-color: #f0fdf9;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card-bordered .image-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #20c997;
-        }
-
-        .card-bordered .process-card-body {
-            padding: 20px;
-            background-color: white;
-        }
-
-        .card-bordered h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #0f8c73;
-            border-bottom: 2px solid #e6f7f2;
-            padding-bottom: 10px;
-        }
-
-        .card-bordered li {
-            display: flex;
-            align-items: center;
-            padding: 5px 0;
-            border-bottom: 1px solid #f5f5f5;
-        }
-
-        .card-bordered li i {
-            color: #20c997;
-            margin-right: 10px;
-        }
-
-        /* Card 4: Minimalist with hover effects */
-        .card-minimalist {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: background-color 0.3s ease;
-        }
-
-        .card-minimalist:hover {
-            background-color: white;
-        }
-
-        .card-minimalist .process-image {
-            overflow: hidden;
-        }
-
-        .card-minimalist .process-image img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .card-minimalist:hover .process-image img {
-            transform: scale(1.05);
-        }
-
-        .card-minimalist .process-card-body {
-            padding: 20px;
-        }
-
-        .card-minimalist h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        .card-minimalist:hover h3 {
-            color: #3b82f6;
-        }
-
-        .card-minimalist li {
-            padding: 6px 0;
-            color: #666;
-            transition: color 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .card-minimalist:hover li {
-            color: #333;
-        }
-
-        .card-minimalist .dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: #ccc;
-            border-radius: 50%;
-            margin-right: 12px;
-            transition: background-color 0.3s ease;
-        }
-
-        .card-minimalist:hover .dot {
-            background-color: #3b82f6;
-        }
-
-        /* Card 5: Dark theme with accent border */
-        .card-dark {
-            background-color: #1f2937;
-            color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            border-left: 4px solid #fbbf24;
-        }
-
-        .card-dark .process-image {
-            padding: 15px;
-            background-color: #111827;
-        }
-
-        .card-dark .process-image img {
-            border-radius: 6px;
-            opacity: 0.8;
-            height: 160px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-dark .process-card-body {
-            padding: 20px;
-        }
-
-        .card-dark h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #fbbf24;
-        }
-
-        .card-dark li {
-            display: flex;
-            align-items: flex-start;
-            color: #d1d5db;
-            margin-bottom: 10px;
-            transition: color 0.2s ease;
-        }
-
-        .card-dark li:hover {
-            color: white;
-        }
-
-        .card-dark .number-box {
-            width: 20px;
-            height: 20px;
-            background-color: #374151;
-            color: #fbbf24;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.75rem;
-            border-radius: 4px;
-        }
-
-        /* Card 6: Horizontal layout */
-        .card-horizontal {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-horizontal .process-image {
+        /* CTA section styles */
+        .cta-section {
             position: relative;
-        }
-
-        .card-horizontal .image-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-            padding: 15px;
-        }
-
-        .card-horizontal h3 {
+            background-color: #000;
             color: white;
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-
-        .card-horizontal .process-card-body {
-            padding: 20px;
-        }
-
-        .card-horizontal li {
-            display: flex;
-            align-items: center;
-            color: #4b5563;
-            padding: 5px 0;
-        }
-
-        .card-horizontal .number-circle-orange {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: #fff3e6;
-            color: #f97316;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* Card 7: Neumorphic style */
-        .card-neumorphic {
-            background-color: #f0f0f0;
-            border-radius: 16px;
-            padding: 8px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
-        }
-
-        .card-neumorphic .process-image {
-            padding: 15px;
-        }
-
-        .card-neumorphic .image-container-inner {
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #e6e6e6;
-            padding: 8px;
-            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
-        }
-
-        .card-neumorphic .process-image img {
-            border-radius: 6px;
-            height: 160px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-neumorphic .process-card-body {
-            padding: 20px;
-        }
-
-        .card-neumorphic h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .card-neumorphic li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            color: #4b5563;
-        }
-
-        .card-neumorphic .number-circle-neuro {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #555;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.8);
-        }
-
-        /* Card 8: Glass morphism effect */
-        .card-glass {
-            position: relative;
-            border-radius: 16px;
+            padding: 100px 0;
             overflow: hidden;
         }
 
-        .card-glass::before {
-            content: "";
+        .cta-section::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+            width: 100%;
+            height: 100%;
+            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-T64R49UO7T8Jb1ObaM6FMKwkU2wpUM.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
             z-index: 0;
         }
 
-        .card-glass .glass-content {
+        .cta-content {
             position: relative;
             z-index: 1;
-            backdrop-filter: blur(8px);
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 16px;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .card-glass .process-image {
-            padding: 15px;
-        }
-
-        .card-glass .process-image img {
-            border-radius: 8px;
-            height: 160px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-glass .process-card-body {
-            padding: 20px;
-        }
-
-        .card-glass h3 {
-            font-size: 1.25rem;
+        .cta-section h2 {
+            font-size: 4rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #333;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .card-glass .glass-item {
-            display: flex;
-            align-items: center;
-            color: #4b5563;
-            padding: 5px 0;
+        .cta-btn {
+            background-color: white;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
-        .card-glass .glass-item i {
-            color: #8b5cf6;
-            margin-right: 10px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .cta-btn:hover {
+            background-color: var(--neon-yellow);
+            color: #000;
         }
 
-        .card-glass .glass-item:hover i {
-            opacity: 1;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767px) {
-            .card-horizontal {
-                flex-direction: column;
-            }
-
-            .card-horizontal .image-overlay {
-                position: relative;
-                background: #333;
-            }
+        /* Outline text effect for CTA heading */
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+            text-stroke: 2px white;
         }
     </style>
 </head>
 
 <body>
-    <div class="container py-5">
-        <h1 class="text-center mb-5">8 Different Card UI Designs</h1>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
-            <!-- Card 1: Modern with shadow and border radius -->
-            <div class="col">
-                <div id="card-1" class="process-card card-modern">
-                    <div class="process-image">
-                        <img src="https://placehold.co/600x400" class="img-fluid" alt="card-one" />
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li><i class="fas fa-check text-success"></i> Initial Client Consultation</li>
-                            <li><i class="fas fa-check text-success"></i> Requirements Gathering</li>
-                            <li><i class="fas fa-check text-success"></i> Project Scope Definition</li>
-                            <li><i class="fas fa-check text-success"></i> Timeline Planning</li>
-                            <li><i class="fas fa-check text-success"></i> Budget Estimation</li>
-                            <li><i class="fas fa-check text-success"></i> Resource Allocation</li>
-                            <li><i class="fas fa-check text-success"></i> Kickoff Meeting</li>
-                        </ul>
-                    </div>
+    <!-- About Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img src="img/unloacking_digital.png" alt="Professional thinking" class="img-fluid founder">
                 </div>
-            </div>
-
-            <!-- Card 2: Gradient background with white text -->
-            <div class="col">
-                <div id="card-2" class="process-card card-gradient">
-                    <div class="process-image">
-                        <div class="image-container">
-                            <img src="https://placehold.co/600x400" class="img-fluid" alt="card-two" />
-                        </div>
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li>
-                                <div class="number-circle">1</div>
-                                Initial Client Consultation
-                            </li>
-                            <li>
-                                <div class="number-circle">2</div>
-                                Requirements Gathering
-                            </li>
-                            <li>
-                                <div class="number-circle">3</div>
-                                Project Scope Definition
-                            </li>
-                            <li>
-                                <div class="number-circle">4</div>
-                                Timeline Planning
-                            </li>
-                            <li>
-                                <div class="number-circle">5</div>
-                                Budget Estimation
-                            </li>
-                            <li>
-                                <div class="number-circle">6</div>
-                                Resource Allocation
-                            </li>
-                            <li>
-                                <div class="number-circle">7</div>
-                                Kickoff Meeting
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3: Bordered with accent color -->
-            <div class="col">
-                <div id="card-3" class="process-card card-bordered">
-                    <div class="process-image">
-                        <div class="image-circle">
-                            <img src="https://placehold.co/400x400" class="img-fluid" alt="card-three" />
-                        </div>
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li><i class="fas fa-chevron-right"></i> Initial Client Consultation</li>
-                            <li><i class="fas fa-chevron-right"></i> Requirements Gathering</li>
-                            <li><i class="fas fa-chevron-right"></i> Project Scope Definition</li>
-                            <li><i class="fas fa-chevron-right"></i> Timeline Planning</li>
-                            <li><i class="fas fa-chevron-right"></i> Budget Estimation</li>
-                            <li><i class="fas fa-chevron-right"></i> Resource Allocation</li>
-                            <li><i class="fas fa-chevron-right"></i> Kickoff Meeting</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4: Minimalist with hover effects -->
-            <div class="col">
-                <div id="card-4" class="process-card card-minimalist">
-                    <div class="process-image">
-                        <img src="https://placehold.co/600x400" class="img-fluid" alt="card-four" />
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li><span class="dot"></span> Initial Client Consultation</li>
-                            <li><span class="dot"></span> Requirements Gathering</li>
-                            <li><span class="dot"></span> Project Scope Definition</li>
-                            <li><span class="dot"></span> Timeline Planning</li>
-                            <li><span class="dot"></span> Budget Estimation</li>
-                            <li><span class="dot"></span> Resource Allocation</li>
-                            <li><span class="dot"></span> Kickoff Meeting</li>
-                        </ul>
-                    </div>
+                <div class="col-lg-7">
+                    <h1>Unlock Revenue Growth for Your Business</h1>
+                    <p>
+                        If you ask our clients what it's like working with us, they'll talk about
+                        how much we care about their success. For us, real relationships fuel
+                        real success. We love building brands.
+                    </p>
+                    <p>
+                        We are a creative agency working with brands building insightful
+                        strategy, creating unique designs and crafting value.
+                    </p>
+                    <button class="about-btn">
+                        ABOUT US
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <!-- Card 5: Dark theme with accent border -->
-            <div class="col">
-                <div id="card-5" class="process-card card-dark">
-                    <div class="process-image">
-                        <img src="https://placehold.co/600x400" class="img-fluid" alt="card-five" />
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li>
-                                <div class="number-box">1</div>
-                                Initial Client Consultation
-                            </li>
-                            <li>
-                                <div class="number-box">2</div>
-                                Requirements Gathering
-                            </li>
-                            <li>
-                                <div class="number-box">3</div>
-                                Project Scope Definition
-                            </li>
-                            <li>
-                                <div class="number-box">4</div>
-                                Timeline Planning
-                            </li>
-                            <li>
-                                <div class="number-box">5</div>
-                                Budget Estimation
-                            </li>
-                            <li>
-                                <div class="number-box">6</div>
-                                Resource Allocation
-                            </li>
-                            <li>
-                                <div class="number-box">7</div>
-                                Kickoff Meeting
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6: Horizontal layout -->
-            <div class="col">
-                <div id="card-6" class="process-card card-horizontal">
-                    <div class="row g-0">
-                        <div class="col-md-4 position-relative">
-                            <img src="https://placehold.co/400x600" class="img-fluid h-100 object-fit-cover"
-                                alt="card-six" />
-                            <div class="image-overlay">
-                                <h3>Project Understanding</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="process-card-body">
-                                <ul>
-                                    <li>
-                                        <div class="number-circle-orange">1</div>
-                                        Initial Client Consultation
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">2</div>
-                                        Requirements Gathering
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">3</div>
-                                        Project Scope Definition
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">4</div>
-                                        Timeline Planning
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">5</div>
-                                        Budget Estimation
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">6</div>
-                                        Resource Allocation
-                                    </li>
-                                    <li>
-                                        <div class="number-circle-orange">7</div>
-                                        Kickoff Meeting
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7: Neumorphic style -->
-            <div class="col">
-                <div id="card-7" class="process-card card-neumorphic">
-                    <div class="process-image">
-                        <div class="image-container-inner">
-                            <img src="https://placehold.co/600x400" class="img-fluid" alt="card-seven" />
-                        </div>
-                    </div>
-                    <div class="process-card-body">
-                        <h3>Project Understanding</h3>
-                        <ul>
-                            <li>
-                                <div class="number-circle-neuro">1</div>
-                                Initial Client Consultation
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">2</div>
-                                Requirements Gathering
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">3</div>
-                                Project Scope Definition
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">4</div>
-                                Timeline Planning
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">5</div>
-                                Budget Estimation
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">6</div>
-                                Resource Allocation
-                            </li>
-                            <li>
-                                <div class="number-circle-neuro">7</div>
-                                Kickoff Meeting
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 8: Glass morphism effect -->
-            <div class="col">
-                <div id="card-8" class="process-card card-glass">
-                    <div class="glass-content">
-                        <div class="process-image">
-                            <img src="https://placehold.co/600x400" class="img-fluid" alt="card-eight" />
-                        </div>
-                        <div class="process-card-body">
-                            <h3>Project Understanding</h3>
-                            <ul>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Initial Client Consultation
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Requirements Gathering
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Project Scope Definition
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Timeline Planning
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Budget Estimation
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Resource Allocation
-                                </li>
-                                <li class="glass-item">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Kickoff Meeting
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 cta-content">
+                    <h2 class="outline-text">Ready to work<br>together?</h2>
+                    <button class="btn cta-btn">Let's talk</button>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

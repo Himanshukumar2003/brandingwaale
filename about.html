@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/about.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -33,31 +35,31 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                 <ul class="navbar-nav gap-3">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom" href="index.html">
                             <i class="bi bi-house-door nav-icon mb-1"></i>
                             Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom" href="about.html">
                             <i class="bi bi-person nav-icon mb-1"></i>
                             About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom" href="portfolio.html">
                             <i class="bi bi-briefcase nav-icon mb-1"></i>
                             Portfolio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom" href="">
                             <i class="bi bi-gear nav-icon mb-1"></i>
                             Service
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="#">
+                        <a class="nav-link nav-link-custom" href="contact.html">
                             <i class="bi bi-envelope nav-icon mb-1"></i>
                             Contact
                         </a>
@@ -66,45 +68,87 @@
             </div>
         </div>
     </nav>
-    <div class="section ">
+    <section class="about-section section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About Us</h2>
-                    <p> Greetings and welcome to our esteemed Web Development Company! We are a team of seasoned
-                        professionals who specialize in crafting bespoke marketing strategies that are geared towards
-                        achieving results. Though our agency has been in operation since 2016, we recently underwent a
-                        rebranding and incorporated in our current form in October 2020. With this evolution, we have
-                        fine-tuned our skills and adapted to the latest trends in the industry to provide top-notch
-                        services
-                        to our clients.</p>
-
-                    <p> At our agency, transparency and collaboration are values we hold dear. Therefore, we work
-                        closely
-                        with our clients to ensure that we are meeting their unique needs and delivering measurable
-                        results.
-                        We understand the importance of staying informed, which is why we provide regular progress
-                        updates
-                        and detailed reports to keep our clients in the loop about the impact of our marketing efforts.
-                    </p>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="">
-                        <img src="img/about.gif" class="img-fluid">
+            <div class="row g-4">
+                <!-- Left side image -->
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="/img/unloacking_digital.png" class="img-fluid" alt="about-us">
+                        <div class="projects-counter" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="counter-number">950<span>+</span></div>
+                            <div class="counter-text">PROJECTS SUCCESSFULLY COMPLETED</div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Right side content -->
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div data-aos="fade-up" data-aos-duration="800">
+                            <h6 class="about-tag">ABOUT US</h6>
+                            <h1>Unlocking Digital Marketing Success</h2>
+                                <div class="title-underline" data-aos="fade-right" data-aos-delay="300"></div>
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400">
+
+
+                            <p class="about-description">
+                                Monitoring and improving a brand's online reputation through reviews,
+                                testimonials, and social media feedback. Monitoring and improving a
+                                brand's online reputation through reviews, testimonials, and social media
+                                feedback.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="500">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>Blog and article creation</span>
+                                    </div>
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="600">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>SEO optimization tools</span>
+                                    </div>
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="700">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>Conversion tracking</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="800">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>Affiliate tracking systems</span>
+                                    </div>
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="900">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>Mobile app analytics</span>
+                                    </div>
+                                    <div class="service-item" data-aos="fade-right" data-aos-delay="1000">
+                                        <span class="service-icon"><i class="fas fa-check-circle"></i></span>
+                                        <span>Location-based marketing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
+
+            <!-- Projects counter box -->
+
         </div>
-    </div>
+    </section>
 
 
     <section class="journey-section bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1 class="journey-header">OUR JOURNEY</h1>
+                    <h1>OUR JOURNEY</h1>
                     <p class="journey-text">
                         After five years of industry experience, Sandeep Gupta founded Brandingwaale Webtech in 2019
                         from his home office, starting with a dedicated two-member team. Recognizing the accelerating
@@ -126,13 +170,16 @@
                         serving our future clients with the same passion and excellence.
                     </p>
                 </div>
+
+                <div class="col-md-4">
+                    <img src="img/seven.png" alt="" class="img-fluid" alt="seven years">
+
+                </div>
+
             </div>
         </div>
 
-        <div class="ribbon">
-            <div class="ribbon-text">
-                SEVEN<br>YEARS IN<br>INDUSTRY
-            </div>
+
         </div>
     </section>
 
@@ -209,7 +256,41 @@
         </div>
     </section>
 
+    <section class="founder-section section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img src="img/unloacking_digital.png" alt="Professional thinking" class="img-fluid founder">
+                </div>
+                <div class="col-lg-7">
+                    <h1>Sandeep Gupta
+                    </h1>
+                    <p>
+                        Sandeep Gupta is the founder of Brandingwaale, a Web Development Company based in India. With
+                        over 10 years of experience in the industry, Sandeep is a skilled digital marketer with
+                        expertise in web development, social media marketing, graphic designing, and various other
+                        digital skills.
+                    </p>
+                    <p>
+                        At Brandingwaale, Sandeep leads a team of talented professionals who share his passion for
+                        digital marketing. He believes in delivering results-driven solutions that help his clients grow
+                        their businesses and achieve their objectives.
 
+
+                    </p>
+                    <p>Sandeep also understands the importance of staying up-to-date with the latest digital marketing
+                        trends and technology. He is constantly learning and adapting his strategies to ensure that his
+                        clients stay ahead of their competition. Under Sandeep's leadership, Brandingwaale has helped
+                        numerous businesses across industries achieve their digital marketing goals and grow their
+                        online presence. Sandeep's dedication, expertise, and passion for digital marketing make him a
+                        valuable asset to any business looking to establish a strong online presence and succeed in the
+                        digital world.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
