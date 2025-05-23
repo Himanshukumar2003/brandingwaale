@@ -2633,6 +2633,9 @@ label {
 .process-image img {
     width: 100%;
     border-radius: 10px;
+    max-height: 200px;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .process-card h3 {
