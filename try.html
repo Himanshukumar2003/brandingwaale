@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Founder Section - Minimalist Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        .founder-section {
-            padding: 100px 0;
-            background-color: #ffffff;
+        :root {
+            --space-unit: 1em;
+            --space-md: calc(1.25 * var(--space-unit));
+            --primary-color: #f5e6d0;
+            --accent-color: #ffc107;
+            --text-color: #333333;
+            --highlight-color: #f5a623;
+            --dark-bg: #0f0f0f;
+            --darker-bg: #050505;
+            --text-light: #ffffff;
+            --text-muted: #b0b0b0;
+            --border-color: #333;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
         }
 
         .section-title {
@@ -27,106 +39,89 @@
             bottom: -10px;
             width: 50px;
             height: 3px;
-            background: #3498db;
+            background: var(--accent-color);
+        }
+
+        .founder-section {
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .founder-img-container {
+            position: relative;
+            height: 100%;
+        }
+
+        .founder-img-section {
+            /* We'll control this with JS */
+            width: 100%;
         }
 
         .founder-img {
             width: 100%;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
         }
 
         .founder-name {
             font-weight: 700;
             color: #333;
-            margin-top: 30px;
+            font-size: 2.5rem;
             margin-bottom: 5px;
         }
 
         .founder-title {
-            color: #3498db;
+            color: var(--accent-color);
             font-weight: 600;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
 
         .founder-bio {
-            color: #555;
-            line-height: 1.8;
             margin-bottom: 30px;
-        }
-
-        .skill-item {
-            display: inline-block;
-            background: #f8f9fa;
-            padding: 8px 15px;
-            border-radius: 30px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background: #3498db;
-            color: white;
+            font-size: 1.3rem;
         }
 
         .quote {
             font-style: italic;
-            color: #777;
-            border-left: 3px solid #3498db;
-            padding-left: 20px;
-            margin: 30px 0;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent-color);
         }
 
-        .contact-btn {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background: #2980b9;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        /* Add some extra content to demonstrate scrolling */
+        .extra-content {
+            height: 500px;
+            background-color: #f9f9f9;
+            margin-top: 50px;
+            padding: 50px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <section class="founder-section">
+    <section class="founder-section section">
         <div class="container">
-            <h2 class="section-title">Our Founder</h2>
-
-            <div class="row align-items-center">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <img src="/placeholder.svg?height=400&width=300" alt="Sandeep Gupta" class="founder-img">
-                    <h3 class="founder-name">Sandeep Gupta</h3>
-                    <p class="founder-title">Founder & CEO, Brandingwaale</p>
-
-                    <div class="mt-4">
-                        <span class="skill-item">Web Development</span>
-                        <span class="skill-item">Digital Marketing</span>
-                        <span class="skill-item">Social Media</span>
-                        <span class="skill-item">Graphic Design</span>
-                        <span class="skill-item">SEO</span>
-                        <span class="skill-item">Content Strategy</span>
+            <div class="row">
+                <div class="col-lg-5 founder-img-container">
+                    <div class="founder-img-section">
+                        <img src="/placeholder.svg?height=500&width=400" alt="Sandeep Gupta" class="founder-img">
                     </div>
                 </div>
 
-                <div class="col-lg-8">
+                <div class="col-lg-7 founder-content">
+                    <h3 class="founder-name">Sandeep Gupta</h3>
+                    <p class="founder-title">Founder & CEO, Brandingwaale</p>
+
                     <p class="founder-bio">
                         Sandeep Gupta is the founder of Brandingwaale, a Web Development Company based in India. With
                         over 10 years of experience in the industry, Sandeep is a skilled digital marketer with
                         expertise in web development, social media marketing, graphic designing, and various other
                         digital skills.
                     </p>
-
                     <p class="quote">
                         "I believe in delivering results-driven solutions that help clients grow their businesses and
                         achieve their objectives."
@@ -146,13 +141,82 @@
                         online presence.
                     </p>
 
-                    <button class="contact-btn mt-4">Connect with Sandeep</button>
+                    <p class="founder-bio">
+                        With a customer-centric approach, Sandeep ensures that each project is tailored to meet the
+                        specific needs and goals of the client. He works closely with his team to develop innovative
+                        strategies that drive results and provide value to clients.
+                    </p>
+
+                    <p class="founder-bio">
+                        Sandeep's vision for Brandingwaale is to be a leading digital marketing agency that empowers
+                        businesses to thrive in the digital landscape. He is committed to delivering excellence in
+                        every project and building long-term relationships with clients based on trust and results.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Extra section to demonstrate scrolling -->
+    <div class="extra-content">
+        <h2>More Content Below</h2>
+        <p>This section is just to demonstrate the sticky scrolling effect.</p>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imgSection = document.querySelector(".founder-img-section");
+            const imgContainer = document.querySelector(".founder-img-container");
+            const content = document.querySelector(".founder-content");
+            const image = document.querySelector(".founder-img");
+
+            // Set initial height for the container to match content
+            imgContainer.style.height = content.offsetHeight + "px";
+
+            function onScroll() {
+                const scrollY = window.scrollY;
+                const containerRect = imgContainer.getBoundingClientRect();
+                const containerTop = containerRect.top + scrollY;
+                const containerHeight = imgContainer.offsetHeight;
+                const imageHeight = image.offsetHeight;
+
+                // Calculate the boundaries for sticky behavior
+                const stickyStart = containerTop;
+                const stickyEnd = containerTop + containerHeight - imageHeight;
+
+                // Apply the appropriate positioning
+                if (scrollY >= stickyStart && scrollY <= stickyEnd) {
+                    // Sticky phase - image follows the scroll
+                    imgSection.style.position = "fixed";
+                    imgSection.style.top = "20px";
+                    imgSection.style.width = imgContainer.offsetWidth + "px";
+                } else if (scrollY > stickyEnd) {
+                    // Past the sticky end - image stays at the bottom of container
+                    imgSection.style.position = "absolute";
+                    imgSection.style.top = (containerHeight - imageHeight) + "px";
+                    imgSection.style.width = "100%";
+                } else {
+                    // Before the sticky start - image stays at the top of container
+                    imgSection.style.position = "absolute";
+                    imgSection.style.top = "0";
+                    imgSection.style.width = "100%";
+                }
+            }
+
+            // Update on scroll and resize
+            window.addEventListener("scroll", onScroll);
+            window.addEventListener("resize", function () {
+                // Update container height on resize
+                imgContainer.style.height = content.offsetHeight + "px";
+                onScroll();
+            });
+
+            // Initial call to set positions
+            onScroll();
+        });
+    </script>
 </body>
 
 </html>

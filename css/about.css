@@ -23,10 +23,7 @@
 }
 
 
-.founder-section {
-    overflow: hidden;
-    position: relative;
-}
+
 
 .about-content {
     background-color: #000;
@@ -141,34 +138,57 @@
     background: var(--accent-color);
 }
 
+.founder-section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.founder-img-container {
+    position: relative;
+    height: 100%;
+}
+
+.founder-img-section {
+    /* We'll control this with JS */
+    width: 100%;
+}
+
 .founder-img {
     width: 100%;
-    max-height: 350px;
+    max-height: 500px;
     object-fit: contain;
+    display: block;
 }
 
 .founder-name {
     font-weight: 700;
     color: #333;
+    font-size: 2.5rem;
     margin-bottom: 5px;
-    text-align: center;
-
 }
 
 .founder-title {
     color: var(--accent-color);
     font-weight: 600;
-    text-align: center;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .founder-bio {
-
     margin-bottom: 30px;
+    font-size: 1.3rem;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 3px solid var(--accent-color);
 }
 
 
-.founder-skills {
+/* .founder-skills {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +211,7 @@
 .skill-item:hover {
     background: var(--highlight-color);
     color: white;
-}
+} */
 
 .quote {
     font-style: italic;

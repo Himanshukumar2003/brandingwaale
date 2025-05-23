@@ -33,6 +33,84 @@ body {
     color: var(--text-color);
 }
 
+
+.content-card:hover .custom-btn {
+    background-color: var(--darker-bg);
+}
+
+.custom-btn {
+    position: relative;
+    z-index: 10;
+    display: flex;
+
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 9999px;
+    overflow: hidden;
+    cursor: pointer;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(8px);
+    isolation: isolate;
+}
+
+.custom-btn::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--dark-bg);
+    border-radius: 9999px;
+    transform: scale(1);
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.custom-btn:hover::before {
+    left: 0;
+    transform: scale(1.5);
+}
+
+.custom-btn:hover {
+    color: #fff;
+}
+
+/* SVG Icon Styles */
+.arrow-icon {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 9999px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover .arrow-icon {
+    transform: rotate(90deg);
+    background-color: #fff;
+    border: none;
+}
+
+.arrow-path {
+    fill: #f5a623;
+}
+
+.custom-btn:hover .arrow-path {
+    fill: #1f2937;
+}
+
+
 .brand-circle {
     width: 40px;
     height: 40px;
@@ -1895,6 +1973,8 @@ ul {
 }
 
 
+
+
 .portfolio-title {
     font-weight: 600;
     color: #050505;
@@ -2404,9 +2484,9 @@ label {
 
 
 .main-img {
-    max-height: 450px;
-    border-radius: 50px;
-    border: 10px solid black;
+    /* max-height: 450px; */
+    /* border-radius: 50px; */
+    /* border: 10px solid black; */
     margin-bottom: 20px;
 }
 
@@ -2427,13 +2507,13 @@ label {
 
 
 .app-home img {
-    width: 100%;
     z-index: 1;
 }
 
 .app-home img {
     max-height: 500px;
 
+    object-fit: contain;
 }
 
 

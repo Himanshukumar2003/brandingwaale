@@ -198,6 +198,18 @@ var swiperThree = new Swiper(".app-home", {
   },
   grabCursor: true,
 });
+var swiperFour = new Swiper(".websites-swiper", {
+  loop: true,
+  pagination: false,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  grabCursor: true,
+});
 
 $(".logo-section1")
   .eq(0)
@@ -320,3 +332,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // Trigger scroll event on page load to set initial active state
   window.dispatchEvent(new Event("scroll"));
 });
+
+// websites-swiper
