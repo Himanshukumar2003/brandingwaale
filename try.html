@@ -4,129 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About and CTA Sections</title>
-    <!-- Bootstrap CSS -->
+    <title>Founder Section - Minimalist Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <style>
-        /* Custom colors and styles */
-        :root {
-            --neon-yellow: #d9ff00;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
-        /* About section styles */
-
-
-
-
-        /* CTA section styles */
-        .cta-section {
-            position: relative;
-            background-color: #000;
-            color: white;
+        .founder-section {
             padding: 100px 0;
-            overflow: hidden;
+            background-color: #ffffff;
         }
 
-        .cta-section::before {
+        .section-title {
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .section-title::after {
             content: '';
             position: absolute;
-            top: 0;
             left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .founder-img {
             width: 100%;
-            height: 100%;
-            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-T64R49UO7T8Jb1ObaM6FMKwkU2wpUM.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.7;
-            z-index: 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .cta-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 4rem;
+        .founder-name {
             font-weight: 700;
-            margin-bottom: 40px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 5px;
         }
 
-        .cta-btn {
-            background-color: white;
-            color: #000;
+        .founder-title {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .founder-bio {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .skill-item {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #777;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+
+        .contact-btn {
+            background: #3498db;
+            color: white;
             border: none;
             padding: 12px 30px;
+            border-radius: 30px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .cta-btn:hover {
-            background-color: var(--neon-yellow);
-            color: #000;
-        }
-
-        /* Outline text effect for CTA heading */
-        .outline-text {
-            color: transparent;
-            -webkit-text-stroke: 2px white;
-            text-stroke: 2px white;
+        .contact-btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
     </style>
 </head>
 
 <body>
-    <!-- About Section -->
     <section class="founder-section">
         <div class="container">
+            <h2 class="section-title">Our Founder</h2>
+
             <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <img src="img/unloacking_digital.png" alt="Professional thinking" class="img-fluid founder">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <img src="/placeholder.svg?height=400&width=300" alt="Sandeep Gupta" class="founder-img">
+                    <h3 class="founder-name">Sandeep Gupta</h3>
+                    <p class="founder-title">Founder & CEO, Brandingwaale</p>
+
+                    <div class="mt-4">
+                        <span class="skill-item">Web Development</span>
+                        <span class="skill-item">Digital Marketing</span>
+                        <span class="skill-item">Social Media</span>
+                        <span class="skill-item">Graphic Design</span>
+                        <span class="skill-item">SEO</span>
+                        <span class="skill-item">Content Strategy</span>
+                    </div>
                 </div>
-                <div class="col-lg-7">
-                    <h1>Unlock Revenue Growth for Your Business</h1>
-                    <p>
-                        If you ask our clients what it's like working with us, they'll talk about
-                        how much we care about their success. For us, real relationships fuel
-                        real success. We love building brands.
+
+                <div class="col-lg-8">
+                    <p class="founder-bio">
+                        Sandeep Gupta is the founder of Brandingwaale, a Web Development Company based in India. With
+                        over 10 years of experience in the industry, Sandeep is a skilled digital marketer with
+                        expertise in web development, social media marketing, graphic designing, and various other
+                        digital skills.
                     </p>
-                    <p>
-                        We are a creative agency working with brands building insightful
-                        strategy, creating unique designs and crafting value.
+
+                    <p class="quote">
+                        "I believe in delivering results-driven solutions that help clients grow their businesses and
+                        achieve their objectives."
                     </p>
-                    <button class="about-btn">
-                        ABOUT US
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </button>
+
+                    <p class="founder-bio">
+                        At Brandingwaale, Sandeep leads a team of talented professionals who share his passion for
+                        digital marketing. He believes in delivering results-driven solutions that help his clients grow
+                        their businesses and achieve their objectives.
+                    </p>
+
+                    <p class="founder-bio">
+                        Sandeep also understands the importance of staying up-to-date with the latest digital marketing
+                        trends and technology. He is constantly learning and adapting his strategies to ensure that his
+                        clients stay ahead of their competition. Under Sandeep's leadership, Brandingwaale has helped
+                        numerous businesses across industries achieve their digital marketing goals and grow their
+                        online presence.
+                    </p>
+
+                    <button class="contact-btn mt-4">Connect with Sandeep</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 cta-content">
-                    <h2 class="outline-text">Ready to work<br>together?</h2>
-                    <button class="btn cta-btn">Let's talk</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

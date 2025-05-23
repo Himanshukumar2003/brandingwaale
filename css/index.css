@@ -4,7 +4,7 @@
 
     --space-md: calc(1.25 * var(--space-unit));
     --primary-color: #f5e6d0;
-    --accent-color: #EDAC18;
+    --accent-color: #ffc107;
     --text-color: #333333;
     --highlight-color: #f5a623;
     /* --primary-color: #ffd700; */
@@ -65,7 +65,7 @@ body {
 }
 
 .nav-link-custom:hover {
-    color: var(--accent-color);
+    color: var(--highlight-color);
 }
 
 .nav-link {
@@ -2697,3 +2697,5 @@ label {
 html {
     scroll-behavior: smooth;
 }
+
+/*  */
