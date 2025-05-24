@@ -1818,14 +1818,14 @@ a {
     top: 90px;
 }
 
-.opacity {
+/* .opacity {
     -moz-transition: 0.4s ease;
     -ms-transition: 0.4s ease;
     -o-transition: 0.4s ease;
     transition: 0.4s ease;
     -webkit-transition: 0.4s ease;
     opacity: 1;
-}
+} */
 
 .scale {
     moz-transition: 0.4s ease;
