@@ -4,218 +4,892 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Founder Section - Minimalist Profile</title>
+    <title>Brandingwaale - Transform Your Business</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="css/index.css">
     <style>
-        :root {
-            --space-unit: 1em;
-            --space-md: calc(1.25 * var(--space-unit));
-            --primary-color: #f5e6d0;
-            --accent-color: #ffc107;
-            --text-color: #333333;
-            --highlight-color: #f5a623;
-            --dark-bg: #0f0f0f;
-            --darker-bg: #050505;
-            --text-light: #ffffff;
-            --text-muted: #b0b0b0;
-            --border-color: #333;
-            --dark-color: #1a1a1a;
-            --light-color: #f8f9fa;
+        .service-header {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--dark-bg);
+            color: white;
+        }
+
+        .brand-label {
+            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .header-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .header-image {
+            position: relative;
+        }
+
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+
+
+
+        /* Neon effect elements */
+        .neon-element {
+            position: absolute;
+            background-color: var(--accent-color);
+            filter: blur(5px);
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        .neon-1 {
+            width: 150px;
+            height: 3px;
+            bottom: 100px;
+            left: -50px;
+            transform: rotate(45deg);
+        }
+
+        .neon-2 {
+            width: 3px;
+            height: 200px;
+            top: 50px;
+            right: 30%;
+        }
+
+        .faq-section {
+            position: relative;
         }
 
         .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
-            font-weight: 800;
-            color: #333;
-            margin-bottom: 50px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            left: 0;
             bottom: -10px;
-            width: 50px;
-            height: 3px;
-            background: var(--accent-color);
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
         }
 
-        .founder-section {
-            padding: 80px 0;
+        .section-subtitle {
+            color: #6c757d;
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+
+        .faq-timeline {
+            position: relative;
+            /* padding-left: 50px; */
+        }
+
+        /* .faq-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            width: 2px;
+            background-color: #e9ecef;
+        } */
+
+        .faq-item {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        /* .faq-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid var(--accent-color);
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active::before {
+            background-color: var(--accent-color);
+        } */
+
+        .faq-question {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: var(--accent-color);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(78, 90, 249, 0.2);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            background-color: #fff;
+            margin-top: 10px;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-height: 0;
             overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0;
         }
 
-        .founder-img-container {
+        .faq-item.active .faq-answer {
+            padding: 25px 30px;
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .faq-answer p {
+            margin-bottom: 0;
+            line-height: 1.7;
+            color: #6c757d;
+        }
+
+        .faq-image-container {
             position: relative;
             height: 100%;
         }
 
-        .founder-img-section {
-            /* We'll control this with JS */
+        .faq-image {
             width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
         }
 
-        .founder-img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: contain;
-            display: block;
+        .image-shape {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(78, 90, 249, 0.1);
+            z-index: 1;
         }
 
-        .founder-name {
-            font-weight: 700;
-            color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 5px;
+        .shape-1 {
+            top: -50px;
+            right: -30px;
         }
 
-        .founder-title {
-            color: var(--accent-color);
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+        .shape-2 {
+            bottom: -30px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(78, 90, 249, 0.15);
         }
 
-        .founder-bio {
-            margin-bottom: 30px;
-            font-size: 1.3rem;
+        @media (max-width: 991px) {
+            .faq-image-container {
+                margin-bottom: 50px;
+            }
         }
 
-        .quote {
-            font-style: italic;
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            padding-left: 15px;
-            border-left: 3px solid var(--accent-color);
+
+        @media (max-width: 991px) {
+            .header-title {
+                font-size: 2.5rem;
+            }
+
+            .header-image {
+                margin-top: 3rem;
+            }
         }
 
-        /* Add some extra content to demonstrate scrolling */
-        .extra-content {
-            height: 500px;
-            background-color: #f9f9f9;
-            margin-top: 50px;
-            padding: 50px;
-            text-align: center;
+        .faq-image-container {
+            position: sticky;
+            top: 0;
+
+        }
+
+
+
+        .cta-card {
+            background: linear-gradient(135deg, #ffc107, #f5a623);
+            border-radius: 24px;
+            padding: 60px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .cta-img {
+            margin-bottom: -320px;
         }
     </style>
 </head>
 
+
+
 <body>
-    <section class="founder-section section">
+    <nav class="navbar navbar-expand-md bg-white border-bottom border-warning ">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 founder-img-container">
-                    <div class="founder-img-section">
-                        <img src="/placeholder.svg?height=500&width=400" alt="Sandeep Gupta" class="founder-img">
+            <!-- Branding -->
+            <a href="#" class="d-flex align-items-center text-decoration-none">
+                <img src="img/log.gif" class="logo">
+            </a>
+
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="index.html">
+                            <i class="bi bi-house-door nav-icon mb-1"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="about.html">
+                            <i class="bi bi-person nav-icon mb-1"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="portfolio.html">
+                            <i class="bi bi-briefcase nav-icon mb-1"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="">
+                            <i class="bi bi-gear nav-icon mb-1"></i>
+                            Service
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custom" href="contact.html">
+                            <i class="bi bi-envelope nav-icon mb-1"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="service-header section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h5 class="brand-label" data-aos="fade-up" data-aos-delay="200">BRANDING</h5>
+                    <h1 class="header-title" data-aos="fade-up" data-aos-delay="400">
+                        Discover Branding Solutions
+                        <span class="highlight">Tailored To You</span>
+                    </h1>
+                    <p class="header-description" data-aos="fade-up" data-aos-delay="600">
+                        At Brandemic, we know that a strong brand is the foundation for
+                        business success. Our passionate team of experts is here to
+                        ensure your brand not only stands out but thrives in a
+                        competitive landscape.
+                    </p>
+                    <!-- <button class="cta-btn" data-aos="fade-up" data-aos-delay="800">Get Started</button> -->
+                </div>
+                <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
+
+                    <img src="" alt="Branding Services Illustration" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="companies-logo bglight">
+
+
+        <div>
+            <!-- Top Banks 1 -->
+            <div class="slider-wrapper">
+
+                <div class="logo-section1">
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client11.png" alt="Axis Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client12.png" alt="Bandhan Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client13.png" alt="Citi Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client14.png" alt="HDFC Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client15.png" alt="HSBC" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client16.png" alt="IDFC" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client17.png" alt="Magma" /></div>
                     </div>
                 </div>
+            </div>
+            <!-- Top Banks 2 -->
+            <div class="slider-wrapper">
 
-                <div class="col-lg-7 founder-content">
-                    <h3 class="founder-name">Sandeep Gupta</h3>
-                    <p class="founder-title">Founder & CEO, Brandingwaale</p>
-
-                    <p class="founder-bio">
-                        Sandeep Gupta is the founder of Brandingwaale, a Web Development Company based in India. With
-                        over 10 years of experience in the industry, Sandeep is a skilled digital marketer with
-                        expertise in web development, social media marketing, graphic designing, and various other
-                        digital skills.
-                    </p>
-                    <p class="quote">
-                        "I believe in delivering results-driven solutions that help clients grow their businesses and
-                        achieve their objectives."
-                    </p>
-
-                    <p class="founder-bio">
-                        At Brandingwaale, Sandeep leads a team of talented professionals who share his passion for
-                        digital marketing. He believes in delivering results-driven solutions that help his clients grow
-                        their businesses and achieve their objectives.
-                    </p>
-
-                    <p class="founder-bio">
-                        Sandeep also understands the importance of staying up-to-date with the latest digital marketing
-                        trends and technology. He is constantly learning and adapting his strategies to ensure that his
-                        clients stay ahead of their competition. Under Sandeep's leadership, Brandingwaale has helped
-                        numerous businesses across industries achieve their digital marketing goals and grow their
-                        online presence.
-                    </p>
-
-                    <p class="founder-bio">
-                        With a customer-centric approach, Sandeep ensures that each project is tailored to meet the
-                        specific needs and goals of the client. He works closely with his team to develop innovative
-                        strategies that drive results and provide value to clients.
-                    </p>
-
-                    <p class="founder-bio">
-                        Sandeep's vision for Brandingwaale is to be a leading digital marketing agency that empowers
-                        businesses to thrive in the digital landscape. He is committed to delivering excellence in
-                        every project and building long-term relationships with clients based on trust and results.
-                    </p>
+                <div class="logo-section1" dir="rtl">
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client18.png" alt="Max Life" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client19.png" alt="Paytm" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client20.png" alt="RBL Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client21.png" alt="Small Finance Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client22.png" alt="TATA AIA" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client11.png" alt="Yes Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client18.png" alt="Max Life" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client19.png" alt="Paytm" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client20.png" alt="RBL Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client21.png" alt="Small Finance Bank" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client22.png" alt="TATA AIA" /></div>
+                    </div>
+                    <div>
+                        <div class="clint-img"><img src="img/logo/client11.png" alt="Yes Bank" /></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Extra section to demonstrate scrolling -->
-    <div class="extra-content">
-        <h2>More Content Below</h2>
-        <p>This section is just to demonstrate the sticky scrolling effect.</p>
+
+
+    <div class="section what-we-do-section">
+        <h2 class="text-white text-center mb-4">INDUSTRIES WE SERVE</h2>
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="cards">
+                        <div class="custom-card card1" id="1">
+                            <div class="sticky-card-body">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="what-we-do">
+
+                                            <h2>Web Development
+                                            </h2>
+                                            <p> Build fast, sleek websites that impress every visitor.</p>
+                                            <div class="line"></div>
+                                            <ul>
+                                                <li>- Custom Web Solutions
+                                                </li>
+                                                <li>- Performance & Speed
+                                                </li>
+                                                <li>- Responsive & Scalable
+                                                </li>
+                                                <li>- SEO & Security Integration
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
+                                            class="sticky-card-img w-100 h-100">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="custom-card card2" id="2">
+                            <div class="sticky-card-body">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="what-we-do">
+
+                                            <h2>Web Development
+                                            </h2>
+                                            <p> Build fast, sleek websites that impress every visitor.</p>
+                                            <div class="line"></div>
+                                            <ul>
+                                                <li>- Custom Web Solutions
+                                                </li>
+                                                <li>- Performance & Speed
+                                                </li>
+                                                <li>- Responsive & Scalable
+                                                </li>
+                                                <li>- SEO & Security Integration
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
+                                            class="sticky-card-img w-100 h-100">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-card card3" id="3">
+                            <div class="sticky-card-body">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="what-we-do">
+
+                                            <h2>Web Development
+                                            </h2>
+                                            <p> Build fast, sleek websites that impress every visitor.</p>
+                                            <div class="line"></div>
+                                            <ul>
+                                                <li>- Custom Web Solutions
+                                                </li>
+                                                <li>- Performance & Speed
+                                                </li>
+                                                <li>- Responsive & Scalable
+                                                </li>
+                                                <li>- SEO & Security Integration
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
+                                            class="sticky-card-img w-100 h-100">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-card card4" id="4">
+                            <div class="sticky-card-body">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="what-we-do">
+
+                                            <h2>Web Development
+                                            </h2>
+                                            <p> Build fast, sleek websites that impress every visitor.</p>
+                                            <div class="line"></div>
+                                            <ul>
+                                                <li>- Custom Web Solutions
+                                                </li>
+                                                <li>- Performance & Speed
+                                                </li>
+                                                <li>- Responsive & Scalable
+                                                </li>
+                                                <li>- SEO & Security Integration
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
+                                            class="sticky-card-img w-100 h-100">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="cta-section section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="cta-card">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <!-- <div class="caption-text">CAPTION HERE</div> -->
+                                <h1 class="main-heading">Let's Talk About your Business
+                                </h1>
+                                <p class="description">
+                                    We are passionate about helping businesses achieve their goals through effective
+                                    marketing strategies. Contact us today to learn know more about how we can help your
+                                    business grow and thrive.
+
+
+                                </p>
+
+
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <div class="btn-section d-flex justify-content-start">
+                                        <a href="about.html" class="custom-btn " style="background-color: black;">
+                                            Contact us
+                                            <svg class="arrow-icon" viewBox="0 0 16 19"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                                                    class="arrow-path"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/cta_1.png" class="img-fluid cta-img" alt="cta">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="testimonial-section">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Heading -->
+                <div class="col-lg-4 d-flex align-items-center">
+                    <div class="heading-content">
+                        <h1>INSPIRING<br />TRUST</h1>
+                        <h3>THROUGH EXPERIENCES</h3>
+                    </div>
+                </div>
+
+                <!-- Marquee Left -->
+                <div class="col-lg-4">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-marquee" id="marqueeLeft"></div>
+                    </div>
+                </div>
+
+                <!-- Marquee Right -->
+                <div class="col-lg-4">
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-marquee reverse" id="marqueeRight"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+    <section class="faq-section section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="faq-image-container">
+                        <img src="img/faq.png" alt="faq" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Explore our comprehensive FAQ section to find answers to your branding
+                        questions</p>
+
+                    <div class="faq-timeline">
+                        <div class="faq-item active">
+                            <div class="faq-question">
+                                What is branding, and why is it important for my business?
+                                <i class="bi bi-plus-lg faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Branding encompasses the visual and verbal elements that represent your business,
+                                    including your logo, color scheme, messaging, and overall identity. It's important
+                                    because it helps differentiate your business from competitors, builds trust and
+                                    credibility with customers, and creates emotional connections that drive loyalty and
+                                    repeat business.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                How do I know if my brand needs a refresh or revitalization?
+                                <i class="bi bi-plus-lg faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Signs that your brand might need a refresh include outdated visuals, inconsistent
+                                    messaging, difficulty differentiating from competitors, or if your business has
+                                    evolved beyond its original branding. If your brand no longer reflects your
+                                    company's values, mission, or target audience, it's likely time for a
+                                    revitalization.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                What is the difference between a brand strategy and a brand identity?
+                                <i class="bi bi-plus-lg faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Brand strategy is the long-term plan for developing a successful brand, including
+                                    your brand's purpose, promise, and positioning. Brand identity is the collection of
+                                    visual elements that represent your brand, such as your logo, colors, typography,
+                                    and design system. Strategy guides the direction, while identity is how that
+                                    direction is visually expressed.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                How do I maintain consistency in my branding efforts?
+                                <i class="bi bi-plus-lg faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Maintaining brand consistency requires creating and following brand guidelines that
+                                    document your visual identity, voice, and messaging. Regularly audit your brand
+                                    touchpoints, train your team on proper usage, and use templates for common
+                                    materials. Consider appointing a brand guardian to oversee consistency across all
+                                    channels and communications.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                How long does it take to see results from branding initiatives?
+                                <i class="bi bi-plus-lg faq-icon"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Branding is a long-term investment. While some immediate recognition may occur with a
+                                    rebrand or new visual identity, the full impact of branding initiatives typically
+                                    takes 6-12 months to materialize. Consistent application and promotion of your brand
+                                    over time leads to increased awareness, recognition, and the business results you're
+                                    seeking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <div class="d-flex justify-content-start">
+                        <div class="footer-logo">
+                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our
+                        Company.
+                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with Our Digital
+                        Solutions.
+
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Our Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98677 37785<br>+91 98183 19568</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@brandingwaale.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana 121003</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <script src="js/scroll.js"></script>
+
+    <script src="js/swiper.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const imgSection = document.querySelector(".founder-img-section");
-            const imgContainer = document.querySelector(".founder-img-container");
-            const content = document.querySelector(".founder-content");
-            const image = document.querySelector(".founder-img");
-
-            // Set initial height for the container to match content
-            imgContainer.style.height = content.offsetHeight + "px";
-
-            function onScroll() {
-                const scrollY = window.scrollY;
-                const containerRect = imgContainer.getBoundingClientRect();
-                const containerTop = containerRect.top + scrollY;
-                const containerHeight = imgContainer.offsetHeight;
-                const imageHeight = image.offsetHeight;
-
-                // Calculate the boundaries for sticky behavior
-                const stickyStart = containerTop;
-                const stickyEnd = containerTop + containerHeight - imageHeight;
-
-                // Apply the appropriate positioning
-                if (scrollY >= stickyStart && scrollY <= stickyEnd) {
-                    // Sticky phase - image follows the scroll
-                    imgSection.style.position = "fixed";
-                    imgSection.style.top = "20px";
-                    imgSection.style.width = imgContainer.offsetWidth + "px";
-                } else if (scrollY > stickyEnd) {
-                    // Past the sticky end - image stays at the bottom of container
-                    imgSection.style.position = "absolute";
-                    imgSection.style.top = (containerHeight - imageHeight) + "px";
-                    imgSection.style.width = "100%";
-                } else {
-                    // Before the sticky start - image stays at the top of container
-                    imgSection.style.position = "absolute";
-                    imgSection.style.top = "0";
-                    imgSection.style.width = "100%";
-                }
-            }
-
-            // Update on scroll and resize
-            window.addEventListener("scroll", onScroll);
-            window.addEventListener("resize", function () {
-                // Update container height on resize
-                imgContainer.style.height = content.offsetHeight + "px";
-                onScroll();
+        // Initialize AOS animations
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                once: true,
+                mirror: false,
+                offset: 120,
+                easing: 'ease-out-cubic'
             });
-
-            // Initial call to set positions
-            onScroll();
         });
+
+
+
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all items
+                    faqItems.forEach(i => i.classList.remove('active'));
+
+                    // If the clicked item wasn't active, open it
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 

@@ -147,7 +147,7 @@
     <section class="journey-section   bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <h1>OUR JOURNEY</h1>
                     <p class="journey-text">
                         After five years of industry experience, Sandeep Gupta founded Brandingwaale Webtech in 2019
@@ -171,9 +171,15 @@
                     </p>
                 </div>
 
-                <div class="col-md-4">
-                    <img src="img/seven.png" alt="" class="img-fluid seven-years" alt="seven years">
-
+                <div class="col-md-5">
+                    <div class="counter-section d-flex justify-content-center align-items-center" id="counterSection">
+                        <div class="container text-center">
+                            <div class="counter" id="counter">01</div>
+                        </div>
+                        <div class="projects-counter" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="counter-text">Years Completed</div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -378,7 +384,57 @@
         </div>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/index.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const counterElement = document.getElementById('counter');
+            const counterSection = document.getElementById('counterSection');
+            let hasAnimated = false;
+
+            // Format number with leading zero
+            function formatNumber(num) {
+                return num < 10 ? '0' + num : num;
+            }
+
+            // Check if element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            // Animate counter
+            function animateCounter() {
+                if (!hasAnimated && isInViewport(counterSection)) {
+                    hasAnimated = true;
+                    let count = 1;
+
+                    const interval = setInterval(() => {
+                        counterElement.textContent = formatNumber(count);
+
+                        // Change color to orange when reaching 7
+                        if (count === 7) {
+                            counterElement.style.color = 'orange';
+                        }
+
+                        count++;
+                        if (count > 7) {
+                            clearInterval(interval);
+                        }
+                    }, 300); // Speed of animation (300ms between each number)
+                }
+            }
+
+            // Check on scroll
+            window.addEventListener('scroll', animateCounter);
+
+            // Check on initial load
+            animateCounter();
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const imgSection = document.querySelector(".founder-img-section");

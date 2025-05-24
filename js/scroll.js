@@ -123,3 +123,72 @@ function labelToScroll(timeline, label) {
     progress = timeline.labels[label] / timeline.duration();
   return st.start + (st.end - st.start) * progress;
 }
+
+$(".logo-section1")
+  .eq(0)
+  .slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
+
+$(".logo-section1")
+  .eq(1)
+  .slick({
+    rtl: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });

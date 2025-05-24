@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap');
+
+
 :root {
 
     --space-unit: 1em;
@@ -33,6 +36,10 @@ body {
     color: var(--text-color);
 }
 
+.counter {
+    font-family: 'Hanuman', serif;
+
+}
 
 .content-card:hover .custom-btn {
     background-color: var(--darker-bg);
@@ -1817,7 +1824,7 @@ a {
     -o-transition: 0.4s ease;
     transition: 0.4s ease;
     -webkit-transition: 0.4s ease;
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .scale {
@@ -2780,5 +2787,3 @@ label {
 html {
     scroll-behavior: smooth;
 }
-
-/*  */
