@@ -11,462 +11,536 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="css/index.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/viewer.css">
     <style>
-        .seo img {
-            height: 100%;
-            border-radius: 10px;
-            min-height: 300px;
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
         }
+
+        .nav-tabs {
+            border: none;
+            flex-direction: column;
+            margin-right: 30px;
+        }
+
+        .nav-tabs .nav-link {
+            color: #9e9e9e;
+            border: none;
+            padding: 10px 0;
+            transition: color 0.3s;
+            text-align: left;
+        }
+
+        .nav-tabs .nav-link:hover,
+        .nav-tabs .nav-link.active {
+            color: #ffffff;
+            background-color: transparent;
+            border: none;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-description {
+            color: #9e9e9e;
+        }
+
+        /* Hide portfolio items by default */
+        .tab-pane {
+            display: none;
+        }
+
+        /* Show active tab content */
+        .tab-pane.active {
+            display: block;
+        }
+
+
+
+
+        .portfolio-card {}
     </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-white border-bottom border-warning ">
-        <div class="container">
-            <!-- Branding -->
-            <a href="#" class="d-flex align-items-center text-decoration-none">
-                <img src="img/log.gif" class="logo">
-            </a>
 
-            <!-- Mobile toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <div class="logo-section">
+                <a class="logo" href="index.html">
+                    <img src="img/log.gif">
+                </a>
+            </div>
+
+            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
             </button>
 
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-                <ul class="navbar-nav gap-3">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="index.html">
-                            <i class="bi bi-house-door nav-icon mb-1"></i>
-                            Home
-                        </a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="about.html">
-                            <i class="bi bi-person nav-icon mb-1"></i>
-                            About
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button">
+                            Services
                         </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="service.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-code-slash"></i>
+
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DEVELOPMENT
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Crafting unique identities that resonate.</p>
+                                    </div>
+                                </a>
+
+                                <a href="service.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            MARKETING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Designing user-friendly experiences.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            PR & ADVERTISING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Building responsive and scalable websites.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-camera"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DESIGN
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Capturing visuals that tell your brand's story.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="portfolio.html">
-                            <i class="bi bi-briefcase nav-icon mb-1"></i>
-                            Portfolio
-                        </a>
+                        <a class="nav-link" href="service-details.html">Portfolio</a>
                     </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Creative Studio</a>
+                    </li> -->
+
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="">
-                            <i class="bi bi-gear nav-icon mb-1"></i>
-                            Service
-                        </a>
+                        <a class="nav-link" href="#">Careers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="contact.html">
-                            <i class="bi bi-envelope nav-icon mb-1"></i>
-                            Contact
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Resources
                         </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Blog
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Latest insights and industry trends.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Downloads
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Free resources and templates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
-    <section class="section bg-light">
+    <div class="section">
         <div class="container">
-
-
-            <div class="product-tabs">
-
-                <div class="product-tab active" data-tab="tab1">Website</div>
-                <div class="product-tab" data-tab="tab2">App</div>
-                <div class="product-tab" data-tab="tab3">Seo</div>
-
-            </div>
-
-
-
-
-            <div class="product-content active" id="tab1">
-                <section class="portfolio-grid">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Portfolio Item 1 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Portfolio Item 2 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Portfolio Item 3 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Portfolio Item 4 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Portfolio Item 5 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Portfolio Item 6 -->
-                            <div class="col-md-4">
-                                <div class="portfolio-item" onclick="openViewer('https://astroshivang.com/')">
-                                    <img src="img/midasia.png" alt="Fitness">
-                                    <div class="portfolio-overlay">
-                                        <div class="name-section">
-                                            <h3 class="portfolio-title">Fitness Tracker</h3>
-                                            <p class="portfolio-category">Health & Wellness</p>
-                                        </div>
-                                        <p>At Astro Shivang, we offer powerful, result-driven remedies through authentic
-                                            Vedic Puja, Anushthaan, and rituals.
-
-                                        </p>
-                                        <button class="view-btn">View Website</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="product-content" id="tab2">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class=" col-lg-4">
-
-
-
-                            <h2>SUCCESS DELIVERED</h2>
-                            <p>FOR OUR CLIENTS</p>
-                            <a class="view-btn">View App</a>
-
-                        </div>
-                        <div class="col-lg-8">
-
-                            <div class="swiper apps py-2">
-                                <!-- <img src="img/mobile.png" class="mobile-img-case"> -->
-
-                                <div class="swiper-wrapper">
-
-                                    <div class="swiper-slide">
-                                        <img src="img/mobilerrr-Copy.png" alt="app 1" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="apps-item">
-                                            <img src="img/mobilerrr-Copy.png" alt="app 2" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="apps-item">
-
-                                            <img src="img/mobilerrr-Copy.png" alt="app 3" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="apps-item">
-
-                                            <img src="img/mobilerrr-Copy.png" alt="app 4" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="apps-item">
-
-                                            <img src="img/mobilerrr-Copy.png" alt="app 1" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="apps-item">
-
-                                            <img src="img/mobilerrr-Copy.png" alt="app 2" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/mobilerrr-Copy.png" alt="app 3" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/mobilerrr-Copy.png" alt="app 4" />
-                                    </div>
-                                </div>
-
-
-
-                                <!-- Pagination -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Hero Section -->
+            <div class="row ">
+                <div class="col-md-6">
+                    <h1>Wow, Just Wow</h1>
+                </div>
+                <div class="col-md-6">
+                    <p>Here's just a sample of how we embody design-thinking and strategy to help
+                        you achieve your big dream.</p>
                 </div>
             </div>
 
-
-
-            <div class="product-content" id="tab3">
-
-                <div class="container">
-                    <div class="">
-                        <div class="sec-img">
-                            <img src="" class="img-fluid" alt="seo-1">
-                        </div>
-
-                        <div class="sec-img">
-                            <img src="" class="img-fluid" alt="seo-1">
-                        </div>
-
-                        <div class="sec-img">
-                            <img src="" class="img-fluid" alt="seo-1">
-                        </div>
-
-                        <div class="sec-img">
-                            <img src="" class="img-fluid" alt="seo-1">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+            <!-- Portfolio Section -->
 
         </div>
-        </div>
+    </div>
 
-
-        </div>
-        </div>
-        </div>
-    </section>
-
-
-
-
-
-    <footer class="footer-main">
+    <div class="portfolio-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 footer-col">
-                    <div class="d-flex justify-content-start">
-                        <div class="footer-logo">
-                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                <!-- Tabs on the left -->
+                <div class="col-md-3">
+                    <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                                type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding"
+                                type="button" role="tab" aria-controls="branding"
+                                aria-selected="false">Branding</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="packaging-tab" data-bs-toggle="tab" data-bs-target="#packaging"
+                                type="button" role="tab" aria-controls="packaging"
+                                aria-selected="false">Packaging</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product"
+                                type="button" role="tab" aria-controls="product" aria-selected="false">Product & App
+                                UI/UX</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="web-ui-tab" data-bs-toggle="tab" data-bs-target="#web-ui"
+                                type="button" role="tab" aria-controls="web-ui" aria-selected="false">Web UI/UX</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="web-dev-tab" data-bs-toggle="tab" data-bs-target="#web-dev"
+                                type="button" role="tab" aria-controls="web-dev" aria-selected="false">Web
+                                Development</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="shopify-tab" data-bs-toggle="tab" data-bs-target="#shopify"
+                                type="button" role="tab" aria-controls="shopify" aria-selected="false">Shopify</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="webflow-tab" data-bs-toggle="tab" data-bs-target="#webflow"
+                                type="button" role="tab" aria-controls="webflow" aria-selected="false">Webflow</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="photography-tab" data-bs-toggle="tab"
+                                data-bs-target="#photography" type="button" role="tab" aria-controls="photography"
+                                aria-selected="false">Photography</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video"
+                                type="button" role="tab" aria-controls="video" aria-selected="false">Video
+                                Production</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="ad-tab" data-bs-toggle="tab" data-bs-target="#ad" type="button"
+                                role="tab" aria-controls="ad" aria-selected="false">Ad Campaigns</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="award-tab" data-bs-toggle="tab" data-bs-target="#award"
+                                type="button" role="tab" aria-controls="award" aria-selected="false">Award
+                                Winning</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Portfolio items on the right -->
+                <div class="col-md-9">
+                    <div class="tab-content" id="portfolioTabContent">
+                        <!-- All Tab Content -->
+                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                            <div class="row g-4">
+                                <!-- Portfolio Item 1 -->
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/astro.png" alt="Adil Qadri">
+                                        </div>
+                                        <h3 class="portfolio-title">Astro shivang</h3>
+                                        <p class="portfolio-description">Where legacy lingers. Where scent is styled.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Portfolio Item 2 -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Nutrition Army">
+                                    </div>
+                                    <h3 class="portfolio-title">Nutrition Army</h3>
+                                    <p class="portfolio-description">Wellness that speaks. A store that listens.</p>
+                                </div>
+
+                                <!-- Portfolio Item 3 -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Project 3">
+                                    </div>
+                                    <h3 class="portfolio-title">Creative Studio</h3>
+                                    <p class="portfolio-description">Where ideas come to life. Design that inspires.</p>
+                                </div>
+
+                                <!-- Portfolio Item 4 -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Project 4">
+                                    </div>
+                                    <h3 class="portfolio-title">Tech Solutions</h3>
+                                    <p class="portfolio-description">Innovation at its finest. Technology that
+                                        transforms.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Branding Tab Content -->
+                        <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="branding-tab">
+                            <div class="row">
+                                <!-- Branding Item 1 -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Adil Qadri">
+                                    </div>
+                                    <h3 class="portfolio-title">Adil Qadri</h3>
+                                    <p class="portfolio-description">Where legacy lingers. Where scent is styled.</p>
+                                </div>
+
+                                <!-- Branding Item 2 -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Brand Project">
+                                    </div>
+                                    <h3 class="portfolio-title">Luxury Brand</h3>
+                                    <p class="portfolio-description">Elegance redefined. Premium experience.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Packaging Tab Content -->
+                        <div class="tab-pane fade" id="packaging" role="tabpanel" aria-labelledby="packaging-tab">
+                            <div class="row">
+                                <!-- Packaging Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Packaging Project">
+                                    </div>
+                                    <h3 class="portfolio-title">Eco Packaging</h3>
+                                    <p class="portfolio-description">Sustainable design. Earth-friendly solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product & App UI/UX Tab Content -->
+                        <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+                            <div class="row">
+                                <!-- Product Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="App UI/UX">
+                                    </div>
+                                    <h3 class="portfolio-title">Fitness App</h3>
+                                    <p class="portfolio-description">Intuitive design. Seamless experience.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web UI/UX Tab Content -->
+                        <div class="tab-pane fade" id="web-ui" role="tabpanel" aria-labelledby="web-ui-tab">
+                            <div class="row">
+                                <!-- Web UI/UX Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Web UI/UX">
+                                    </div>
+                                    <h3 class="portfolio-title">E-commerce Platform</h3>
+                                    <p class="portfolio-description">User-centered design. Conversion-focused interface.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web Development Tab Content -->
+                        <div class="tab-pane fade" id="web-dev" role="tabpanel" aria-labelledby="web-dev-tab">
+                            <div class="row">
+                                <!-- Web Development Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Web Development">
+                                    </div>
+                                    <h3 class="portfolio-title">Corporate Website</h3>
+                                    <p class="portfolio-description">Robust architecture. Scalable solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shopify Tab Content -->
+                        <div class="tab-pane fade" id="shopify" role="tabpanel" aria-labelledby="shopify-tab">
+                            <div class="row">
+                                <!-- Shopify Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Shopify Store">
+                                    </div>
+                                    <h3 class="portfolio-title">Nutrition Army</h3>
+                                    <p class="portfolio-description">Wellness that speaks. A store that listens.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Webflow Tab Content -->
+                        <div class="tab-pane fade" id="webflow" role="tabpanel" aria-labelledby="webflow-tab">
+                            <div class="row">
+                                <!-- Webflow Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Webflow Project">
+                                    </div>
+                                    <h3 class="portfolio-title">Creative Agency</h3>
+                                    <p class="portfolio-description">Dynamic interactions. Stunning animations.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Photography Tab Content -->
+                        <div class="tab-pane fade" id="photography" role="tabpanel" aria-labelledby="photography-tab">
+                            <div class="row">
+                                <!-- Photography Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Photography">
+                                    </div>
+                                    <h3 class="portfolio-title">Product Photography</h3>
+                                    <p class="portfolio-description">Capturing essence. Telling stories.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Production Tab Content -->
+                        <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                            <div class="row">
+                                <!-- Video Production Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Video Production">
+                                    </div>
+                                    <h3 class="portfolio-title">Brand Story</h3>
+                                    <p class="portfolio-description">Cinematic quality. Emotional connection.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ad Campaigns Tab Content -->
+                        <div class="tab-pane fade" id="ad" role="tabpanel" aria-labelledby="ad-tab">
+                            <div class="row">
+                                <!-- Ad Campaigns Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Ad Campaign">
+                                    </div>
+                                    <h3 class="portfolio-title">Holiday Campaign</h3>
+                                    <p class="portfolio-description">Strategic messaging. Targeted results.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Award Winning Tab Content -->
+                        <div class="tab-pane fade" id="award" role="tabpanel" aria-labelledby="award-tab">
+                            <div class="row">
+                                <!-- Award Winning Item -->
+                                <div class="col-md-6 portfolio-item">
+                                    <div class="portfolio-image">
+                                        <img src="https://placeholder.svg?height=250&width=400" alt="Award Winning">
+                                    </div>
+                                    <h3 class="portfolio-title">Design Excellence</h3>
+                                    <p class="portfolio-description">Award-winning creativity. Industry recognition.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our
-                        Company.
-                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with Our Digital
-                        Solutions.
-
-                    </p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-6 footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-col">
-                    <h4 class="footer-heading">Our Expertise</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Social Media Marketing</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+91 98677 37785<br>+91 98183 19568</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>sales@brandingwaale.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana 121003</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="copyright">Copyright © 2025 All rights reserved.
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="footer-bottom-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        function openViewer(url) {
-            const viewerUrl = 'viewer.html?url=' + encodeURIComponent(url);
-            window.open(viewerUrl, '_blank');
-        }
-    </script>
-
-    <script src="js/tabs.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            new Swiper(".apps", {
-                slidesPerView: 3,
-                spaceBetween: 5,
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false
-                },
-                pagination: false,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 2.5,
-                        spaceBetween: 20,
-                    },
-                },
-            });
-        });
-
-
-    </script>
-
-
-
-    <script src="js/index.js"></script>
-
-    <script src="js/scroll.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
