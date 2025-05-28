@@ -3,240 +3,170 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTA Section</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Gyrus for Government Agencies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .caption-text {
-            color: #8b5cf6;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #ffffff;
         }
 
-        .main-heading {
-            font-size: 48px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .description {
-            color: #6b7280;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        .badge-container {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-
-        .custom-badge {
-            background: #f3f4f6;
-            color: #374151;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .custom-badge:hover {
-            background: #e5e7eb;
-            color: #374151;
-            text-decoration: none;
-        }
-
-        .cta-button {
-            background: #6366f1;
+        .hero {
+            background-color: #0047ba;
             color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
+            padding: 60px 0;
+        }
+
+        .hero h1 span {
+            color: orange;
+        }
+
+        .btn-orange {
+            background-color: orange;
+            color: #fff;
+        }
+
+        .section-title {
             font-weight: 600;
-            font-size: 16px;
-            border: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
         }
 
-        .cta-button:hover {
-            background: #4f46e5;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        .benefits {
+            background-color: #f8f9fa;
+            padding: 40px 0;
         }
 
-        .button-description {
-            color: #9ca3af;
-            font-size: 14px;
-            margin-left: 16px;
+        .stats-box {
+            background: orange;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
         }
 
-        .pricing-preview {
-            position: absolute;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e5e7eb;
-            width: 280px;
+        .team-card img {
+            border-radius: 8px;
         }
 
-        .pricing-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-
-        .plan-name {
+        .team-card h6 {
+            margin-top: 10px;
             font-weight: 600;
-            color: #1f2937;
-            font-size: 16px;
-        }
-
-        .plan-type {
-            color: #10b981;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .plan-description {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1f2937;
-        }
-
-        .price-period {
-            color: #6b7280;
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        .usage-info {
-            color: #6b7280;
-            font-size: 14px;
-            margin: 16px 0;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 8px;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: #10b981;
-            width: 67%;
-            border-radius: 4px;
-        }
-
-        .more-options {
-            color: #6b7280;
-            font-size: 18px;
-            margin-left: 12px;
-        }
-
-        @media (max-width: 1200px) {
-            .pricing-preview {
-                position: static;
-                transform: none;
-                margin-top: 40px;
-                width: 100%;
-                max-width: 320px;
-            }
-
-            .cta-card {
-                padding: 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-heading {
-                font-size: 36px;
-            }
-
-            .cta-card {
-                padding: 30px;
-                margin: 20px;
-            }
-
-            .pricing-preview {
-                margin-top: 30px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <section class="cta-section">
+
+    <!-- HERO SECTION -->
+    <section class="hero text-center">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="cta-card">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <div class="caption-text">CAPTION HERE</div>
-                                <h1 class="main-heading">Call to action example</h1>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet consectetur integer consequat ex id tortor
-                                    molestiae accumsan sedmi sed porta auctor
-                                </p>
+            <h1>Gyrus LMS for <span>Government Agencies</span></h1>
+            <p class="lead">Empowering secure, scalable learning for public sector teams.</p>
+            <a href="#" class="btn btn-orange mt-3">Get Started</a>
+        </div>
+    </section>
 
-                                <div class="badge-container">
-                                    <a href="#" class="custom-badge">
-                                        <i class="fas fa-file-alt"></i>
-                                        SASS Template
-                                    </a>
-                                    <a href="#" class="custom-badge">
-                                        <i class="fas fa-globe"></i>
-                                        Flowbase.co/apex-collection
-                                    </a>
-                                </div>
+    <!-- BENEFITS SECTION -->
+    <section class="benefits text-center">
+        <div class="container">
+            <h2 class="section-title mb-4">Benefits of GyrusLMS for Government</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm rounded">✔ Scalable Infrastructure</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm rounded">✔ Compliance Ready</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm rounded">✔ Secure Deployment</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                <div class="d-flex align-items-center flex-wrap">
-                                    <button class="cta-button">
-                                        Get started
-                                    </button>
-                                    <span class="button-description">*short description can be added here.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pricing Preview Card -->
-
+    <!-- SOLUTIONS SECTION -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Tailored Solutions by GyrusLMS</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 border rounded">
+                        <h5>Learning Paths</h5>
+                        <p>Custom workflows for public sector development.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border rounded">
+                        <h5>Real-Time Reporting</h5>
+                        <p>Stay informed with dynamic performance analytics.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border rounded">
+                        <h5>Role-Based Access</h5>
+                        <p>Fine-grained user permissions for different departments.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- STATS SECTION -->
+    <section class="text-center py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3>25+</h3>
+                        <p>Government Clients</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3>100k+</h3>
+                        <p>Active Learners</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3>500+</h3>
+                        <p>Customized Modules</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-4">Meet The Crew</h2>
+            <p class="mb-5">Bring your passion. Discover your purpose.</p>
+            <div class="row g-4">
+                <div class="col-6 col-md-3 team-card">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Team">
+                    <h6>Jane Doe</h6>
+                    <small>Project Manager</small>
+                </div>
+                <div class="col-6 col-md-3 team-card">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Team">
+                    <h6>John Smith</h6>
+                    <small>Lead Designer</small>
+                </div>
+                <div class="col-6 col-md-3 team-card">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Team">
+                    <h6>Sarah Lee</h6>
+                    <small>UX Specialist</small>
+                </div>
+                <div class="col-6 col-md-3 team-card">
+                    <img src="https://via.placeholder.com/150" class="img-fluid" alt="Team">
+                    <h6>Mark Ray</h6>
+                    <small>Developer</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

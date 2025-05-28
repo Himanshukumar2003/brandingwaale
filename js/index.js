@@ -1,3 +1,36 @@
+// Enhanced hover effects for desktop
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    const menu = dropdown.querySelector(".dropdown-menu");
+    let hoverTimeout;
+
+    dropdown.addEventListener("mouseenter", function () {
+      clearTimeout(hoverTimeout);
+      menu.style.display = "block";
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      hoverTimeout = setTimeout(() => {
+        menu.style.display = "none";
+      }, 100);
+    });
+  });
+
+  // Mobile dropdown toggle
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        const menu = this.nextElementSibling;
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
+});
+
 // type
 
 var text = "Looking for a partner that transforms your business into a brand?";
