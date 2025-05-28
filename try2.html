@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wow, Just Wow - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-section {
+            padding: 80px 0 40px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #00cc99;
+            margin-top: 15px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .nav-tabs {
+            border: none;
+            flex-direction: column;
+            margin-right: 30px;
+        }
+
+        .nav-tabs .nav-link {
+            color: #9e9e9e;
+            border: none;
+            padding: 10px 0;
+            transition: color 0.3s;
+            text-align: left;
+        }
+
+        .nav-tabs .nav-link:hover,
+        .nav-tabs .nav-link.active {
+            color: #ffffff;
+            background-color: transparent;
+            border: none;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-description {
+            color: #9e9e9e;
+        }
+
+        /* Hide portfolio items by default */
+        .tab-pane {
+            display: none;
+        }
+
+        /* Show active tab content */
+        .tab-pane.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="row hero-section">
+            <div class="col-md-6">
+                <h1 class="hero-title">Wow, Just Wow</h1>
+            </div>
+            <div class="col-md-6">
+                <p class="hero-description">Here's just a sample of how we embody design-thinking and strategy to help
+                    you achieve your big dream.</p>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <!-- Tabs on the left -->
+            <div class="col-md-2">
+                <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding"
+                            type="button" role="tab" aria-controls="branding" aria-selected="false">Branding</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="packaging-tab" data-bs-toggle="tab" data-bs-target="#packaging"
+                            type="button" role="tab" aria-controls="packaging" aria-selected="false">Packaging</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product"
+                            type="button" role="tab" aria-controls="product" aria-selected="false">Product & App
+                            UI/UX</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-ui-tab" data-bs-toggle="tab" data-bs-target="#web-ui"
+                            type="button" role="tab" aria-controls="web-ui" aria-selected="false">Web UI/UX</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="web-dev-tab" data-bs-toggle="tab" data-bs-target="#web-dev"
+                            type="button" role="tab" aria-controls="web-dev" aria-selected="false">Web
+                            Development</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="shopify-tab" data-bs-toggle="tab" data-bs-target="#shopify"
+                            type="button" role="tab" aria-controls="shopify" aria-selected="false">Shopify</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="webflow-tab" data-bs-toggle="tab" data-bs-target="#webflow"
+                            type="button" role="tab" aria-controls="webflow" aria-selected="false">Webflow</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="photography-tab" data-bs-toggle="tab" data-bs-target="#photography"
+                            type="button" role="tab" aria-controls="photography"
+                            aria-selected="false">Photography</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video"
+                            type="button" role="tab" aria-controls="video" aria-selected="false">Video
+                            Production</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ad-tab" data-bs-toggle="tab" data-bs-target="#ad" type="button"
+                            role="tab" aria-controls="ad" aria-selected="false">Ad Campaigns</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="award-tab" data-bs-toggle="tab" data-bs-target="#award"
+                            type="button" role="tab" aria-controls="award" aria-selected="false">Award Winning</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Portfolio items on the right -->
+            <div class="col-md-10">
+                <div class="tab-content" id="portfolioTabContent">
+                    <!-- All Tab Content -->
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                        <div class="row">
+                            <!-- Portfolio Item 1 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Adil Qadri">
+                                </div>
+                                <h3 class="portfolio-title">Adil Qadri</h3>
+                                <p class="portfolio-description">Where legacy lingers. Where scent is styled.</p>
+                            </div>
+
+                            <!-- Portfolio Item 2 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Nutrition Army">
+                                </div>
+                                <h3 class="portfolio-title">Nutrition Army</h3>
+                                <p class="portfolio-description">Wellness that speaks. A store that listens.</p>
+                            </div>
+
+                            <!-- Portfolio Item 3 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Project 3">
+                                </div>
+                                <h3 class="portfolio-title">Creative Studio</h3>
+                                <p class="portfolio-description">Where ideas come to life. Design that inspires.</p>
+                            </div>
+
+                            <!-- Portfolio Item 4 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Project 4">
+                                </div>
+                                <h3 class="portfolio-title">Tech Solutions</h3>
+                                <p class="portfolio-description">Innovation at its finest. Technology that transforms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Branding Tab Content -->
+                    <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="branding-tab">
+                        <div class="row">
+                            <!-- Branding Item 1 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Adil Qadri">
+                                </div>
+                                <h3 class="portfolio-title">Adil Qadri</h3>
+                                <p class="portfolio-description">Where legacy lingers. Where scent is styled.</p>
+                            </div>
+
+                            <!-- Branding Item 2 -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Brand Project">
+                                </div>
+                                <h3 class="portfolio-title">Luxury Brand</h3>
+                                <p class="portfolio-description">Elegance redefined. Premium experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Packaging Tab Content -->
+                    <div class="tab-pane fade" id="packaging" role="tabpanel" aria-labelledby="packaging-tab">
+                        <div class="row">
+                            <!-- Packaging Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Packaging Project">
+                                </div>
+                                <h3 class="portfolio-title">Eco Packaging</h3>
+                                <p class="portfolio-description">Sustainable design. Earth-friendly solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product & App UI/UX Tab Content -->
+                    <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+                        <div class="row">
+                            <!-- Product Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="App UI/UX">
+                                </div>
+                                <h3 class="portfolio-title">Fitness App</h3>
+                                <p class="portfolio-description">Intuitive design. Seamless experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web UI/UX Tab Content -->
+                    <div class="tab-pane fade" id="web-ui" role="tabpanel" aria-labelledby="web-ui-tab">
+                        <div class="row">
+                            <!-- Web UI/UX Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Web UI/UX">
+                                </div>
+                                <h3 class="portfolio-title">E-commerce Platform</h3>
+                                <p class="portfolio-description">User-centered design. Conversion-focused interface.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Tab Content -->
+                    <div class="tab-pane fade" id="web-dev" role="tabpanel" aria-labelledby="web-dev-tab">
+                        <div class="row">
+                            <!-- Web Development Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Web Development">
+                                </div>
+                                <h3 class="portfolio-title">Corporate Website</h3>
+                                <p class="portfolio-description">Robust architecture. Scalable solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shopify Tab Content -->
+                    <div class="tab-pane fade" id="shopify" role="tabpanel" aria-labelledby="shopify-tab">
+                        <div class="row">
+                            <!-- Shopify Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Shopify Store">
+                                </div>
+                                <h3 class="portfolio-title">Nutrition Army</h3>
+                                <p class="portfolio-description">Wellness that speaks. A store that listens.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Webflow Tab Content -->
+                    <div class="tab-pane fade" id="webflow" role="tabpanel" aria-labelledby="webflow-tab">
+                        <div class="row">
+                            <!-- Webflow Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Webflow Project">
+                                </div>
+                                <h3 class="portfolio-title">Creative Agency</h3>
+                                <p class="portfolio-description">Dynamic interactions. Stunning animations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Photography Tab Content -->
+                    <div class="tab-pane fade" id="photography" role="tabpanel" aria-labelledby="photography-tab">
+                        <div class="row">
+                            <!-- Photography Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Photography">
+                                </div>
+                                <h3 class="portfolio-title">Product Photography</h3>
+                                <p class="portfolio-description">Capturing essence. Telling stories.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Production Tab Content -->
+                    <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                        <div class="row">
+                            <!-- Video Production Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Video Production">
+                                </div>
+                                <h3 class="portfolio-title">Brand Story</h3>
+                                <p class="portfolio-description">Cinematic quality. Emotional connection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Campaigns Tab Content -->
+                    <div class="tab-pane fade" id="ad" role="tabpanel" aria-labelledby="ad-tab">
+                        <div class="row">
+                            <!-- Ad Campaigns Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Ad Campaign">
+                                </div>
+                                <h3 class="portfolio-title">Holiday Campaign</h3>
+                                <p class="portfolio-description">Strategic messaging. Targeted results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Award Winning Tab Content -->
+                    <div class="tab-pane fade" id="award" role="tabpanel" aria-labelledby="award-tab">
+                        <div class="row">
+                            <!-- Award Winning Item -->
+                            <div class="col-md-6 portfolio-item">
+                                <div class="portfolio-image">
+                                    <img src="https://placeholder.svg?height=250&width=400" alt="Award Winning">
+                                </div>
+                                <h3 class="portfolio-title">Design Excellence</h3>
+                                <p class="portfolio-description">Award-winning creativity. Industry recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
