@@ -130,6 +130,12 @@
             padding-bottom: 20px;
             border-bottom: 4px solid green;
         }
+
+
+        .slider {
+            position: sticky;
+            top: 20px;
+        }
     </style>
 
 </head>
@@ -302,43 +308,32 @@
             <div class="row py-2">
                 <!-- Tabs on the left -->
                 <div class="col-md-3">
-                    <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="website-tab" data-bs-toggle="tab"
-                                data-bs-target="#website" type="button" role="tab" aria-controls="website"
-                                aria-selected="true">Website</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="webportal-tab" data-bs-toggle="tab" data-bs-target="#webportal"
-                                type="button" role="tab" aria-controls="webportal" aria-selected="false">Web
-                                Portal</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ecommerce-tab" data-bs-toggle="tab" data-bs-target="#ecommerce"
-                                type="button" role="tab" aria-controls="ecommerce"
-                                aria-selected="false">E-commerce</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="mobileapp-tab" data-bs-toggle="tab" data-bs-target="#mobileapp"
-                                type="button" role="tab" aria-controls="mobileapp" aria-selected="false">Mobile
-                                Application</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="socialmedia-tab" data-bs-toggle="tab"
-                                data-bs-target="#socialmedia" type="button" role="tab" aria-controls="socialmedia"
-                                aria-selected="false">Social Media</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="seo-tab" data-bs-toggle="tab" data-bs-target="#seo"
-                                type="button" role="tab" aria-controls="seo" aria-selected="false">Search Engine
-                                Optimization</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="gmb-tab" data-bs-toggle="tab" data-bs-target="#gmb"
-                                type="button" role="tab" aria-controls="gmb" aria-selected="false">GMB
-                                Optimization</button>
-                        </li>
-                    </ul>
+                    <div class="slider">
+                        <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="website-tab" data-bs-toggle="tab"
+                                    data-bs-target="#website" type="button" role="tab" aria-controls="website"
+                                    aria-selected="true">Development</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="webportal-tab" data-bs-toggle="tab"
+                                    data-bs-target="#webportal" type="button" role="tab" aria-controls="webportal"
+                                    aria-selected="false">Marketing</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="ecommerce-tab" data-bs-toggle="tab"
+                                    data-bs-target="#ecommerce" type="button" role="tab" aria-controls="ecommerce"
+                                    aria-selected="false">Pr & Advertising</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="mobileapp-tab" data-bs-toggle="tab"
+                                    data-bs-target="#mobileapp" type="button" role="tab" aria-controls="mobileapp"
+                                    aria-selected="false">Design
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Portfolio items on the right -->
@@ -348,6 +343,20 @@
                         <div class="tab-pane fade show active" id="website" role="tabpanel"
                             aria-labelledby="website-tab">
                             <div class="row">
+                                <div class="pb-5">
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-start">
+                                                <h1 class="highlight-text"> <span>Website</span></h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Here's just a sample of how we embody design-thinking and strategy to
+                                                help
+                                                you achieve your big dream.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6 ">
                                     <div class="portfolio-card">
                                         <div class="portfolio-image">
@@ -366,8 +375,9 @@
                                     <div class="portfolio-image">
                                         <img src="img/potal/asset-12.png" alt="Web Portal" class="img-fluid" />
                                     </div>
-                                    <h4 class="portfolio-title">Portal Sample</h4>
-                                    <p class="portfolio-description">Web portal for user services and management.
+                                    <h4 class="portfolio-title">Creative Converts</h4>
+                                    <p class="portfolio-description">Creative Converters is an Australian-based digital
+                                        agency specializing in TikTok advertising and content creation.
                                     </p>
                                 </div>
 
@@ -375,17 +385,52 @@
                                     <div class="portfolio-image">
                                         <img src="img/potal/asset-14.png" alt="E-commerce" class="img-fluid" />
                                     </div>
-                                    <h4 class="portfolio-title">E-commerce Project</h4>
-                                    <p class="portfolio-description">Responsive online shopping experience.</p>
+                                    <h4 class="portfolio-title">Midasia Routes</h4>
+                                    <p class="portfolio-description">Midasia Routes is a travel company specializing in
+                                        curated journeys across Asia and the Middle East.</p>
                                 </div>
 
                                 <div class="col-md-6 portfolio-card">
                                     <div class="portfolio-image">
                                         <img src="img/potal/asset-13.png" alt="Social Media" class="img-fluid" />
                                     </div>
-                                    <h4 class="portfolio-title">Social Media Campaign</h4>
-                                    <p class="portfolio-description">Engaging campaigns to boost online presence.
+                                    <h4 class="portfolio-title">Harisons Furnishings</h4>
+                                    <p class="portfolio-description">Harisons Furnishings is a premier Indian home
+                                        furnishings brand renowned for its luxury offerings and bespoke design
+                                        solutions.
                                     </p>
+                                </div>
+                            </div>
+
+                            <div class="webportal">
+                                <div class="py-5">
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-start">
+                                                <h1 class="highlight-text"> <span>Web Portal</span></h1>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Here's just a sample of how we embody design-thinking and strategy to
+                                                help
+                                                you achieve your big dream.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-9.png" alt="Astro Shivang" class="img-fluid" />
+                                        </div>
+
+                                        <h4 class="portfolio-title">Infrakeys </h4>
+                                        <p class="portfolio-description">Infrakeys is a construction and infrastructure
+                                            solutions provider based in Faridabad, Haryana, India. </p>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -393,86 +438,100 @@
                         <!-- Web Portal Tab Content -->
                         <div class="tab-pane fade" id="webportal" role="tabpanel" aria-labelledby="webportal-tab">
                             <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-12.png" alt="Web Portal" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Portal Sample</h4>
-                                    <p class="portfolio-description">Web portal for user services and management.</p>
-                                </div>
-                            </div>
-                        </div>
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-9.png" alt="Astro Shivang" class="img-fluid" />
+                                        </div>
 
-                        <!-- E-commerce Tab Content -->
-                        <div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="ecommerce-tab">
-                            <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-14.png" alt="E-commerce" class="img-fluid" />
+                                        <h4 class="portfolio-title">Infrakeys </h4>
+                                        <p class="portfolio-description">Infrakeys is a construction and infrastructure
+                                            solutions provider based in Faridabad, Haryana, India. </p>
                                     </div>
-                                    <h4 class="portfolio-title">E-commerce Project</h4>
-                                    <p class="portfolio-description">Responsive online shopping experience.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Mobile App Tab Content -->
-                        <div class="tab-pane fade" id="mobileapp" role="tabpanel" aria-labelledby="mobileapp-tab">
-                            <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-13.png" alt="Mobile App" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Mobile App Design</h4>
-                                    <p class="portfolio-description">Modern and sleek app UI for mobile devices.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Social Media Tab Content -->
-                        <div class="tab-pane fade" id="socialmedia" role="tabpanel" aria-labelledby="socialmedia-tab">
-                            <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/social.png" alt="Social Media" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Social Media Campaign</h4>
-                                    <p class="portfolio-description">Engaging campaigns to boost online presence.</p>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
+                                        </div>
 
-                        <!-- SEO Tab Content -->
-                        <div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="seo-tab">
-                            <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/seo.png" alt="SEO" class="img-fluid" />
+                                        <h4 class="portfolio-title">Astro Shivang</h4>
+                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
+                                            Vedic
+                                            solutions company.</p>
                                     </div>
-                                    <h4 class="portfolio-title">SEO Strategy</h4>
-                                    <p class="portfolio-description">Optimized content and structure for search engines.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- GMB Tab Content -->
-                        <div class="tab-pane fade" id="gmb" role="tabpanel" aria-labelledby="gmb-tab">
-                            <div class="row">
-                                <div class="col-md-6 portfolio-item">
-                                    <div class="portfolio-image">
-                                        <img src="img/gmb.png" alt="GMB" class="img-fluid" />
+
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
+                                        </div>
+
+                                        <h4 class="portfolio-title">Astro Shivang</h4>
+                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
+                                            Vedic
+                                            solutions company.</p>
                                     </div>
-                                    <h4 class="portfolio-title">GMB Optimization</h4>
-                                    <p class="portfolio-description">Enhanced visibility with Google My Business
-                                        updates.</p>
+
+
+                                </div>
+
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
+                                        </div>
+
+                                        <h4 class="portfolio-title">Astro Shivang</h4>
+                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
+                                            Vedic
+                                            solutions company.</p>
+                                    </div>
+
+
                                 </div>
                             </div>
+
+
+                            <!-- E-commerce Tab Content -->
+                            <div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="ecommerce-tab">
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-14.png" alt="E-commerce" class="img-fluid" />
+                                        </div>
+                                        <h4 class="portfolio-title">E-commerce Project</h4>
+                                        <p class="portfolio-description">Responsive online shopping experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mobile App Tab Content -->
+                            <div class="tab-pane fade" id="mobileapp" role="tabpanel" aria-labelledby="mobileapp-tab">
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-13.png" alt="Mobile App" class="img-fluid" />
+                                        </div>
+                                        <h4 class="portfolio-title">Mobile App Design</h4>
+                                        <p class="portfolio-description">Modern and sleek app UI for mobile devices.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
-                    </div> <!-- End of Tab Content -->
-                </div> <!-- End of Right Column -->
-            </div> <!-- End of Row -->
-        </div> <!-- End of Container -->
+                    </div>
+                </div> <!-- End of Tab Content -->
+            </div>
+        </div> <!-- End of Row -->
+    </div>
     </div>
     <footer class="footer-main">
         <div class="container">
