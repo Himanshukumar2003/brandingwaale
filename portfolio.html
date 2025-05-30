@@ -9,135 +9,326 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/viewer.css">
+
     <style>
+        :root {
+            --accent-color: #ffc107;
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2a2a2a;
+            --bg-card: #333333;
+            --text-color: #000000;
+            --text-light: #ffffff;
+            --text-muted: #aaaaaa;
+            --text-gray: #cccccc;
+        }
+
         body {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .nav-tabs {
+        /* Portfolio Container */
+        .portfolio-container {
+            background-color: var(--bg-secondary);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .main-heading h2 {
+            position: relative;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .main-heading h2::after {
+            position: absolute;
+            content: "";
+            bottom: -15px;
+            width: 100px;
+            left: 0;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Services Sidebar Styles */
+        .services-sidebar {
+            background-color: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .category-item {
+            margin-bottom: 10px;
+        }
+
+        .category-btn {
+            width: 100%;
+            text-align: left;
+            background: transparent;
             border: none;
-            flex-direction: column;
-            margin-right: 30px;
+            color: var(--text-gray);
+            font-size: 18px;
+            font-weight: 500;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
         }
 
-        .nav-tabs .nav-link:hover,
-        .nav-tabs .nav-link.active {
-            color: #ffffff;
-            background-color: transparent;
+        .category-btn:hover,
+        .category-btn.active {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .category-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5);
+        }
+
+        .subcategory-list {
+            display: none;
+            padding-left: 20px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .subcategory-list.show {
+            display: block;
+        }
+
+        .subcategory-btn {
+            width: 100%;
+            text-align: left;
+            background: transparent;
             border: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .portfolio-item {
+        .subcategory-btn:hover,
+        .subcategory-btn.active {
+            background-color: var(--bg-card);
+            color: var(--accent-color);
+        }
+
+        .subcategory-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.3);
+        }
+
+        /* Portfolio Content Styles */
+        .portfolio-content {
+            background-color: var(--bg-secondary);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .portfolio-grid {
+            display: none;
+        }
+
+        .portfolio-grid.active {
+            display: block;
+        }
+
+        .category-header {
+            text-align: left;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .category-header h2 {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .category-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .subcategory-header {
             margin-bottom: 30px;
-            transition: transform 0.3s;
+            padding: 20px;
+            background-color: var(--bg-card);
+            border-radius: 10px;
         }
 
-        .portfolio-item:hover {
+        .subcategory-header h3 {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .subcategory-header p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* Portfolio Card Styles */
+        .portfolio-card {
+            background-color: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+        }
+
+        .portfolio-card:hover {
             transform: translateY(-5px);
+            border-color: var(--accent-color);
         }
 
         .portfolio-image {
-            border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 15px;
+            object-fit: contain;
         }
 
         .portfolio-image img {
             width: 100%;
-            height: auto;
-            min-height: 300px;
             object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+
+        .pr-logo img {
+            height: auto;
+        }
+
+        .pr-logo {
+            height: auto;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-card-body {
+            padding: 20px;
         }
 
         .portfolio-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-light);
         }
 
         .portfolio-description {
-            color: #9e9e9e;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
 
-        /* Hide portfolio items by default */
-        .tab-pane {
-            display: none;
+        .portfolio-link {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
-        /* Show active tab content */
-        .tab-pane.active {
+        .portfolio-link:hover {
+            background-color: #e0a800;
+            color: var(--text-color);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-sidebar {
+                margin-bottom: 30px;
+                position: relative;
+            }
+
+            .portfolio-content {
+                padding: 20px;
+            }
+
+            .portfolio-container {
+                padding: 20px;
+            }
+
+            .main-heading h2 {
+                font-size: 1.8rem;
+            }
+
+            .category-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .subcategory-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: all 0.3s ease;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e0a800;
+        }
+
+
+        /* Section anchors */
+        .section-anchor {
             display: block;
-        }
-
-
-        .portfolio-card {
-            display: flex;
-            gap: 8px;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .portfolio-card:hover img {
-            transform: translateY(-10px);
-        }
-
-        .portfolio-card h4 {
-            color: white;
-            font-weight: 600
-        }
-
-
-        .portfolio-card img {
-            background-color: white;
-            transition: all 0.5s;
-
-        }
-
-
-
-        .nav-tabs .nav-link {
-            color: #999999 !important;
-            fill: #999999;
-            padding-top: 10;
-            text-align: left;
-            font-size: 21px;
-            font-weight: 500;
-            border: none
-        }
-
-
-        .portfolio-contanier {
-            padding: 60px;
-            background-color: #333333;
-            border-radius: 40px;
-        }
-
-        .portfolio-contanier h1 {
-            padding-bottom: 20px;
-            border-bottom: 4px solid green;
-        }
-
-
-        .slider {
-            position: sticky;
-            top: 20px;
+            position: relative;
+            top: -100px;
+            visibility: hidden;
         }
     </style>
-
 </head>
 
 <body>
@@ -169,7 +360,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <div class="services-grid">
-                                <a href="service.html" class="service-item">
+                                <a href="#" class="service-item">
                                     <div class="service-icon">
                                         <i class="bi bi-code-slash"></i>
 
@@ -184,7 +375,7 @@
                                     </div>
                                 </a>
 
-                                <a href="service.html" class="service-item">
+                                <a href="#" class="service-item">
                                     <div class="service-icon">
                                         <i class="bi bi-layout-text-window-reverse"></i>
                                     </div>
@@ -218,7 +409,7 @@
                                     </div>
                                     <div class="service-content">
                                         <h6>
-                                            Branding
+                                            DESIGN
                                             <span class="service-arrow">↗</span>
                                         </h6>
                                         <p>Capturing visuals that tell your brand's story.</p>
@@ -229,7 +420,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service-details.html">Portfolio</a>
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                     </li>
 
                     <!-- <li class="nav-item">
@@ -280,259 +471,1101 @@
             </div>
         </div>
     </nav>
-
-    <div class="section portfolio-header">
+    <div class="container-fluid py-5">
+        <!-- Portfolio Header -->
         <div class="container">
-            <!-- Hero Section -->
-            <div class="portfolio-contanier">
-                <div class="row ">
+            <div class="portfolio-container">
+                <div class="row">
                     <div class="col-md-6">
-                        <div class="d-flex justify-content-start">
-                            <h1>Wow, Just Wow</h1>
+                        <div class="main-heading">
+                            <h2>Wow, Just Wow</h2>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <p>Here's just a sample of how we embody design-thinking and strategy to help
+                        <p class="text-white">Here's just a sample of how we embody design-thinking and strategy to help
                             you achieve your big dream.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Portfolio Section -->
+            <div class="row g-4">
+                <!-- Services Sidebar -->
+                <div class="col-md-4">
+                    <div class="services-sidebar">
+                        <!-- All Projects Button -->
+                        <div class="category-item">
+                            <button class="category-btn active" onclick="showAllProjects()">
+                                <span><i class="bi bi-grid-fill me-2"></i>All</span>
+                            </button>
+                        </div>
 
-        </div>
-    </div>
-
-    <div class="portfolio-section">
-        <div class="container">
-            <div class="row py-2">
-                <!-- Tabs on the left -->
-                <div class="col-md-3">
-                    <div class="slider">
-                        <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="website-tab" data-bs-toggle="tab"
-                                    data-bs-target="#website" type="button" role="tab" aria-controls="website"
-                                    aria-selected="true">Development</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="webportal-tab" data-bs-toggle="tab"
-                                    data-bs-target="#webportal" type="button" role="tab" aria-controls="webportal"
-                                    aria-selected="false">Marketing</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="ecommerce-tab" data-bs-toggle="tab"
-                                    data-bs-target="#ecommerce" type="button" role="tab" aria-controls="ecommerce"
-                                    aria-selected="false">Pr & Advertising</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="mobileapp-tab" data-bs-toggle="tab"
-                                    data-bs-target="#mobileapp" type="button" role="tab" aria-controls="mobileapp"
-                                    aria-selected="false">Design
+                        <!-- Development Category -->
+                        <div class="category-item">
+                            <button class="category-btn" onclick="toggleCategory('development')">
+                                <span><i class="bi bi-code-slash me-2"></i>DEVELOPMENT</span>
+                                <i class="bi bi-chevron-down" id="development-icon"></i>
+                            </button>
+                            <div class="subcategory-list" id="development-list">
+                                <button class="subcategory-btn" onclick="showSubcategory('website-development')">
+                                    Website Designing & Development
                                 </button>
-                            </li>
+                                <button class="subcategory-btn" onclick="showSubcategory('web-application')">
+                                    Web Application Development
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('web-portals')">
+                                    Web Portals Development
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('ecommerce')">
+                                    E-commerce
+                                </button>
+                            </div>
+                        </div>
 
-                        </ul>
+                        <!-- Marketing Category -->
+                        <div class="category-item">
+                            <button class="category-btn" onclick="toggleCategory('marketing')">
+                                <span><i class="bi bi-graph-up me-2"></i>MARKETING</span>
+                                <i class="bi bi-chevron-down" id="marketing-icon"></i>
+                            </button>
+                            <div class="subcategory-list" id="marketing-list">
+                                <button class="subcategory-btn" onclick="showSubcategory('seo-sem')">
+                                    SMM | SEO | SEM | SMO
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('gmb-optimization')">
+                                    Google My Business (GMB) Optimization
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('whatsapp-marketing')">
+                                    WhatsApp Marketing & Automation
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('whatsapp-api')">
+                                    WhatsApp API Integration
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- PR & Advertising Category -->
+                        <div class="category-item">
+                            <button class="category-btn" onclick="toggleCategory('advertising')">
+                                <span><i class="bi bi-megaphone me-2"></i>PR & ADVERTISING</span>
+                                <i class="bi bi-chevron-down" id="advertising-icon"></i>
+                            </button>
+                            <div class="subcategory-list" id="advertising-list">
+                                <button class="subcategory-btn" onclick="showSubcategory('media-buying')">
+                                    Media Buying
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('print-media')">
+                                    Print Media Advertising
+                                </button>
+                                <button class="subcategory-btn" onclick="showSubcategory('digital-advertising')">
+                                    Mobile Advertising, Radio, Cinema
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Design Category -->
+                        <div class="category-item">
+                            <button class="category-btn" onclick="toggleCategory('design')">
+                                <span><i class="bi bi-palette me-2"></i>DESIGN</span>
+                                <i class="bi bi-chevron-down" id="design-icon"></i>
+                            </button>
+                            <div class="subcategory-list" id="design-list">
+                                <button class="subcategory-btn" onclick="showSubcategory('logo-design')">
+                                    Logo Designing
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Portfolio items on the right -->
-                <div class="col-md-9">
-                    <div class="tab-content" id="portfolioTabContent">
-                        <!-- Website Tab Content -->
-                        <div class="tab-pane fade show active" id="website" role="tabpanel"
-                            aria-labelledby="website-tab">
-                            <div class="row">
-                                <div class="pb-5">
-                                    <div class="row ">
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-start">
-                                                <h1 class="highlight-text"> <span>Website</span></h1>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Here's just a sample of how we embody design-thinking and strategy to
-                                                help
-                                                you achieve your big dream.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <div class="portfolio-card">
-                                        <div class="portfolio-image">
-                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
-                                        </div>
-
-                                        <h4 class="portfolio-title">Astro Shivang</h4>
-                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
-                                            Vedic
-                                            solutions company.</p>
-                                    </div>
-
-
-                                </div>
-                                <div class="col-md-6 portfolio-card">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-12.png" alt="Web Portal" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Creative Converts</h4>
-                                    <p class="portfolio-description">Creative Converters is an Australian-based digital
-                                        agency specializing in TikTok advertising and content creation.
-                                    </p>
-                                </div>
-
-                                <div class="col-md-6 portfolio-card">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-14.png" alt="E-commerce" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Midasia Routes</h4>
-                                    <p class="portfolio-description">Midasia Routes is a travel company specializing in
-                                        curated journeys across Asia and the Middle East.</p>
-                                </div>
-
-                                <div class="col-md-6 portfolio-card">
-                                    <div class="portfolio-image">
-                                        <img src="img/potal/asset-13.png" alt="Social Media" class="img-fluid" />
-                                    </div>
-                                    <h4 class="portfolio-title">Harisons Furnishings</h4>
-                                    <p class="portfolio-description">Harisons Furnishings is a premier Indian home
-                                        furnishings brand renowned for its luxury offerings and bespoke design
-                                        solutions.
-                                    </p>
-                                </div>
+                <!-- Portfolio Content -->
+                <div class="col-md-8">
+                    <div class="portfolio-content">
+                        <!-- Default View - All Projects -->
+                        <div id="default-view" class="portfolio-grid active">
+                            <div class="subcategory-header">
+                                <h3>All Projects</h3>
+                                <p>Explore all our service categories and successful project implementations.</p>
                             </div>
-
-                            <div class="webportal">
-                                <div class="py-5">
-                                    <div class="row ">
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-start">
-                                                <h1 class="highlight-text"> <span>Web Portal</span></h1>
-                                            </div>
+                            <div class="row g-4" id="all-projects-grid">
+                                <!-- Website Development Projects -->
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-1.png" alt="Astro Shivang" loading="lazy">
                                         </div>
-                                        <div class="col-md-6">
-                                            <p>Here's just a sample of how we embody design-thinking and strategy to
-                                                help
-                                                you achieve your big dream.</p>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Astro Shivang</h4>
+                                            <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
+                                                Vedic solutions company offering comprehensive astrological services.
+                                            </p>
+                                            <a href="#" class="portfolio-link">View Project</a>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-12.png" alt="Creative Converts" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Creative Converts</h4>
+                                            <p class="portfolio-description">Australian-based digital agency
+                                                specializing in TikTok advertising and content creation.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-1.png" alt="E-commerce SEO Success" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">E-commerce SEO Success</h4>
+                                            <p class="portfolio-description">Increased organic traffic by 300% for a
+                                                leading e-commerce platform through strategic SEO.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="col-md-6 ">
                                     <div class="portfolio-card">
                                         <div class="portfolio-image">
-                                            <img src="img/potal/asset-9.png" alt="Astro Shivang" class="img-fluid" />
+                                            <img src="img/pr-logo/abp.webp" alt="Media Buying" loading="lazy">
                                         </div>
-
-                                        <h4 class="portfolio-title">Infrakeys </h4>
-                                        <p class="portfolio-description">Infrakeys is a construction and infrastructure
-                                            solutions provider based in Faridabad, Haryana, India. </p>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">ABP News Media Campaign</h4>
+                                            <p class="portfolio-description">Strategic media buying campaign on ABP News
+                                                network for maximum brand visibility.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Web Portal Tab Content -->
-                        <div class="tab-pane fade" id="webportal" role="tabpanel" aria-labelledby="webportal-tab">
-                            <div class="row">
-                                <div class="col-md-6 ">
-                                    <div class="portfolio-card">
-                                        <div class="portfolio-image">
-                                            <img src="img/potal/asset-9.png" alt="Astro Shivang" class="img-fluid" />
-                                        </div>
-
-                                        <h4 class="portfolio-title">Infrakeys </h4>
-                                        <p class="portfolio-description">Infrakeys is a construction and infrastructure
-                                            solutions provider based in Faridabad, Haryana, India. </p>
-                                    </div>
-
-
-                                </div>
-                                <div class="col-md-6 ">
-                                    <div class="portfolio-card">
-                                        <div class="portfolio-image">
-                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
-                                        </div>
-
-                                        <h4 class="portfolio-title">Astro Shivang</h4>
-                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
-                                            Vedic
-                                            solutions company.</p>
-                                    </div>
-
-
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <div class="portfolio-card">
-                                        <div class="portfolio-image">
-                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
-                                        </div>
-
-                                        <h4 class="portfolio-title">Astro Shivang</h4>
-                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
-                                            Vedic
-                                            solutions company.</p>
-                                    </div>
-
-
-                                </div>
-
-
-                                <div class="col-md-6 ">
-                                    <div class="portfolio-card">
-                                        <div class="portfolio-image">
-                                            <img src="img/astro.png" alt="Astro Shivang" class="img-fluid" />
-                                        </div>
-
-                                        <h4 class="portfolio-title">Astro Shivang</h4>
-                                        <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
-                                            Vedic
-                                            solutions company.</p>
-                                    </div>
-
-
-                                </div>
+                        <!-- Website Development -->
+                        <div id="website-development" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Website Designing & Development</h3>
+                                <p>Professional websites that drive results and enhance your digital presence with
+                                    modern design and functionality.</p>
                             </div>
-
-
-                            <!-- E-commerce Tab Content -->
-                            <div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="ecommerce-tab">
-                                <div class="row">
-                                    <div class="col-md-6 portfolio-item">
+                            <div class="row g-4">
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
                                         <div class="portfolio-image">
-                                            <img src="img/potal/asset-14.png" alt="E-commerce" class="img-fluid" />
+                                            <img src="img/potal/asset-1.png" alt="Astro Shivang" loading="lazy">
                                         </div>
-                                        <h4 class="portfolio-title">E-commerce Project</h4>
-                                        <p class="portfolio-description">Responsive online shopping experience.</p>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Astro Shivang</h4>
+                                            <p class="portfolio-description">Astro Shivang Pvt. Ltd. is a spiritual and
+                                                Vedic solutions company offering comprehensive astrological services.
+                                            </p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-12.png" alt="Creative Converts" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Creative Converts</h4>
+                                            <p class="portfolio-description">Australian-based digital agency
+                                                specializing in TikTok advertising and content creation.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-11.png" alt="Midasia Routes" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Midasia Routes</h4>
+                                            <p class="portfolio-description">Midasia Routes is a travel company
+                                                specializing in curated journeys across Asia and the Middle East.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-14.png" alt="Harisons Furnishings" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Harisons Furnishings</h4>
+                                            <p class="portfolio-description">Harisons Furnishings is a premier Indian
+                                                home furnishings brand renowned for its luxury offerings.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Mobile App Tab Content -->
-                            <div class="tab-pane fade" id="mobileapp" role="tabpanel" aria-labelledby="mobileapp-tab">
-                                <div class="row">
-                                    <div class="col-md-6 portfolio-item">
+                        <!-- Web Application Development -->
+                        <div id="web-application" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Web Application Development</h3>
+                                <p>Custom web applications built with modern technologies to streamline your business
+                                    processes and improve efficiency.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
                                         <div class="portfolio-image">
-                                            <img src="img/potal/asset-13.png" alt="Mobile App" class="img-fluid" />
+                                            <img src="img/app/asset1.png" alt="Custom CRM System" loading="lazy">
                                         </div>
-                                        <h4 class="portfolio-title">Mobile App Design</h4>
-                                        <p class="portfolio-description">Modern and sleek app UI for mobile devices.</p>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Custom CRM System</h4>
+                                            <p class="portfolio-description">Advanced customer relationship management
+                                                system with automated workflows and analytics.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/app/asset2.png" alt="Inventory Management" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Inventory Management</h4>
+                                            <p class="portfolio-description">Real-time inventory tracking system with
+                                                automated alerts and reporting features.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/app/asset3.png" alt="Project Management Tool" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Project Management Tool</h4>
+                                            <p class="portfolio-description">Comprehensive project management platform
+                                                with team collaboration and time tracking.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/app/asset5.png" alt="HR Management System" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">HR Management System</h4>
+                                            <p class="portfolio-description">Complete HR solution with employee
+                                                management, payroll, and performance tracking.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- Web Portals Development -->
+                        <div id="web-portals" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Web Portals Development</h3>
+                                <p>Secure and scalable web portals that connect users, streamline processes, and enhance
+                                    collaboration.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-9.png" alt="Educational Portal" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Educational Portal</h4>
+                                            <p class="portfolio-description">Comprehensive learning management system
+                                                for educational institutions with course management.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-10.png" alt="Healthcare Portal" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Healthcare Portal</h4>
+                                            <p class="portfolio-description">Patient management portal with appointment
+                                                scheduling, medical records, and telemedicine.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-6.png" alt="Real Estate Portal" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Real Estate Portal</h4>
+                                            <p class="portfolio-description">Property listing and management portal with
+                                                advanced search and virtual tours.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-7.png" alt="Employee Portal" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Employee Portal</h4>
+                                            <p class="portfolio-description">Internal employee portal with HR resources,
+                                                company news, and collaboration tools.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- E-commerce Development -->
+                        <div id="ecommerce" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>E-commerce Development</h3>
+                                <p>Complete e-commerce solutions with secure payment gateways, inventory management, and
+                                    user-friendly shopping experiences.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-5.png" alt="Fashion E-commerce" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Fashion E-commerce</h4>
+                                            <p class="portfolio-description">Modern fashion e-commerce platform with
+                                                advanced filtering and recommendation engine.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-4.png" alt="Electronics Marketplace"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Electronics Marketplace</h4>
+                                            <p class="portfolio-description">Multi-vendor electronics marketplace with
+                                                advanced search and comparison features.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/potal/asset-3.png" alt="Grocery Delivery" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Grocery Delivery</h4>
+                                            <p class="portfolio-description">Online grocery store with real-time
+                                                inventory, delivery scheduling, and subscription options.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEO & SEM -->
+                        <div id="seo-sem" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>SMM | SEO | SEM | SMO</h3>
+                                <p>Comprehensive digital marketing strategies to boost your online visibility, drive
+                                    traffic, and increase conversions.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-1.png" alt="E-commerce SEO Success" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">E-commerce SEO Success</h4>
+                                            <p class="portfolio-description">Increased organic traffic by 300% for a
+                                                leading e-commerce platform through strategic SEO.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-2.png" alt="Social Media Growth" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Social Media Growth</h4>
+                                            <p class="portfolio-description">Achieved 500% follower growth and 200%
+                                                engagement increase for a lifestyle brand.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-3.png" alt="PPC Campaign Success" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">PPC Campaign Success</h4>
+                                            <p class="portfolio-description">Reduced cost per acquisition by 40% while
+                                                increasing conversion rate by 25%.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-4.png" alt="Local SEO Strategy" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Local SEO Strategy</h4>
+                                            <p class="portfolio-description">Boosted local search visibility and
+                                                in-store visits for a retail chain.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GMB Optimization -->
+                        <div id="gmb-optimization" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Google My Business (GMB) Optimization</h3>
+                                <p>Strategic optimization of your Google Business Profile to improve local search
+                                    visibility and customer engagement.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-5.png" alt="GMB Optimization" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Restaurant GMB Optimization</h4>
+                                            <p class="portfolio-description">Increased restaurant bookings by 45%
+                                                through strategic GMB optimization and review management.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-6.png" alt="GMB Optimization" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Retail Store GMB Strategy</h4>
+                                            <p class="portfolio-description">Enhanced local visibility with optimized
+                                                GMB profile resulting in 60% more store visits.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Marketing -->
+                        <div id="whatsapp-marketing" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>WhatsApp Marketing & Automation</h3>
+                                <p>Leverage WhatsApp's reach for effective marketing campaigns and automated customer
+                                    interactions.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="img/seo/asset-7.png" alt="WhatsApp Marketing" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">WhatsApp Campaign Success</h4>
+                                            <p class="portfolio-description">Achieved 85% open rate and 35% conversion
+                                                rate with targeted WhatsApp marketing campaign.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp API -->
+                        <div id="whatsapp-api" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>WhatsApp API Integration</h3>
+                                <p>Seamless WhatsApp API integration for automated customer support and business
+                                    communications.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/25D366/ffffff?text=WhatsApp+API"
+                                                alt="WhatsApp API" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">E-commerce WhatsApp Integration</h4>
+                                            <p class="portfolio-description">Automated order updates and customer
+                                                support through WhatsApp API integration.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Media Buying -->
+                        <div id="media-buying" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Media Buying</h3>
+                                <p>Strategic media buying services to maximize your advertising ROI across premium
+                                    platforms.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/abp.webp" alt="abp" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/ani.webp" alt="ani" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/businessstandard.webp" alt="business standard"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/business-world.webp" alt="business world"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/chronicle.webp" alt="chronicle" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/cnbc.webp" alt="cnbc" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/dh.webp" alt="dh" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/dna.webp" alt="dna" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/financial-express.webp" alt="financial express"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/hindustan-times.webp" alt="hindustan times"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/indian-express.webp" alt="indian express"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/indiatoday.webp" alt="india today" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/lastestly.webp" alt="lastestly" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/live-mint.webp" alt="live mint" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/lokmat-times.webp" alt="lokmat times" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/mid-day.webp" alt="mid day" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/ndtv.webp" alt="ndtv" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/one-india.webp" alt="one india" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/outlook.webp" alt="outlook" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/republic.webp" alt="republic" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-asianage.webp" alt="the asian age" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-hindu.webp" alt="the hindu" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/thepioneer.webp" alt="the pioneer" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-print.webp" alt="the print" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee5.webp" alt="zee5" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee-business.webp" alt="zee business" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee-news.webp" alt="zee news" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Print Media -->
+                        <div id="print-media" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Print Media Advertising</h3>
+                                <p>Strategic print media campaigns for maximum brand visibility and credibility.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/2C3E50/ffffff?text=Print+Media+Campaign"
+                                                alt="Print Media Campaign" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">Newspaper Advertisement Campaign</h4>
+                                            <p class="portfolio-description">Strategic newspaper advertising campaign
+                                                across major publications for brand awareness.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Digital Advertising -->
+                        <div id="digital-advertising" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Mobile Advertising, Radio, Cinema</h3>
+                                <p>AMPLIFY YOUR BRAND WITH A POWERFUL BLEND OF ATL REACH AND BTL PRECISION</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/FF6B6B/ffffff?text=AUTO+RICKSHAW+BRANDING"
+                                                alt="Auto Rickshaw Branding" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">AUTO RICKSHAW BRANDING</h4>
+                                            <p class="portfolio-description">Strategic auto rickshaw branding campaign
+                                                for maximum local visibility and brand recognition.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/FFD93D/333333?text=RADIO+BRANDING"
+                                                alt="Radio Branding" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">RADIO BRANDING</h4>
+                                            <p class="portfolio-description">Effective radio advertising campaigns with
+                                                strategic placement and compelling audio content.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/43e97b/ffffff?text=BUS+BRANDING"
+                                                alt="Bus Branding" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">BUS BRANDING</h4>
+                                            <p class="portfolio-description">High-impact bus branding campaigns for
+                                                maximum visibility across urban areas.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="portfolio-card">
+                                        <div class="portfolio-image">
+                                            <img src="https://via.placeholder.com/400x250/4facfe/ffffff?text=CINEMA+ADVERTISING"
+                                                alt="Cinema Advertising" loading="lazy">
+                                        </div>
+                                        <div class="portfolio-card-body">
+                                            <h4 class="portfolio-title">CINEMA ADVERTISING</h4>
+                                            <p class="portfolio-description">Engaging cinema advertising campaigns
+                                                targeting captive audiences for maximum impact.</p>
+                                            <a href="#" class="portfolio-link">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Logo Design -->
+                        <div id="logo-design" class="portfolio-grid">
+                            <div class="subcategory-header">
+                                <h3>Logo Designing</h3>
+                                <p>Creative and memorable logo designs that represent your brand identity perfectly and
+                                    leave a lasting impression.</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/abp.webp" alt="abp" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/ani.webp" alt="ani" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/businessstandard.webp" alt="business standard"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/business-world.webp" alt="business world"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/chronicle.webp" alt="chronicle" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/cnbc.webp" alt="cnbc" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/dh.webp" alt="dh" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/dna.webp" alt="dna" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/financial-express.webp" alt="financial express"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/hindustan-times.webp" alt="hindustan times"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/indian-express.webp" alt="indian express"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/indiatoday.webp" alt="india today" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/lastestly.webp" alt="lastestly" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/live-mint.webp" alt="live mint" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/lokmat-times.webp" alt="lokmat times" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/mid-day.webp" alt="mid day" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/ndtv.webp" alt="ndtv" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/one-india.webp" alt="one india" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/outlook.webp" alt="outlook" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/republic.webp" alt="republic" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-asianage.webp" alt="the asian age" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-hindu.webp" alt="the hindu" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/thepioneer.webp" alt="the pioneer" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/the-print.webp" alt="the print" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee5.webp" alt="zee5" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee-business.webp" alt="zee business" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="portfolio-card pr-logo">
+                                        <div class="portfolio-image">
+                                            <img src="img/pr-logo/zee-news.webp" alt="zee news" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
+
+                        <!-- Dynamic Content Area -->
+                        <div id="dynamic-content"></div>
                     </div>
-                </div> <!-- End of Tab Content -->
+                </div>
             </div>
-        </div> <!-- End of Row -->
+        </div>
     </div>
-    </div>
+
+
     <footer class="footer-main">
         <div class="container">
             <div class="row">
@@ -599,8 +1632,170 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap JS Bundle with Popper -->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        // State variables
+        let activeCategory = null;
+        let activeSubcategory = null;
+
+        // Toggle category function
+        function toggleCategory(categoryName) {
+            const categoryList = document.getElementById(categoryName + '-list');
+            const categoryIcon = document.getElementById(categoryName + '-icon');
+            const categoryBtn = event.target.closest('.category-btn');
+
+            // Close other categories
+            document.querySelectorAll('.subcategory-list').forEach(list => {
+                if (list.id !== categoryName + '-list') {
+                    list.classList.remove('show');
+                }
+            });
+
+            // Reset other category buttons
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn !== categoryBtn) {
+                    btn.classList.remove('active');
+                    const icon = btn.querySelector('i:last-child');
+                    if (icon) {
+                        icon.classList.remove('bi-chevron-up');
+                        icon.classList.add('bi-chevron-down');
+                    }
+                }
+            });
+
+            // Toggle current category
+            if (activeCategory === categoryName) {
+                // Close current category
+                categoryList.classList.remove('show');
+                categoryBtn.classList.remove('active');
+                categoryIcon.classList.remove('bi-chevron-up');
+                categoryIcon.classList.add('bi-chevron-down');
+                activeCategory = null;
+                showDefaultView();
+            } else {
+                // Open current category
+                categoryList.classList.add('show');
+                categoryBtn.classList.add('active');
+                categoryIcon.classList.remove('bi-chevron-down');
+                categoryIcon.classList.add('bi-chevron-up');
+                activeCategory = categoryName;
+            }
+
+            // Reset subcategory selection
+            document.querySelectorAll('.subcategory-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            activeSubcategory = null;
+        }
+
+        // Show subcategory function
+        function showSubcategory(subcategoryName) {
+            // Reset all subcategory buttons
+            document.querySelectorAll('.subcategory-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Activate clicked subcategory button
+            event.target.classList.add('active');
+            activeSubcategory = subcategoryName;
+
+            // Hide all portfolio grids
+            document.querySelectorAll('.portfolio-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+
+            // Show selected subcategory grid
+            const targetGrid = document.getElementById(subcategoryName);
+            if (targetGrid) {
+                targetGrid.classList.add('active');
+            }
+        }
+
+        // Show all projects
+        function showAllProjects() {
+            // Reset all buttons
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.subcategory-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.subcategory-list').forEach(list => {
+                list.classList.remove('show');
+            });
+
+            // Activate "All" button
+            event.target.classList.add('active');
+
+            // Hide all portfolio grids
+            document.querySelectorAll('.portfolio-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+
+            // Show default view
+            document.getElementById('default-view').classList.add('active');
+
+            // Reset state
+            activeCategory = null;
+            activeSubcategory = null;
+        }
+
+        // Show default view
+        function showDefaultView() {
+            // Hide all portfolio grids
+            document.querySelectorAll('.portfolio-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+
+            // Show default view
+            document.getElementById('default-view').classList.add('active');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function () {
+            showDefaultView();
+
+            // Add keyboard navigation support
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    // Close all categories and show default view
+                    document.querySelectorAll('.category-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    document.querySelectorAll('.subcategory-list').forEach(list => {
+                        list.classList.remove('show');
+                    });
+                    document.querySelectorAll('.subcategory-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    activeCategory = null;
+                    activeSubcategory = null;
+                    showDefaultView();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
