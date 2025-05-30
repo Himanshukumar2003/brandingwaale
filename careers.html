@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandingwaale - Transform Your Business</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/viewer.css">
+
+    <style>
+        body {
+
+            color: white;
+        }
+
+
+        .value-card {
+            padding: 40px;
+            background-color: #2a2a2a;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+
+            border-radius: 20px;
+        }
+
+        /* .value-card:hover {
+            background: rgba(255, 193, 7, 0.8);
+        } */
+
+
+        .card-accent {
+            background-color: #e0a800;
+        }
+
+        .mission-card:hover .card-accent {
+            background-color: #2a2a2a !important;
+        }
+
+
+
+
+        .value-card i {
+            transition: transform 0.5s ease;
+            display: inline-block;
+        }
+
+        .value-card:hover i {
+            transform: rotateY(360deg);
+        }
+
+        .border-bottom {
+            border-bottom: 3px solid #333333 !important;
+        }
+
+        .card-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+
+        .card-heading i {
+            font-size: 2.5rem;
+
+        }
+
+
+        .benefits-section {
+            position: relative;
+            background-color: #2a2a2a;
+        }
+
+        .benefits-section::after {
+            content: "";
+            /* background: linear-gradient(45deg, var(--accent-color), rgba(255, 193, 7, 0.3)); */
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+
+        .benefit-card {
+            /* background: rgba(40, 60, 40, 0.6); */
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            border-radius: 15px;
+            padding: 30px 25px;
+            height: 100%;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 193, 7, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 193, 7, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .benefit-icon i {
+            font-size: 24px;
+            color: var(--accent-color);
+        }
+
+
+
+
+        .position-card {
+            padding: 20px;
+            background-color: #2a2a2a;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .position-card h4 {
+            margin-top: 20px;
+        }
+
+        .position-tag {
+
+            background: rgba(255, 193, 7, 0.3);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+
+        .btn-apply {
+            color: var(--accent-color);
+
+        }
+
+
+        .sub-category {
+            list-style-type: disc;
+        }
+
+
+        .form-container {
+            max-width: 550px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .elegant-card {
+            background: var(--bg-card);
+            border-radius: 0;
+            padding: 60px 50px;
+            text-align: left;
+            box-shadow:
+
+                0 30px 80px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 193, 7, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .elegant-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), #e0a800, var(--accent-color));
+        }
+
+        .elegant-card::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(255, 193, 7, 0.1);
+            pointer-events: none;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+        }
+
+
+
+        .form-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .elegant-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .elegant-input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--text-muted);
+            background: var(--bg-secondary);
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .elegant-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .elegant-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: var(--bg-primary);
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+        }
+
+        .elegant-select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--text-muted);
+            background: var(--bg-secondary);
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 0.4s ease;
+        }
+
+        option {
+            background-color: var(--bg-secondary);
+
+        }
+
+        .elegant-textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--text-muted);
+            background: var(--bg-secondary);
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 400;
+            transition: all 0.4s ease;
+            resize: vertical;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .elegant-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+
+
+        .elegant-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3);
+        }
+
+        .elegant-btn:hover::before {
+            left: 100%;
+        }
+
+        .decorative-line {
+            width: 60px;
+            height: 2px;
+            background: var(--accent-color);
+            margin: 20px auto;
+        }
+
+        .input-group-elegant {
+            position: relative;
+        }
+
+        .input-icon-elegant {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-color);
+            font-size: 18px;
+        }
+
+        .file-upload-elegant {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-elegant input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-upload-label {
+            display: block;
+            padding: 18px 25px;
+            border: 1px solid var(--text-muted);
+            background: var(--bg-secondary);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .file-upload-label:hover {
+            border-color: var(--accent-color);
+            background: var(--bg-primary);
+        }
+
+        .elegant-divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .elegant-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--text-muted), transparent);
+        }
+
+        .elegant-divider span {
+            background: var(--bg-card);
+            padding: 0 20px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+
+        .modal-header {
+            border-bottom: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <div class="logo-section">
+                <a class="logo" href="index.html">
+                    <img src="img/log.gif">
+                </a>
+            </div>
+
+            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button">
+                            Services
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-code-slash"></i>
+
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DEVELOPMENT
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Crafting unique identities that resonate.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            MARKETING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Designing user-friendly experiences.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            PR & ADVERTISING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Building responsive and scalable websites.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-camera"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DESIGN
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Capturing visuals that tell your brand's story.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Creative Studio</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Careers</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Blog
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Latest insights and industry trends.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Downloads
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Free resources and templates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section border-bottom">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h6 class="highlight">What Defines Us</h6>
+                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        We are pioneers in driving technological advancement and personal growth through innovative
+                        solutions and exceptional work culture, fostering creativity and professional success.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card-custom card-accent value-card">
+                        <div class="card-heading">
+
+                            <h3 class="card-title">OUR VISION</h3>
+                            <i class="fas fa-eye"></i>
+
+                        </div>
+                        <p>To be a leading digital transformation company that empowers brands to achieve unprecedented
+                            growth through innovative technology solutions and creative strategies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class=" value-card mission-card">
+                        <div class="card-heading">
+                            <h3 class="card-title">OUR MISSION</h3>
+
+                            <i class="fas fa-rocket"></i>
+
+                        </div>
+                        <p>Our mission is to deliver exceptional digital experiences that drive business growth and
+                            create lasting value for our clients through cutting-edge technology and innovative
+                            solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="why-join-us  section ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="why-us">
+                        <div class="heading">
+                            <div class="label">OUR PROCESS</div>
+                            <h1>
+                                Beyond
+                                <span class="highlight">Branding</span>
+                            </h1>
+                            <br>
+
+                        </div>
+                        <div class="services-process-step">
+                            <div>
+                                <div class="step-title">Innovative Spirit</div>
+                                <div class="step-description">
+                                    We thrive on creativity and encourage out-of-the-box thinking. Our team is dedicated
+                                    to pushing boundaries and exploring new possibilities in digital marketing.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="step-title">Collaborative Environment</div>
+                                <div class="step-description">
+                                    Collaboration is at the heart of everything we do. We believe that diverse
+                                    perspectives lead to the best solutions, and we foster an inclusive environment
+                                    where everyone's voice is heard.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="step-title">Growth-Oriented</div>
+                                <div class="step-description">
+                                    Personal and professional growth is important to us. We offer continuous learning
+                                    opportunities and support career development to help you reach your full potential.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="benefits-section section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h6 class="highlight">What Defines Us</h6>
+                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        We are pioneers in driving technological advancement and personal growth through innovative
+                        solutions and exceptional work culture, fostering creativity and professional success.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h5 class="benefit-title">Dynamic Work Environment</h5>
+                        <p class="benefit-description">
+                            Experience a fast-paced and engaging workplace where innovation is encouraged.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="benefit-title">Career Development</h4>
+                        <p class="benefit-description">
+                            Benefit from ongoing training and professional development programs designed to enhance your
+                            skills.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="benefit-title">Flexible Work Options</h4>
+                        <p class="benefit-description">
+                            Enjoy flexibility with remote and hybrid work opportunities that support work-life balance
+                            and personal productivity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4 class="benefit-title">Supportive Team</h4>
+                        <p class="benefit-description">
+                            Join a team that values collaboration and offers support to help you succeed in your role
+                            and beyond.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="benefit-title">Competitive Benefits</h4>
+                        <p class="benefit-description">
+                            Receive a comprehensive benefits package including health insurance, paid time off, and
+                            other.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="benefit-title">Innovative Culture</h4>
+                        <p class="benefit-description">
+                            Join a forward-thinking team that encourages creativity, problem-solving, and staying ahead
+                            of industry trends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="positions-section section">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h6 class="highlight">What Defines Us</h6>
+                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        We are pioneers in driving technological advancement and personal growth through innovative
+                        solutions and exceptional work culture, fostering creativity and professional success.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">MARKETING</span>
+                        <h4>Marketing Specialist</h4>
+                        <p class="sub-category mb-3">New York, NY</p>
+                        <p>We're looking for a creative marketing specialist to join our dynamic team and help drive our
+                            brand forward.</p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="Marketing Specialist">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">DESIGN</span>
+                        <h4>UX/UI Designer</h4>
+                        <p class="sub-category mb-3">San Francisco, CA</p>
+                        <p>Join our design team to create exceptional user experiences and innovative digital solutions.
+                        </p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="UX/UI Designer">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">CONTENT</span>
+                        <h4>Content Writer</h4>
+                        <p class="sub-category mb-3">Remote</p>
+                        <p>We need a talented content writer to create engaging content that resonates with our
+                            audience.</p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="Content Writer">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">DEVELOPMENT</span>
+                        <h4>Social Media Manager</h4>
+                        <p class="sub-category mb-3">Los Angeles, CA</p>
+                        <p>Manage our social media presence and engage with our community across various platforms.</p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="Social Media Manager">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">DESIGN</span>
+                        <h4>Graphic Designer</h4>
+                        <p class="sub-category mb-3">Chicago, IL</p>
+                        <p>Create stunning visual designs that communicate our brand message effectively across all
+                            channels.</p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="Graphic Designer">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="position-card">
+                        <span class="position-tag">MARKETING</span>
+                        <h4>Digital Marketing Manager</h4>
+                        <p class="sub-category mb-3">Austin, TX</p>
+                        <p>Lead our digital marketing efforts and drive growth through innovative online strategies.</p>
+                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
+                            data-position="Digital Marketing Manager">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="applicationModal" tabindex="-1" aria-labelledby="applicationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applicationModalLabel">Apply Now</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="elegant-card">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="elegant-label">First Name</label>
+                                        <div class="input-group-elegant">
+                                            <input type="text" class="elegant-input" required>
+                                            <i class="fas fa-user input-icon-elegant"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="elegant-label">Last Name</label>
+                                        <div class="input-group-elegant">
+                                            <input type="text" class="elegant-input" required>
+                                            <i class="fas fa-user input-icon-elegant"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">Email Address</label>
+                                <div class="input-group-elegant">
+                                    <input type="email" class="elegant-input" required>
+                                    <i class="fas fa-envelope input-icon-elegant"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">Phone Number</label>
+                                <div class="input-group-elegant">
+                                    <input type="tel" class="elegant-input" required>
+                                    <i class="fas fa-phone input-icon-elegant"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">Position of Interest</label>
+                                <select class="elegant-select" id="positionSelect" required>
+                                    <option value="">Select Position</option>
+                                    <option value="Marketing Specialist">Marketing Specialist</option>
+                                    <option value="UX/UI Designer">UX/UI Designer</option>
+                                    <option value="Content Writer">Content Writer</option>
+                                    <option value="Social Media Manager">Social Media Manager</option>
+                                    <option value="Graphic Designer">Graphic Designer</option>
+                                    <option value="Digital Marketing Manager">Digital Marketing Manager</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">Executive Resume</label>
+                                <div class="file-upload-elegant">
+                                    <input type="file" id="resume-elegant-modal" accept=".pdf,.doc,.docx" required>
+                                    <label for="resume-elegant-modal" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt me-2"></i>Upload Professional Resume
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">Executive Summary</label>
+                                <textarea class="elegant-textarea" rows="5"
+                                    placeholder="Provide a brief executive summary..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="elegant-label">LinkedIn Profile</label>
+                                <div class="input-group-elegant">
+                                    <input type="url" class="elegant-input" placeholder="https://linkedin.com/in/...">
+                                    <i class="fab fa-linkedin input-icon-elegant"></i>
+                                </div>
+                            </div>
+                            <button type="submit" class="custom-btn">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex justify-content-start">
+                        <div class="footer-logo">
+                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our
+                        Company.
+                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with Our Digital
+                        Solutions.
+
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Our Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98677 37785<br>+91 98183 19568</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@brandingwaale.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana 121003</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('resume-elegant').addEventListener('change', function (e) {
+            const label = document.querySelector('.file-upload-label');
+            if (e.target.files.length > 0) {
+                label.innerHTML = `<i class="fas fa-check me-2"></i>${e.target.files[0].name}`;
+                label.style.borderColor = 'var(--accent-color)';
+                label.style.background = 'var(--bg-primary)';
+                label.style.color = 'var(--accent-color)';
+            }
+        });
+
+        document.querySelectorAll('.elegant-input, .elegant-select, .elegant-textarea').forEach(input => {
+            input.addEventListener('focus', function () {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+
+            input.addEventListener('blur', function () {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.btn-apply').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const position = this.getAttribute('data-position');
+                document.getElementById('positionSelect').value = position;
+            });
+        });
+    </script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
