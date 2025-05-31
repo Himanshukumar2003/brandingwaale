@@ -30,18 +30,25 @@
     --sticky-cardMargin: 60px;
     --sticky-cardTopPadding: 60px;
     --sticky-cards: 4;
+    --bg-primary: #1a1a1a;
+
 
 }
 
 body {
     /* background-color: var(--darker-bg); */
     font-family: 'Manrope', sans-serif;
-    color: var(--text-color);
+    background-color: var(--bg-primary);
+
 }
 
 .counter {
     font-family: 'Hanuman', serif;
 
+}
+
+.border-bottom {
+    border-bottom: 3px solid #333333 !important;
 }
 
 .content-card:hover .custom-btn {
@@ -3211,3 +3218,44 @@ html {
 
 
 /*  */
+
+
+/* blogs */
+.blog-card {
+    background-color: #0f0f0f;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-meta {
+    font-size: 14px;
+    color: #9e9e9e;
+    margin-bottom: 10px;
+}
+
+.blog-title {
+
+    margin-bottom: 10px;
+}
+
+.blog-description {
+
+    margin-bottom: 20px;
+}

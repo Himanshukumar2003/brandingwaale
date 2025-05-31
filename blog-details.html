@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandingwaale - Transform Your Business</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/viewer.css">
+
+    <style>
+        .featured-image {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+
+        .image-meta {
+            color: var(--accent-color);
+            margin-top: 8px;
+        }
+
+
+
+        .content-list {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            list-style-type: disc;
+        }
+
+        .content-list li {
+            margin-bottom: 10px;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background-color: var(--accent-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-left: 15px;
+        }
+
+        .quote-box h5 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .quote-list {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .quote-list li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            border-radius: 10px;
+            border: 1px solid #313131;
+            padding: 25px 0 0px 0;
+            position: sticky;
+            top: 0;
+            background: #101010;
+            padding: 20px;
+        }
+
+        /* Search Bar */
+        .search-input {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: #e0e0e0;
+            padding: 10px 15px;
+        }
+
+        .search-input:focus {
+            background-color: #1e1e1e;
+            border-color: #444;
+            color: #e0e0e0;
+            box-shadow: none;
+        }
+
+        .search-input::placeholder {
+            color: #888;
+        }
+
+        .search-btn {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: #888;
+        }
+
+        .search-btn:hover {
+            background-color: #333;
+            color: var(--accent-color);
+        }
+
+        /* Section Titles */
+        .sidebar-title {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 2px;
+            background-color: #444;
+        }
+
+        /* Category Links */
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 3px 0;
+        }
+
+        .sidebar-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Popular Posts */
+        .post-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .post-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .post-info {
+            padding-left: 10px;
+        }
+
+        .post-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .post-title a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .post-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .post-date {
+            font-size: 12px;
+            color: #777;
+            display: block;
+        }
+
+        /* Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #1e1e1e;
+            color: #b0b0b0;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            background-color: #333;
+            color: var(--accent-color);
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .sidebar {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .content-area {
+                padding: 20px;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            . {
+                font-size: 22px;
+            }
+
+            .quote-box {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <div class="logo-section">
+                <a class="logo" href="index.html">
+                    <img src="img/log.gif">
+                </a>
+            </div>
+
+            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button">
+                            Services
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-code-slash"></i>
+
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DEVELOPMENT
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Crafting unique identities that resonate.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            MARKETING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Designing user-friendly experiences.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            PR & ADVERTISING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Building responsive and scalable websites.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-camera"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DESIGN
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Capturing visuals that tell your brand's story.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Creative Studio</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Careers</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Blog
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Latest insights and industry trends.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Downloads
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Free resources and templates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section border-bottom">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-lg-6">
+                    <h6 class="highlight">Blogs</h6>
+                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        We are pioneers in driving technological advancement and personal growth through innovative
+                        solutions and exceptional work culture, fostering creativity and professional success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section">
+
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Area -->
+                <div class="col-lg-8 content-area">
+                    <!-- Featured Image -->
+                    <div class="featured-image mb-3">
+                        <img src="img/blog_detail7.png" alt="Team working together" class="img-fluid">
+                        <div class="image-meta">2 Jun, 2023 • SEO & Analytics</div>
+                    </div>
+
+                    <!-- Article Title -->
+                    <h2 class="article-title">How to Dominate Instagram Marketing Like a Pro</h2>
+
+                    <!-- Article Content -->
+                    <div class="article-content">
+                        <p>Instagram has evolved into one of the most powerful platforms for digital marketing. Why use
+                            a
+                            billion online users when you can connect with your target audience with high-quality,
+                            attractive filter products or services, and build a strong brand presence. This guide will
+                            walk
+                            you through the essential Instagram marketing strategies that will help you master your
+                            level of
+                            experience.</p>
+
+                        <!-- SEO Section -->
+                        <h3>Optimize Your Website for SEO</h3>
+                        <p>Search Engine Optimization (SEO) is the backbone of online visibility. By optimizing your
+                            website's content, structure, and performance, you can improve your search engine rankings
+                            and
+                            attract more visitors.</p>
+
+                        <ul class="content-list">
+                            <li>Use relevant keywords in your content.</li>
+                            <li>Ensure your website loads quickly on all mobile devices.</li>
+                            <li>Focus on creating high-quality, original content that satisfies user intent.</li>
+                        </ul>
+
+                        <!-- Instagram Stories Section with Quote Box -->
+                        <div class="row g-0 my-5">
+                            <div class="col-md-5 ">
+                                <div class="h-100">
+                                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                                        alt="Instagram Marketing" class="img-fluid h-100">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="quote-box">
+                                    <h5>Harness the Power of Instagram Stories and Reels</h5>
+                                    <ul class="quote-list">
+                                        <li>Stories last 24 hours and create content scarcity, plus, click-watching.
+                                        </li>
+                                        <li>Reels are 15-30 second videos that, when done well, are highly popular for
+                                            already cost-interactive content.</li>
+                                        <li>Utilize these short, engaging videos that can help you reach a wider
+                                            audience.
+                                            Focus on trending topics and music to increase visibility.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Engage Section -->
+                        <h3 class="">Engage with Your Audience</h3>
+                        <p>Building a community is essential for long-term success.</p>
+
+                        <ul class="content-list">
+                            <li><strong>Respond to Comments and DMs:</strong> Show your audience that you value their
+                                input.
+                            </li>
+                            <li><strong>Collaborate:</strong> Partner with influencers or other brands to reach new
+                                audiences.</li>
+                            <li><strong>Consistency is Key:</strong> Posting too infrequently can lead to followers
+                                forgetting your brand and clicking that unfollow button.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar">
+
+                        <div class="sidebar-section mb-4">
+                            <h4 class="sidebar-title">Our Services</h4>
+                            <ul class="list-unstyled sidebar-links">
+                                <li><a href="#">Digital Marketing</a></li>
+                                <li><a href="#">SEO & Analytics</a></li>
+                                <li><a href="#">Web Analytics</a></li>
+                                <li><a href="#">Web Design</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts Section -->
+                        <div class="sidebar-section mb-4">
+                            <h4 class="sidebar-title">Popular Posts</h4>
+                            <div class="popular-posts">
+                                <!-- Post 1 -->
+                                <div class="post-item">
+                                    <div class="row g-0">
+                                        <div class="col-3">
+                                            <img src="img/blog_detail8-150x150.png" alt="Post thumbnail"
+                                                class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="post-info">
+                                                <h6 class="post-title"><a href="#">How to Measure ROI in Digital
+                                                        Marketing</a></h6>
+                                                <span class="post-date">January 5, 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Post 2 -->
+                                <div class="post-item">
+                                    <div class="row g-0">
+                                        <div class="col-3">
+                                            <img src="img/blog_detail8-150x150.png" alt="Post thumbnail"
+                                                class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="post-info">
+                                                <h6 class="post-title"><a href="#">How to Dominate Instagram
+                                                        Marketing</a>
+                                                </h6>
+                                                <span class="post-date">January 3, 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Post 3 -->
+                                <div class="post-item">
+                                    <div class="row g-0">
+                                        <div class="col-3">
+                                            <img src="img/blog_detail8-150x150.png" alt="Post thumbnail"
+                                                class="img-fluid rounded">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="post-info">
+                                                <h6 class="post-title"><a href="#">How to Build a Winning Digital
+                                                        Marketing
+                                                        Strategy</a></h6>
+                                                <span class="post-date">January 2, 2023</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Popular Tags Section -->
+                        <div class="sidebar-section mb-4">
+                            <h4 class="sidebar-title">Popular Tags</h4>
+                            <div class="tags-container">
+                                <a href="#" class="tag">Digital Strategy</a>
+                                <a href="#" class="tag">Content Marketing</a>
+                                <a href="#" class="tag">Marketing Analytics</a>
+                                <a href="#" class="tag">Online Advertising</a>
+                                <a href="#" class="tag">Social Media Marketing</a>
+                                <a href="#" class="tag">Tech Trends</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Section -->
+                        <div class="sidebar-section">
+                            <h4 class="sidebar-title">Follow us on</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="d-flex justify-content-start">
+                        <div class="footer-logo">
+                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in
+                        our
+                        Company.
+                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with Our
+                        Digital
+                        Solutions.
+
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="footer-heading">Our Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98677 37785<br>+91 98183 19568</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@brandingwaale.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana
+                                121003</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
