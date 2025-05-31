@@ -39,7 +39,13 @@ body {
     /* background-color: var(--darker-bg); */
     font-family: 'Manrope', sans-serif;
     background-color: var(--bg-primary);
+    color: white;
+}
 
+
+
+.highlight {
+    color: var(--accent-color);
 }
 
 .counter {

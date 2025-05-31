@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
 /*  */
 .about-section {
     position: relative;
@@ -88,7 +91,6 @@
         bottom: auto;
         left: auto;
         margin: 2rem auto;
-        width: 80%;
     }
 
 }
@@ -214,6 +216,8 @@
 
 .counter {
     font-size: 23em;
+    font-family: 'Merriweather', serif;
+    margin-top: -70px;
     font-weight: bold;
     transition: color 0.5s ease;
 }
@@ -225,20 +229,17 @@
 }
 
 .counter-section .projects-counter {
-    /* position: absolute;
-    top: 20%;
-    right: 0;
-    rotate: 90deg; */
-    /* left: 50%; */
-    /* transform: translate(-25%, -50%) !important; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-39%, -50%) !important;
 
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 20px 10px;
+    width: 300px;
     background-color: var(--darker-bg);
-    writing-mode: sideways-rl;
     text-align: center;
-    margin-top: -80px;
 }
 
 
@@ -246,5 +247,4 @@
     font-size: 21px;
     color: white;
     font-weight: 900;
-    font-family: 'Inter', sans-serif;
 }
