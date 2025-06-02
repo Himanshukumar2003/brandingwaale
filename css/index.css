@@ -38,8 +38,9 @@
 body {
     /* background-color: var(--darker-bg); */
     font-family: 'Manrope', sans-serif;
-    background-color: var(--bg-primary);
     color: white;
+    background-color: #1E1E1E;
+
 }
 
 
@@ -448,14 +449,16 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, var(--primary-color)61%, #ffffff 50%);
+
+    background: linear-gradient(to bottom, var(--primary-color) 57%, #1E1E1E 43%);
 
 }
+
+
 
 .hero-image {
     max-width: 100%;
     height: auto;
-    margin-bottom: -20px;
 }
 
 .cta-button {
@@ -2722,12 +2725,13 @@ label {
 
 
 .companies-logo {
-    padding: 60px 0;
+    padding: 40px 0;
     border-radius: 10px;
     overflow: hidden;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333333;
+    border-radius: 0px;
 
-
-    background-color: var(--primary-color);
 
 }
 
