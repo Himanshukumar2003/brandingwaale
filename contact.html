@@ -15,50 +15,142 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-white border-bottom border-warning ">
+    <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container">
-            <!-- Branding -->
-            <a href="#" class="d-flex align-items-center text-decoration-none">
-                <img src="img/log.gif" class="logo">
-            </a>
+            <div class="logo-section">
+                <a class="logo" href="index.html">
+                    <img src="img/log.gif">
+                </a>
+            </div>
 
-            <!-- Mobile toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
             </button>
 
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-                <ul class="navbar-nav gap-3">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="index.html">
-                            <i class="bi bi-house-door nav-icon mb-1"></i>
-                            Home
-                        </a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="about.html">
-                            <i class="bi bi-person nav-icon mb-1"></i>
-                            About
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button">
+                            Services
                         </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="service.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-code-slash"></i>
+
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DEVELOPMENT
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Crafting unique identities that resonate.</p>
+                                    </div>
+                                </a>
+
+                                <a href="service.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            MARKETING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Designing user-friendly experiences.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            PR & ADVERTISING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Building responsive and scalable websites.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-camera"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            BRANDING
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Capturing visuals that tell your brand's story.</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="portfolio.html">
-                            <i class="bi bi-briefcase nav-icon mb-1"></i>
-                            Portfolio
-                        </a>
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Creative Studio</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="">
-                            <i class="bi bi-gear nav-icon mb-1"></i>
-                            Service
-                        </a>
+                        <a class="nav-link" href="blog.html">Blogs</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-custom" href="contact.html">
-                            <i class="bi bi-envelope nav-icon mb-1"></i>
-                            Contact
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Resources
                         </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Blog
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Latest insights and industry trends.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Downloads
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Free resources and templates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
             </div>

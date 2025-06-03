@@ -16,68 +16,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 
-    <style>
-        .approach-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border-radius: 20px;
-            padding: 30px;
-            overflow: hidden;
-            border: 1px solid #333;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-        }
-
-        .approach-card:hover {
-            transform: translateY(-10px);
-            /* box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1); */
-        }
-
-        .card-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .approach-card:hover .card-image img {
-            transform: scale(1.05);
-        }
-
-        .card-icon {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            /* background: rgba(0, 255, 136, 0.2); */
-            /* border: 2px solid #00ff88; */
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-
-            justify-content: center;
-        }
-
-        .card-icon i {
-            color: var(--accent-color);
-            font-size: 40px;
-        }
-
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-
-            margin: 15px 0;
-            color: #ffffff;
-        }
-    </style>
 </head>
 
 <body>
@@ -159,7 +97,7 @@
                                     </div>
                                     <div class="service-content">
                                         <h6>
-                                            DESIGN
+                                            BRANDING
                                             <span class="service-arrow">↗</span>
                                         </h6>
                                         <p>Capturing visuals that tell your brand's story.</p>
@@ -170,7 +108,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service-details.html">Portfolio</a>
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
                     </li>
 
                     <!-- <li class="nav-item">
@@ -178,7 +116,10 @@
                     </li> -->
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Careers</a>
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blogs</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button">
@@ -383,59 +324,47 @@
                 </div>
             </div>
 
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="approach-card">
-                        <div class="card-image">
-                            <img src="/img/download.jpg" alt="Team collaboration">
-                            <div class="card-icon">
-                                <i class="bi bi-bullseye"></i>
-                            </div>
-                        </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="approach-cards">
                         <div class="card-content">
+                            <i class="fas fa-bullseye card-icon"></i>
                             <h3 class="card-title">Our Mission</h3>
                             <p class="card-text">
-                                Delivering transformative digital solutions that elevate brands connections.
+                                We aim to deliver transformative digital experiences that inspire trust, creativity, and
+                                long-term value for our partners and communities.
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="approach-card">
-                        <div class="card-image">
-                            <img src="/img/download.jpg" alt="Innovation workspace">
-                            <div class="card-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="approach-cards">
                         <div class="card-content">
+                            <i class="fas fa-eye card-icon"></i>
                             <h3 class="card-title">Our Vision</h3>
                             <p class="card-text">
-                                Shaping the future through innovative and impactful digital experiences.
+                                To become a global leader in technology-driven innovation, empowering businesses to
+                                thrive
+                                in an ever-evolving digital world.
                             </p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="approach-card">
-                        <div class="card-image">
-                            <img src="/img/download.jpg" alt="Team working together">
-                            <div class="card-icon">
-                                <i class="fas fa-gem"></i>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="approach-cards">
                         <div class="card-content">
-                            <h3 class="card-title">Our Value</h3>
+                            <i class="fas fa-star card-icon"></i>
+                            <h3 class="card-title">Our Aim</h3>
                             <p class="card-text">
-                                Integrity, creativity, innovation, collaboration, excellence, results.
+                                We focus on excellence, pushing boundaries with every project while staying rooted in
+                                integrity and client-first thinking.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     <section class="founder-section section">
@@ -552,6 +481,34 @@
         </div>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+    <script>
+        const cards = document.querySelectorAll('.approach-cards');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+                card.style.setProperty('--x', `${xPercent}%`);
+                card.style.setProperty('--y', `${yPercent}%`);
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        });
+    </script>
     <script src="js/index.js"></script>
 
     <script>

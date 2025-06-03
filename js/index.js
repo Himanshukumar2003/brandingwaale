@@ -80,7 +80,30 @@ const observer = new IntersectionObserver(
 cards.forEach((card) => {
   observer.observe(card);
 });
+//faq
 
+function toggleFAQ(element) {
+  const faqItem = element.parentElement;
+  const isActive = faqItem.classList.contains("active");
+
+  // Close all FAQ items
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // If the clicked item wasn't active, open it
+  if (!isActive) {
+    faqItem.classList.add("active");
+  }
+}
+
+// Initialize with first item open
+document.addEventListener("DOMContentLoaded", function () {
+  const firstItem = document.querySelector(".faq-item");
+  if (firstItem) {
+    firstItem.classList.add("active");
+  }
+});
 // Parallax effect
 const rows = document.querySelectorAll(".parallax-row");
 let scrollPosition = 0;
@@ -123,31 +146,6 @@ window.addEventListener("scroll", () => {
       scrollPosition * (speed < 0 ? -0.5 : 0.5)
     }px) translateY(${scrollY * speed}px)`;
   });
-});
-
-var swiperThree = new Swiper(".app-home", {
-  loop: true,
-  pagination: false,
-  autoplay: {
-    delay: 3000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  grabCursor: true,
-});
-var swiperFour = new Swiper(".websites-swiper", {
-  loop: true,
-  pagination: false,
-  autoplay: {
-    delay: 3000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  grabCursor: true,
 });
 
 document.addEventListener("DOMContentLoaded", function () {

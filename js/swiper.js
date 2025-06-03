@@ -1,32 +1,16 @@
-const swiper = new Swiper(".testimonial-swiper", {
-  slidesPerView: 1,
-  spaceBetween: 2,
-  loop: false,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+var swiperFour = new Swiper(".industriesSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: { delay: 2000 },
+  pagination: false,
+  // { el: ".swiper-pagination", clickable: true },
+  navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
   breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
+    320: { slidesPerView: 1 },
+    576: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    992: { slidesPerView: 4 },
   },
 });
 
