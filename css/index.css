@@ -264,18 +264,27 @@ h6 {
 
 .learn-more {
     color: var(--accent-color);
-    font-weight: 600;
+    font-weight: 400;
     display: inline-block;
-    font-size: 19px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 3px 10px;
+}
+
+.learn-more:hover {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 3px 10px;
 }
 
 .learn-more i {
     transition: transform 0.3s ease;
     cursor: pointer;
+    display: inline-block;
 }
 
 .learn-more:hover i {
-    transform: translateX(20px);
+    transform: translateX(4px);
 }
 
 
@@ -2060,7 +2069,27 @@ a {
 
 
 .what-we-do {
-    padding: 80px 40px;
+    padding: 60px 40px;
+}
+
+.what-we-do ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.what-we-do li {
+    font-size: 12px;
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.5);
+    border-radius: 10px;
+    font-weight: 400;
+    padding: 1px 6px;
+    letter-spacing: .5px;
+}
+
+.what-we-do li:hover {
+    background-color: var(--accent-color);
 }
 
 
@@ -2069,7 +2098,6 @@ a {
     box-sizing: border-box;
     border-radius: 50px;
     overflow: hidden;
-
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
     background-color: #383434;
     line-height: 30px;
@@ -2503,7 +2531,7 @@ ul {
 
 .contact-info a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -2578,6 +2606,7 @@ label {
     font-weight: 600;
 }
 
+
 .content-card {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
@@ -2602,6 +2631,10 @@ label {
     background-color: var(--accent-color);
     color: white;
 
+}
+
+.content-card h3 {
+    color: var(--dark-bg);
 }
 
 .form-section .contact-info i {
@@ -3275,11 +3308,8 @@ html {
     transform: translateZ(20px);
 }
 
-.industries-card h3 {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 0;
+.industries-card h5 {
+    text-align: center;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -3318,34 +3348,85 @@ html {
 
 
 /* Background images */
-.healthcare {
-    background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop');
+.card-bg.healthcare {
+    background-image: url('../img/industry/asset-16.png');
 }
 
-.b2b-services {
-    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=300&fit=crop');
+.card-bg.b2b-services {
+    background-image: url('../img/industry/asset-15.png');
 }
 
-.manufacturing {
-    background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop');
+.card-bg.manufacturing {
+    background-image: url('../img/industry/asset-14.png');
 }
 
-.fashion {
-    background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=300&fit=crop');
+.card-bg.fashion {
+    background-image: url('../img/industry/asset-13.png');
 }
 
-.travel {
-    background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop');
+.card-bg.travel {
+    background-image: url('../img/industry/asset-12.png');
 }
 
-.hospitality {
-    background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop');
+.card-bg.hospitality {
+    background-image: url('../img/industry/asset-11.png');
 }
 
-.logistics {
-    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop');
+.card-bg.logistics {
+    background-image: url('../img/industry/asset-10.png');
 }
 
-.agriculture {
-    background-image: url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=300&fit=crop');
+.card-bg.agriculture {
+    background-image: url('../img/industry/asset-9.png');
+}
+
+.card-bg.astrology {
+    background-image: url('../img/industry/asset-8.png');
+}
+
+.card-bg.fmcg {
+    background-image: url('../img/industry/asset-7.png');
+}
+
+.card-bg.ecommerce {
+    background-image: url('../img/industry/asset-6.png');
+}
+
+.card-bg.education {
+    background-image: url('../img/industry/asset-5.png');
+}
+
+.card-bg.real-estate {
+    background-image: url('../img/industry/asset-4.png');
+}
+
+.card-bg.ngo {
+    background-image: url('../img/industry/asset-3.png');
+}
+
+.card-bg.interior-design {
+    background-image: url('../img/industry/asset-2.png');
+}
+
+.card-bg.b2b-retail {
+    background-image: url('../img/industry/asset-1.png');
+}
+
+
+
+.creative-card {
+    padding: 20px 40px;
+    border-radius: 20px;
+    background: var(--bg-secondary);
+
+}
+
+.creative-card img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+.creative-card h2 {
+    font-size: 2rem;
 }
