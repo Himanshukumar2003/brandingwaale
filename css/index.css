@@ -3436,7 +3436,9 @@ html {
 .maps-icon {
   border: 1px solid rgba(255, 193, 7, 0.5);
   border-radius: 10px;
+  min-width: 100px;
   -webkit-border-radius: 10px;
+
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
@@ -3573,3 +3575,8 @@ html {
 .active{
     color: var(--accent-color) !important;
 }
+
+/* p{
+    color: #E0E0E0;
+    font-size: 15px;
+} */
