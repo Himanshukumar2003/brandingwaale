@@ -156,7 +156,15 @@ h1 {
 }
 
 .about-img {
-    margin-top: -70px;
+    border-radius: 20px;
+    filter: grayscale(0);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    -webkit-filter: grayscale(0);
+   
 }
 
 .section {

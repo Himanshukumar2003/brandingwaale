@@ -915,35 +915,7 @@
     <script src="js/index.js"></script>
     <script src="js/swiper.js"></script>
 
-    <script>
-        const swiper = new Swiper('.projectsSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-            },
-        });
-    </script>
+
     <!-- <script>
         var testimonialSwiper = new Swiper('.testimonials-swiper', {
             slidesPerView: 2,
@@ -967,7 +939,6 @@
 
     <script src="js/scroll.js"></script>
 
-    <!-- <script src="js/swiper.js"></script> -->
 
 
     <script>
@@ -987,30 +958,7 @@
     </script>
 
 
-    <script>
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            const isActive = faqItem.classList.contains('active');
 
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-
-            // If the clicked item wasn't active, open it
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
-        }
-
-        // Initialize with first item open
-        document.addEventListener('DOMContentLoaded', function () {
-            const firstItem = document.querySelector('.faq-item');
-            if (firstItem) {
-                firstItem.classList.add('active');
-            }
-        });
-    </script>
 
 </body>
 

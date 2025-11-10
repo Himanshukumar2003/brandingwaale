@@ -200,3 +200,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Trigger scroll event on page load to set initial active state
   window.dispatchEvent(new Event("scroll"));
 });
+
+function toggleFAQ(element) {
+  const faqItem = element.parentElement;
+  const isActive = faqItem.classList.contains("active");
+
+  // Close all FAQ items
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // If the clicked item wasn't active, open it
+  if (!isActive) {
+    faqItem.classList.add("active");
+  }
+}
+
+// Initialize with first item open
+document.addEventListener("DOMContentLoaded", function () {
+  const firstItem = document.querySelector(".faq-item");
+  if (firstItem) {
+    firstItem.classList.add("active");
+  }
+});

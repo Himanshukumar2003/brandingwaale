@@ -77,3 +77,31 @@ for (let i = 0; i < 2; i++) {
 
 marqueeLeft.innerHTML = leftHTML;
 marqueeRight.innerHTML = rightHTML;
+
+const swiper = new Swiper(".projectsSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
