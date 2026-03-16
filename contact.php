@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <div class="logo-section">
+                <a class="logo" href="index.html">
+                    <img src="img/log.gif">
+                </a>
+            </div>
+
+            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button">
+                            Services
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="development.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-code-slash"></i>
+
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            DEVELOPMENT
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Building scalable, high-performing digital platforms.</p>
+                                    </div>
+                                </a>
+
+                                <a href="marketing.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-layout-text-window-reverse"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            MARKETING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Driving engagement through data and creativity.
+                                        </p>
+                                    </div>
+                                </a>
+
+                                <a href="pr-and-advertising.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            PR & ADVERTISING
+
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Amplifying brand presence across every medium.
+                                        </p>
+                                    </div>
+                                </a>
+
+                                <a href="branding.html" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-camera"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            BRANDING
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Crafting visual identities that inspire trust.
+
+                                        </p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Creative Studio</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blogs</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="services-grid">
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-journal-text"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Blog
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Latest insights and industry trends.</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="service-item">
+                                    <div class="service-icon">
+                                        <i class="bi bi-download"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h6>
+                                            Downloads
+                                            <span class="service-arrow">↗</span>
+                                        </h6>
+                                        <p>Free resources and templates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="container">
+            <div class="container main-container">
+                <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-md-6 left-section">
+                        <h1>Connect <span>with Our Team of Experts</span></h1>
+                        <p>Contact our team of excellence-driven experts today to bring your project to life.</p>
+
+                        <div class="contact-info">
+                            <a href="tel:7135953200">
+                                <i class="bi bi-telephone-fill"></i> 7135953200
+                            </a>
+                            <a href="tel:98183 15966">
+                                <i class="bi bi-telephone-fill"></i> 98183 15966
+                            </a>
+                            <a href="mailto:">
+                                <i class="bi bi-envelope"></i> sales@brandingwaale.com
+                            </a>
+                            <a href="#">
+                                <i class="bi bi-geo-alt"></i> SCF 147, Second Floor, Huda Market,
+                                Sector 37, Faridabad, Haryana 121003
+                            </a>
+                        </div>
+
+
+
+                        <div class="content-card">
+                            <div class="row justify-content center align-items-center">
+                                <div class="col-md-6">
+                                    <h3>Want to Join Our Talented Team?</h3>
+                                    <div class="btn-section d-flex justify-content-start">
+                                        <a href="about.html" class="custom-btn">
+                                            About us
+                                            <svg class="arrow-icon" viewBox="0 0 16 19"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                                                    class="arrow-path"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <img src="img/download.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Right Section - Form -->
+                    <div class=" col-md-6">
+                        <div class="form-section">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Location">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="expertise" class="form-label">What Expertise You're
+                                        Interested
+                                        In</label>
+                                    <select class="form-select" id="expertise">
+                                        <option selected>Select</option>
+                                        <option value="web">Web Development</option>
+                                        <option value="mobile">Mobile Development</option>
+                                        <option value="design">UI/UX Design</option>
+                                        <option value="marketing">Digital Marketing</option>
+                                        <option value="consulting">Business Consulting</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Tell Us About Your
+                                        Project</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Leave your message here"></textarea>
+                                </div>
+
+                                <div class="text-start">
+                                    <button type="submit" class="btn-submit">SUBMIT</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7013.946780935371!2d77.310593!3d28.480348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7a4ff585d17%3A0xbc1058e4b74d697!2sBrandingwaale%20Webtech!5e0!3m2!1sen!2sin!4v1747743148692!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <?php include 'components/footer.php'; ?>
+
+    <script src="js/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</body>
+
+</html>

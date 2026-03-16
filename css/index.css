@@ -1618,12 +1618,14 @@ h6 {
 .testimonial-marquee {
     display: flex;
     flex-direction: column;
-    animation: scrollTop 15s linear infinite;
-    /* animation duration can be adjusted */
+    animation: scrollTop 150s linear infinite;
+    /*animationdurationcanbeadjusted*/-webkit-animation: scrollTop 150s linear infinite;
+    -webkit-animation: scrollTop 150s linear infinite;
 }
 
 .testimonial-marquee.reverse {
-    animation: scrollBottom 15s linear infinite;
+    animation: scrollBottom 150s linear infinite;
+    -webkit-animation: scrollBottom 150s linear infinite;
 }
 
 .testimonial-wrapper:hover .testimonial-marquee {
@@ -1676,8 +1678,8 @@ h6 {
 }
 
 .profile-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 15px;
@@ -3444,7 +3446,7 @@ html {
 .maps-icon {
   border: 1px solid rgba(255, 193, 7, 0.5);
   border-radius: 10px;
-  min-width: 100px;
+  width: 130px;
   -webkit-border-radius: 10px;
 
   -moz-border-radius: 10px;

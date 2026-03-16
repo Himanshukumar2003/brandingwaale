@@ -14,69 +14,74 @@ var swiperFour = new Swiper(".industriesSwiper", {
   },
 });
 
-const testimonials = [
-  {
-    name: "Michael Pinkel",
-    title: "Founder & CEO, P.S.I. Selling",
-    message:
-      "Completed the project successfully, productive discussions on creative direction.",
-  },
-  {
-    name: "Aditi Ankolekar",
-    title: "National Marketing Specialist, KPMG",
-    message:
-      "Saloni was a treat to work with. Very impressed with the presentation.",
-  },
-  {
-    name: "April Lea",
-    title: "CEO & Founder, The Neurodiversity Network",
-    message:
-      "Saloni has an exceptional eye for accessible design and always delivers quality work.",
-  },
-  {
-    name: "Saloni",
-    title: "CEO & Founder, Get Sponsorship",
-    message:
-      "Professional and communicates well. Was a great experience working together!",
-  },
-];
-
-function createTestimonialCard(testimonial) {
-  return `
-      <div class="testimonial-card mb-4">
-        <div class="profile-section">
-          <div class="profile-img">
-            <img src="img/michael-pinkel.png" alt="Profile Image" />
-          </div>
-          <div class="profile-info">
-            <h4>${testimonial.name}</h4>
-            <p>${testimonial.title}</p>
-          </div>
-        </div>
-        <div class="testimonial-content">
-          <p>${testimonial.message}</p>
-        </div>
-      </div>
-    `;
-}
-
-const marqueeLeft = document.getElementById("marqueeLeft");
-const marqueeRight = document.getElementById("marqueeRight");
-
-let leftHTML = "";
-let rightHTML = "";
-
-// Duplicate content twice for seamless infinite scroll
-for (let i = 0; i < 2; i++) {
-  testimonials.forEach((testimonial) => {
-    const card = createTestimonialCard(testimonial);
-    leftHTML += card;
-    rightHTML += card;
+$(".logo-section1")
+  .eq(0)
+  .slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
-}
 
-marqueeLeft.innerHTML = leftHTML;
-marqueeRight.innerHTML = rightHTML;
+$(".logo-section1")
+  .eq(1)
+  .slick({
+    rtl: true,
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    centerMode: true,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  });
 
 const swiper = new Swiper(".projectsSwiper", {
   slidesPerView: 1,

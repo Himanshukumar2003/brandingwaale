@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandingwaale - Transform Your Business</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/viewer.css">
+
+    <style>
+        .Profile-imgs img {
+            border-radius: 20px;
+        }
+
+
+
+        .profile-section-content {
+            background-color: #1A1A1A;
+            padding: 60px;
+            border-bottom: 2px solid #333333;
+        }
+
+
+        .profile-section-subcontent {
+            border-bottom: none !important;
+            border-radius: 0px 0px 40px 40px;
+        }
+
+
+        .solution-content {
+            padding-left: 40px;
+            border-radius: 40px;
+            background-color: #1A1A1A;
+
+        }
+
+        .color-box {
+            min-height: 200px;
+            transition: all 0.8s;
+        }
+
+        .color-box:hover {
+            transform: translateY(-20px);
+        }
+
+        .color-box-one {
+            background-color: #363cac;
+        }
+
+
+        .color-box-two {
+            background-color: #423bbf;
+        }
+
+        .color-box-three {
+            background-color: #584eff;
+        }
+
+
+
+
+
+        .colors-petten {
+            border-top: 2px solid #333333;
+            border-bottom: 2px solid #333333;
+
+        }
+
+        .website {
+            width: 100%;
+            height: 90vh;
+            border-radius: 20px;
+        }
+
+
+        .websites-section {
+            background-image: linear-gradient(180deg, #1E1E1E 2%, #363cac 30%, #584eff 63%, #1E1E1E 100%);
+        }
+
+
+        .project-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+        }
+
+
+        .screenshot img {
+            border-radius: 20px;
+        }
+
+
+
+        /* IMPACT CARDS */
+
+        .impact-card {
+
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+
+            padding: 30px;
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            transition: all .35s ease;
+
+            &:hover {
+
+                transform: translateY(-8px);
+
+                border-color: var(--accent-color);
+
+                box-shadow: 0 10px 40px rgba(255, 193, 7, 0.15);
+
+            }
+
+        }
+
+
+        /* ICON */
+
+        .impact-icon {
+
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: rgba(255, 193, 7, 0.12);
+
+            font-size: 22px;
+
+            color: var(--accent-color);
+
+        }
+
+
+        /* TITLE */
+
+        .impact-title {
+
+            font-size: 18px;
+            font-weight: 600;
+
+            color: var(--text-light);
+
+        }
+
+
+        /* DESCRIPTION */
+
+        .impact-desc {
+
+            font-size: 14px;
+
+            color: var(--text-muted);
+
+            line-height: 1.7;
+
+        }
+
+
+        /* ACCENT LINE */
+
+        .impact-line {
+
+            width: 40px;
+            height: 3px;
+
+            background: var(--accent-color);
+
+            border-radius: 6px;
+
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <?php include 'components/navbar.php'; ?>
+
+    <section class=" profile-section text-white">
+        <div class="container">
+            <div class="profile-section-content ">
+                <div class="row ">
+                    <!-- Text Section -->
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="project-title">
+                            <h1 class="display-4 fw-semibold">Creative Converts</h1>
+                            <a href="#website" class="view-projects-btn">
+                                VIEW Website <i class="fas fa-arrow-right"></i>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slider -->
+                    <div class="col-md-6">
+                        <div class="Profile-imgs">
+                            <img src="img/gyrus-brandemic-gif.gif" class="img-fluid ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-section-content  profile-section-subcontent  ">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-md-6 mb-4">
+                        <div class="label">ABOUT
+                        </div>
+
+                        <p class="mb-0">
+                            Creative Converts is a Delhi-based design agency that specializes in crafting powerful and
+                            visually compelling business presentations, pitch decks, and sales materials. Their primary
+                            focus is to help businesses convert ideas into clients by making complex information easy to
+                            understand through impactful design.
+
+
+                        </p>
+                    </div>
+
+                    <!-- Scope Section -->
+                    <div class="col-md-3 mb-4">
+                        <div class="label">SCOPE
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="text-secondary">Branding</li>
+                            <li class="text-secondary">Web UI/UX</li>
+                            <li class="text-secondary">Web Development</li>
+                        </ul>
+                    </div>
+
+                    <!-- Industry Section -->
+                    <div class="col-md-3 mb-4">
+                        <div class="label">INDUSTRY
+                        </div>
+                        <p class="text-secondary mb-0">Medical Equipment & Healthcare Technology Industry</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="Profile-img-highlights ">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="left-side">
+                        <img src="img/potal/asset19.png" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="process-section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="process-heading">
+                        <div class="label">OUR PROCESS</div>
+                        <h1 class="section-title text-white">
+                            Beyond<br>
+                            <span class="highlight">
+                                Development
+                            </span>
+                        </h1>
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="process-steps">
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">01</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Discovery & Planning:</div>
+                                <div class="step-description">
+                                    We start by understanding your business goals, target users, and technical
+                                    requirements.
+                                    This foundation shapes every decision — from site architecture to user flow — before
+                                    a
+                                    single line of code is written.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">02</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Design & Prototyping:</div>
+                                <div class="step-description">
+                                    Our designers craft wireframes and interactive prototypes so you see exactly how
+                                    your
+                                    website will look and feel before development begins. No guesswork, no surprises.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">03</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Development & Testing:</div>
+                                <div class="step-description">
+                                    We build with clean, scalable code — optimized for speed, mobile responsiveness, and
+                                    SEO. Every feature is rigorously tested across devices and browsers before it
+                                    reaches
+                                    you.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">04</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Launch & Support:</div>
+                                <div class="step-description">
+                                    Go-live is just the beginning. We handle deployment, monitor performance, and stay
+                                    by
+                                    your side post-launch to ensure everything runs smoothly and grows with your
+                                    business.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    ```
+    <div class="process-section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="process-heading">
+                        <div class="label">OUR PROCESS</div>
+                        <h1 class="section-title text-white">
+                            Beyond<br>
+                            <span class="highlight">Branding</span>
+                        </h1>
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="process-steps">
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">01</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Discovery Phase:</div>
+                                <div class="step-description">
+                                    We begin by getting to know your business in and out. Through in-depth discussions
+                                    and
+                                    research, we uncover your brand's values, mission, and target audience.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">02</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Discovery Phase:</div>
+                                <div class="step-description">
+                                    We begin by getting to know your business in and out. Through in-depth discussions
+                                    and
+                                    research, we uncover your brand's values, mission, and target audience.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">03</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Discovery Phase:</div>
+                                <div class="step-description">
+                                    We begin by getting to know your business in and out. Through in-depth discussions
+                                    and
+                                    research, we uncover your brand's values, mission, and target audience.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="solution-section section">
+        <div class="container ">
+            <div class="solution-content">
+                <div class="row align-items-center  ">
+                    <div class="col-lg-6 mb-4">
+                        <div class="solution-box">
+                            <div class="label">SOLUTION</div>
+                            <h1 class=" text-white">
+                                Intuitive, Professional,<br>
+                                <span class="highlight-text">Cohesive Design</span>
+                            </h1>
+                            <p class="text-white">
+                                We tackled the design challenges by creating a clean, professional visual identity that
+                                balances
+                                modern aesthetics with industry-specific seriousness. The minimalistic logomark
+                                effectively
+                                symbolizes innovation and higher-order thinking. We used harmonious blue and orange
+                                tones to
+                                reflect Gyrus's values. For the UI/UX, we developed an intuitive, user-friendly
+                                interface
+                                that
+                                ensures seamless navigation across multiple pages, maintaining consistency and
+                                reliability
+                                throughout the platform.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="solution-image">
+                            <img src="img/potal/asset19.png" alt="Gyrus Branding" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class=" identities-section">
+        <div class="container ">
+            <div class="identities-section-content">
+
+
+
+
+
+                <div class="colors-petten section">
+
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <div class="color-box color-box-one"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="color-box color-box-two"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="color-box color-box-three"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="viewer-section section" id="website">
+                    <div class="">
+                        <iframe class="website" src="https://www.creativeconverts.com/"
+                            title="Website Preview"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="websites-section section">
+        <div class="container ">
+
+            <div class="section">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="screenshot">
+                            <img src="img/creative-converts.png" class="img-fluid " alt="website-ui">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="screenshot">
+                            <img src="img/creative-converts-2.png" class="img-fluid" alt="website-ui">
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-4">
+                        <div class="screenshot">
+                            <img src="img/craetive-converts-phone.jpeg" class="img-fluid" alt="website-ui">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class=" identities-section section pt-0">
+        <div class=" container ">
+            <div class=" identities-section-content">
+                <div class="row align-items-center justify-content-center text-center">
+                    <!-- Left: Tagline -->
+                    <h6 class="label">IMPACT
+                    </h6>
+                    <div class="col-lg-12 mb-4 mb-lg-0">
+                        <h1 class="text-white">
+                            Enhanced Credibility &
+                            <br>
+                            <span class="highlight-text">Engagement. Measurable Results.</span>
+                        </h1>
+                    </div>
+
+                    <!-- Right: Description + Heading -->
+                    <div class="col-lg-12">
+
+                        <p class="text-white">
+                            Our design and development work didn't just build a website — it built trust. From the first
+                            pixel to the final launch, every decision was made to increase conversions, reinforce brand
+                            authority, and deliver a user experience that keeps visitors coming back.
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row g-4 mt-3">
+
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="impact-card">
+                            <div class="impact-icon">
+                                <i class="bi bi-patch-check"></i>
+                            </div>
+
+                            <div class="impact-line"></div>
+
+                            <h4 class="impact-title">Brand Credibility</h4>
+
+                            <p class="impact-desc">
+                                A polished visual identity that earns trust at first glance.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="impact-card">
+                            <div class="impact-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+
+                            <div class="impact-line"></div>
+
+                            <h4 class="impact-title">User Experience</h4>
+
+                            <p class="impact-desc">
+                                Intuitive flows that guide visitors toward action naturally.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="impact-card">
+                            <div class="impact-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+
+                            <div class="impact-line"></div>
+
+                            <h4 class="impact-title">Business Growth</h4>
+
+                            <p class="impact-desc">
+                                More leads, more retention, and more revenue post-launch.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <section class="branding-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-header">
+                        <h1 class="text-white">More <span class="highlight-text">PROJECTS</span></h1>
+                        <a href="portfolio.html" class="view-all-btn">VIEW ALL PROJECTS</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-description">
+                        <p>Every project we take on is a story we help tell. Browse through our work and see how we've
+                            helped brands like yours show up boldly, stand out confidently, and grow consistently.
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-12">
+                    <div class="swiper projectsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
+                                    <div class="project-info">
+                                        <h3 class="project-title">LVNG</h3>
+                                        <p class="project-description">Modern interior design brand</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
+                                    <div class="project-info">
+                                        <h3 class="project-title">LVNG</h3>
+                                        <p class="project-description">Modern interior design brand</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
+                                    <div class="project-info">
+                                        <h3 class="project-title">LVNG</h3>
+                                        <p class="project-description">Modern interior design brand</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
+                                    <div class="project-info">
+                                        <h3 class="project-title">LVNG</h3>
+                                        <p class="project-description">Modern interior design brand</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
+                                    <div class="project-info">
+                                        <h3 class="project-title">LVNG</h3>
+                                        <p class="project-description">Modern interior design brand</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+
+                        <!-- Pagination -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class=" faq-container section">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-4">
+                    <div class="faq-sidebar">
+                        <div class="label">FAQs</div>
+                        <h1 class="faq-title">Know The Process</h1>
+                    </div>
+                </div>
+
+                <!-- FAQ Content -->
+                <div class="col-8">
+                    <div class="faq-content h-100">
+                        <div class="faq-item active">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is branding, and why is it important for my business?</h3>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Branding encompasses the visual and verbal elements that represent
+                                    your business,
+                                    including
+                                    your
+                                    logo, color scheme, messaging, and overall identity. It's important
+                                    because it helps
+                                    differentiate your business from competitors, builds trust and
+                                    credibility with
+                                    customers,
+                                    and
+                                    creates emotional connections that drive loyalty and repeat
+                                    business.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How do I know if my brand needs a refresh or revitalization?</h3>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Signs that your brand may need a refresh include declining customer
+                                    engagement,
+                                    outdated
+                                    visual
+                                    elements, inconsistent messaging across platforms, or when your
+                                    business has evolved
+                                    beyond
+                                    your
+                                    current brand identity. If your brand no longer reflects your
+                                    company's values or
+                                    resonates
+                                    with
+                                    your target audience, it's time for a revitalization.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is the difference between a brand strategy and a brand
+                                    identity?</h3>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Brand strategy is the comprehensive plan that defines your brand's
+                                    purpose,
+                                    positioning,
+                                    and
+                                    messaging to achieve business goals. Brand identity is the visual
+                                    and tangible
+                                    expression of
+                                    that strategy, including logos, colors, typography, and design
+                                    elements. Strategy is
+                                    the
+                                    foundation, while identity is how that strategy comes to life
+                                    visually.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How do I maintain consistency in my branding efforts?</h3>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Maintain consistency by creating comprehensive brand guidelines that
+                                    document your
+                                    visual
+                                    elements, tone of voice, and messaging standards. Train your team on
+                                    these
+                                    guidelines,
+                                    use
+                                    templates for common materials, conduct regular brand audits, and
+                                    ensure all
+                                    touchpoints
+                                    reflect
+                                    your brand identity consistently across digital and physical
+                                    platforms.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How long does it take to see results from branding initiatives?</h3>
+                                <div class="faq-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Branding results vary depending on the scope and implementation.
+                                    Initial awareness
+                                    and
+                                    recognition improvements can be seen within 3-6 months, while deeper
+                                    brand
+                                    perception
+                                    changes
+                                    and customer loyalty typically develop over 6-12 months. Long-term
+                                    brand equity and
+                                    market
+                                    positioning benefits often take 1-2 years to fully materialize.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-col">
+                    <div class="d-flex justify-content-start">
+                        <div class="footer-logo">
+                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal
+                        in our
+                        Company.
+                        Innovative Digital Solutions for Your Brand and Amplify Your Brand's Reach with
+                        Our Digital
+                        Solutions.
+
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Our Expertise</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-col">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98677 37785<br>+91 98183 19568</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@brandingwaale.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana
+                                121003</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">Copyright © 2025 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.projectsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+    <script>
+        var testimonialSwiper = new Swiper('.testimonials-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+
+    <script src="js/scroll.js"></script>
+    <script src="js/index.js"></script>
+
+    <!-- <script src="js/swiper.js"></script> -->
+
+
+    <script>
+        // Initialize AOS animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true,
+                mirror: false,
+                offset: 120,
+                easing: 'ease-out-cubic'
+            });
+        });
+    </script>
+
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // If the clicked item wasn't active, open it
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Initialize with first item open
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstItem = document.querySelector('.faq-item');
+            if (firstItem) {
+                firstItem.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
