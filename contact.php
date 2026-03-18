@@ -15,151 +15,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <div class="logo-section">
-                <a class="logo" href="index.html">
-                    <img src="img/log.gif">
-                </a>
-            </div>
 
-            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="bi bi-list"></i>
-            </button>
+    <?php include 'components/navbar.php'; ?>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle " href="#" role="button">
-                            Services
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="development.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-code-slash"></i>
 
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            DEVELOPMENT
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Building scalable, high-performing digital platforms.</p>
-                                    </div>
-                                </a>
-
-                                <a href="marketing.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-layout-text-window-reverse"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            MARKETING
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Driving engagement through data and creativity.
-                                        </p>
-                                    </div>
-                                </a>
-
-                                <a href="pr-and-advertising.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-palette"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            PR & ADVERTISING
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Amplifying brand presence across every medium.
-                                        </p>
-                                    </div>
-                                </a>
-
-                                <a href="branding.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-camera"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            BRANDING
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Crafting visual identities that inspire trust.
-
-                                        </p>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Creative Studio</a>
-                    </li> -->
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="careers.html">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blogs</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
-                            Resources
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="#" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-journal-text"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            Blog
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Latest insights and industry trends.</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-download"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            Downloads
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Free resources and templates.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <div class="section">
         <div class="container">
             <div class="container main-container">
@@ -192,7 +51,7 @@
                                 <div class="col-md-6">
                                     <h3>Want to Join Our Talented Team?</h3>
                                     <div class="btn-section d-flex justify-content-start">
-                                        <a href="about.html" class="custom-btn">
+                                        <a href="about.php" class="custom-btn">
                                             About us
                                             <svg class="arrow-icon" viewBox="0 0 16 19"
                                                 xmlns="http://www.w3.org/2000/svg">

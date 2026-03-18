@@ -50,61 +50,7 @@ if (isset($_POST['submit'])) {
         href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.83/dist/themes/light.css" />
 
 
-    <style>
-        .main-content {
-            padding: 20px;
-            background: #f8f9fc;
-            min-height: 100vh;
-        }
 
-        .form-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .form-row input,
-        .form-row select,
-        textarea {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        .form-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .btn-primary {
-            background: #635bff;
-            border: none;
-        }
-
-        .gallery-box {
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .preview-img {
-            max-height: 100px;
-            margin: 5px;
-            border-radius: 6px;
-        }
-    </style>
 </head>
 
 <body>

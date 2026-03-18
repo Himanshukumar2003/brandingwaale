@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-6 footer-col">
                 <div class="d-flex justify-content-start">
                     <div class="footer-logo">
-                        <img src="img/log.gif" alt="Company Logo" class="img-fluid">
+                        <img src="/img/log.gif" alt="Company Logo" class="img-fluid">
                     </div>
                 </div>
                 <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our
@@ -24,22 +24,22 @@
             <div class="col-lg-2 col-md-6 footer-col">
                 <h4 class="footer-heading">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/index.php">Home</a></li>
+                    <li><a href="/about.php">About</a></li>
+                    <li><a href="/portfolio.php">Portfolio</a></li>
+
+                    <li><a href="/contact.php">Contact</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-col">
                 <h4 class="footer-heading">Our Expertise</h4>
                 <ul class="footer-links">
-                    <li><a href="service-details.html">Web Development</a></li>
-                    <li><a href="service-details.html">Graphic Design</a></li>
-                    <li><a href="service-details.html">Branding</a></li>
-                    <li><a href="service-details.html">Social Media Marketing</a></li>
-                    <li><a href="service-details.html">Digital Marketing</a></li>
+                    <li><a href="development.php"> Development</a></li>
+
+                    <li><a href="branding.php">Branding</a></li>
+                    <li><a href="/pr-and-advertising.php">Pr and Advertising</a></li>
+                    <li><a href="/marketing.php"> Marketing</a></li>
                 </ul>
             </div>
 

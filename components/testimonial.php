@@ -17,8 +17,8 @@
               </div>
 
               <!-- Marquee Right -->
-              <div class="col-lg-4">
-                  <div class="testimonial-wrapper">
+              <div class="col-lg-4  ">
+                  <div class="testimonial-wrapper d-none d-lg-flex  flex-column">
                       <div class="testimonial-marquee reverse" id="marqueeRight"></div>
                   </div>
               </div>

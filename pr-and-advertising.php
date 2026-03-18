@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
 
-                    <img src="img/download.svg" alt="Branding Services Illustration" class="img-fluid"
+                    <img src="img/bg/advertisinggg.png" alt="Branding Services Illustration" class="img-fluid"
                         data-aos="zoom-in" data-aos-duration="1200">
                 </div>
             </div>
@@ -70,105 +70,7 @@
 
 
 
-    <section class="branding-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-header">
-                        <h2 class="section-title text-white">
-                            PR & ADVERTISING
-                            <br> <span>PROJECTS</span>
-                        </h2>
-                        <a href="portfolio.html" class="view-all-btn">VIEW ALL PROJECTS</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-description">
-                        <p>While creativity drives our campaigns, our true satisfaction lies in creating real impact.
-                            Every project we execute combines media strategy, creative communication, and brand
-                            positioning that delivers measurable awareness.
-                            Explore our PR and advertising projects — where communication meets strategy and stories
-                            turn into influence.
 
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row ">
-                <div class="col-12">
-                    <div class="swiper projectsSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-
-                        <!-- Pagination -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="process-section">
 
@@ -195,11 +97,10 @@
                                 <div class="services-step-number">01</div>
                             </div>
                             <div>
-                                <div class="step-title">Discovery Phase:</div>
+                                <div class="step-title"> Brand & Audience Analysis:</div>
                                 <div class="step-description">
-                                    We begin by understanding your brand’s voice, goals, and audience.
-                                    Through detailed research, we define the right media mix and communication approach
-                                    that amplifies your message.
+                                    We study your brand positioning, target audience, and current perception in the market — so every campaign we run is rooted in reality, not guesswork.
+
 
 
                                 </div>
@@ -213,12 +114,10 @@
                                 <div class="services-step-number">02</div>
                             </div>
                             <div>
-                                <div class="step-title">Strategy & Campaign Phase:</div>
+                                <div class="step-title">Campaign Strategy & Messaging:</div>
                                 <div class="step-description">
-                                    Our creative and PR teams collaborate to design compelling ad campaigns, press
-                                    releases, and media outreach plans — ensuring consistency across every touchpoint.
-                                    From digital to traditional, we connect your brand with the right audience at the
-                                    right time.
+                                    We define your core message, ad angles, and PR approach — crafting narratives that are compelling, credible, and impossible to ignore across every platform.
+
 
 
                                 </div>
@@ -232,11 +131,29 @@
                                 <div class="services-step-number">03</div>
                             </div>
                             <div>
-                                <div class="step-title">Execution & Analysis Phase:</div>
+                                <div class="step-title">Creative Production & Placement:</div>
                                 <div class="step-description">
                                     Once live, we monitor campaign performance, media coverage, and audience engagement.
                                     We analyze results, refine messaging, and ensure your brand stays relevant and
                                     visible across every platform.
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="separator-line"></div>
+
+                        <div class="services-process-step">
+                            <div>
+                                <div class="services-step-number">04</div>
+                            </div>
+                            <div>
+                                <div class="step-title">Performance & Reputation Tracking:</div>
+                                <div class="step-description">
+                                    We track reach, sentiment, and ROI — refining every campaign in real time to maximize impact and ensure your brand's reputation only moves in one direction: up.
 
                                 </div>
                             </div>
@@ -269,96 +186,80 @@
             </div>
 
             <!-- Bootstrap Grid Layout for the industries cards -->
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fashion"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Digital Advertising</h5>
-                        </div>
-                    </div>
+            <div class="cards-grid">
+
+                <!-- Digital Advertising -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">01 / ADVERTISING</span>
+                    <h2>Digital<br>Advertising</h2>
+                    <p>Reach your ideal audience at the right time with precision-targeted campaigns across Google, Meta, YouTube, and more. We create data-driven strategies that maximise ROI, boost visibility, and generate high-quality leads.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg travel"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Print Advertising</h5>
-                        </div>
-                    </div>
+                <!-- Print Advertising -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">02 / ADVERTISING</span>
+                    <h2>Print<br>Advertising</h2>
+                    <p>Make a strong impact with professionally designed newspaper, magazine, and publication ads. We combine creative design with smart placement to ensure maximum reach and brand recall.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg hospitality"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Outdoor Advertising</h5>
-                        </div>
-                    </div>
+                <!-- Outdoor Advertising -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">03 / ADVERTISING</span>
+                    <h2>Outdoor<br>Advertising</h2>
+                    <p>Dominate visibility with hoardings, metro branding, airport displays, and transit ads across Delhi NCR. Strategic locations and bold creatives ensure your brand gets noticed every day.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg logistics"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Cinema Campaigns</h5>
-                        </div>
-                    </div>
+                <!-- Cinema Campaigns -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">04 / ADVERTISING</span>
+                    <h2>Cinema<br>Campaigns</h2>
+                    <p>Engage a premium audience with big-screen advertising across leading multiplexes. High-impact visuals and undivided attention deliver powerful brand recall.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg agriculture"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Radio Campaigns</h5>
-                        </div>
-                    </div>
+                <!-- Radio Campaigns -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">05 / ADVERTISING</span>
+                    <h2>Radio<br>Campaigns</h2>
+                    <p>Tap into a wide local audience through top radio stations. From scripting to production and media planning, we ensure your message reaches listeners effectively.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg astrology"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Wikipedia Creation</h5>
-                        </div>
-                    </div>
+                <!-- Wikipedia Creation -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">06 / ADVERTISING</span>
+                    <h2>Wikipedia<br>Creation</h2>
+                    <p>Build authority with professionally written, guideline-compliant Wikipedia pages. We ensure proper sourcing and successful publishing for stronger brand credibility.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fmcg"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Google Knowledge Panel</h5>
-                        </div>
-                    </div>
+                <!-- Google Knowledge Panel -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">07 / ADVERTISING</span>
+                    <h2>Google Knowledge<br>Panel</h2>
+                    <p>Boost your online presence with a verified Knowledge Panel. We manage entity creation, verification, and optimization to make your brand stand out in search results.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg design"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Media Buying</h5>
-                        </div>
-                    </div>
+                <!-- Media Buying -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">08 / ADVERTISING</span>
+                    <h2>Media<br>Buying</h2>
+                    <p>Maximise your marketing budget with strategic media buying. We secure the best placements across digital, print, radio, and outdoor channels for optimal ROI.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg media"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Media Planning</h5>
-                        </div>
-                    </div>
-                </div>
             </div>
 
 
@@ -400,7 +301,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <img src="" class="img-fluid" alt="cta-img">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
                             </div>
 
                         </div>
@@ -539,7 +440,7 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
+                <div class="col-lg-8">
                     <div class="faq-content h-100">
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">

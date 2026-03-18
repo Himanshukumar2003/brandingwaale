@@ -1,8 +1,8 @@
  <nav class="navbar navbar-expand-lg navbar-custom">
      <div class="container">
          <div class="logo-section">
-             <a class="logo" href="index.php">
-                 <img src="img/log.gif">
+             <a class="logo" href="/index.php">
+                 <img src="/img/log.gif">
              </a>
          </div>
 
@@ -14,10 +14,10 @@
          <div class="collapse navbar-collapse" id="navbarNav">
              <ul class="navbar-nav ms-auto">
                  <li class="nav-item">
-                     <a class="nav-link active" href="index.php">Home</a>
+                     <a class="nav-link active" href="/index.php">Home</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="about.php">About Us</a>
+                     <a class="nav-link" href="/about.php">About Us</a>
                  </li>
                  <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle " href="#" role="button">
@@ -25,7 +25,7 @@
                      </a>
                      <div class="dropdown-menu">
                          <div class="services-grid">
-                             <a href="development.php" class="service-item">
+                             <a href="/development.php" class="service-item">
                                  <div class="service-icon">
                                      <i class="bi bi-code-slash"></i>
 
@@ -40,7 +40,7 @@
                                  </div>
                              </a>
 
-                             <a href="marketing.php" class="service-item">
+                             <a href="/marketing.php" class="service-item">
                                  <div class="service-icon">
                                      <i class="bi bi-layout-text-window-reverse"></i>
                                  </div>
@@ -55,7 +55,7 @@
                                  </div>
                              </a>
 
-                             <a href="pr-and-advertising.php" class="service-item">
+                             <a href="/pr-and-advertising.php" class="service-item">
                                  <div class="service-icon">
                                      <i class="bi bi-palette"></i>
                                  </div>
@@ -70,7 +70,7 @@
                                  </div>
                              </a>
 
-                             <a href="branding.php" class="service-item">
+                             <a href="/branding.php" class="service-item">
                                  <div class="service-icon">
                                      <i class="bi bi-camera"></i>
                                  </div>
@@ -89,7 +89,7 @@
                      </div>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="portfolio.php">Portfolio</a>
+                     <a class="nav-link" href="/portfolio.php">Portfolio</a>
                  </li>
 
                  <!-- <li class="nav-item">
@@ -97,10 +97,10 @@
                     </li> -->
 
                  <li class="nav-item">
-                     <a class="nav-link" href="careers.php">Careers</a>
+                     <a class="nav-link" href="/careers.php">Careers</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="blog.php">Blogs</a>
+                     <a class="nav-link" href="/blog.php">Blogs</a>
                  </li>
                  <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button">
@@ -137,9 +137,32 @@
                         </div>
                     </li> -->
                  <li class="nav-item">
-                     <a class="nav-link" href="contact.php">Contact Us</a>
+                     <a class="nav-link" href="/contact.php">Contact Us</a>
                  </li>
              </ul>
          </div>
      </div>
  </nav>
+
+
+
+ <script>
+     const currentPage = window.location.pathname.split("/").pop();
+
+     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+     navLinks.forEach(link => {
+         const linkPage = link.getAttribute('href').split("/").pop();
+
+         // Special case for homepage
+         if (
+             (currentPage === "" || currentPage === "/") && linkPage === "index.php"
+         ) {
+             link.classList.add("active");
+         } else if (linkPage === currentPage) {
+             link.classList.add("active");
+         } else {
+             link.classList.remove("active");
+         }
+     });
+ </script>

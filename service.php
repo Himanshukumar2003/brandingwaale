@@ -367,7 +367,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <img src="" class="img-fluid" alt="cta-img">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
                             </div>
 
                         </div>
@@ -506,7 +506,7 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
+                <div class="col-lg-8">
                     <div class="faq-content h-100">
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">

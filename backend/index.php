@@ -44,17 +44,14 @@ if (isset($_POST['submit'])) {
         rel="stylesheet">
 
     <link href="assets/css/style.css" rel="stylesheet">
-
     <style>
-        /* ================= BODY ================= */
         body {
             margin: 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135 deg, #1a1a1a, #000000 70%);
-            color: var(--text-primary);
+            background: var(--darker-bg);
         }
     </style>
 </head>

@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
 
-                    <img src="img/download.svg" alt="Branding Services Illustration" class="img-fluid"
+                    <img src="img/bg/marketing.png" alt="Branding Services Illustration" class="img-fluid"
                         data-aos="zoom-in" data-aos-duration="1200">
                 </div>
             </div>
@@ -66,102 +66,6 @@
 
 
 
-    <section class="branding-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-header">
-                        <h2 class="section-title text-white">
-                            MARKETING <br> <span>PROJECTS</span>
-                        </h2>
-                        <a href="portfolio.html" class="view-all-btn">VIEW ALL PROJECTS</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-description">
-                        <p>While numbers matter, our real achievement lies in helping brands grow authentically.
-                            Every campaign we create blends creativity with analytics to ensure long-term performance.
-                            Explore our marketing projects — where insights meet innovation and every click creates
-                            connection.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row ">
-                <div class="col-12">
-                    <div class="swiper projectsSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-
-                        <!-- Pagination -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="process-section">
 
@@ -175,7 +79,7 @@
                             <span class="highlight">Marketing</span>
                         </h2>
                         <br>
-                        <a href="portfolio.html" class="view-projects-btn">
+                        <a href="portfolio.php" class="view-projects-btn">
                             VIEW ALL PROJECTS <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -267,86 +171,80 @@
             </div>
 
             <!-- Bootstrap Grid Layout for the industries cards -->
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fashion"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>SEO | SEM | SMM</h5>
-                        </div>
-                    </div>
+            <div class="cards-grid">
+
+                <!-- SEO SEM SMM -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">01 / MARKETING</span>
+                    <h2>SEO | SEM |<br>SMM</h2>
+                    <p>Dominate search results and social platforms with integrated strategies built for real growth. From Google rankings to paid ads and social media, we drive traffic and generate quality leads.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg travel"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>GMB Optimization</h5>
-                        </div>
-                    </div>
+                <!-- GMB -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">02 / MARKETING</span>
+                    <h2>GMB<br>Optimization</h2>
+                    <p>Make your Google presence count with a fully optimized GMB profile. We enhance visibility on local search and Maps through keywords, reviews, posts, and complete profile management.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg hospitality"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>WhatsApp Automation</h5>
-                        </div>
-                    </div>
+                <!-- WhatsApp Automation -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">03 / MARKETING</span>
+                    <h2>WhatsApp<br>Automation</h2>
+                    <p>Automate your business communication with WhatsApp API solutions. From lead follow-ups to customer support, boost engagement and conversions with zero manual effort.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg logistics"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Personal Branding</h5>
-                        </div>
-                    </div>
+                <!-- Personal Branding -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">04 / MARKETING</span>
+                    <h2>Personal<br>Branding</h2>
+                    <p>Build a powerful personal brand with strategic content and visibility. We position you as an authority through LinkedIn, Google presence, and media exposure.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg agriculture"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>UGC Ads</h5>
-                        </div>
-                    </div>
+                <!-- UGC Ads -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">05 / MARKETING</span>
+                    <h2>UGC<br>Ads</h2>
+                    <p>Leverage authentic, relatable content that converts. We create high-performing UGC campaigns that boost engagement, lower costs, and improve ad performance.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg astrology"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>ATL Marketing</h5>
-                        </div>
-                    </div>
+                <!-- ATL -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">06 / MARKETING</span>
+                    <h2>ATL<br>Marketing</h2>
+                    <p>Reach massive audiences through high-impact campaigns across TV, radio, print, and digital. Build strong brand recall with wide-scale visibility.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fmcg"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>BTL Marketing</h5>
-                        </div>
-                    </div>
+                <!-- BTL -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">07 / MARKETING</span>
+                    <h2>BTL<br>Marketing</h2>
+                    <p>Engage directly with your audience through targeted activations, events, and promotions. Drive real interactions and measurable results.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg design"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>TTL Marketing</h5>
-                        </div>
-                    </div>
+                <!-- TTL -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">08 / MARKETING</span>
+                    <h2>TTL<br>Marketing</h2>
+                    <p>Combine ATL reach with BTL precision for maximum impact. We create unified campaigns that deliver consistent messaging across all channels.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
+
             </div>
 
         </div>
@@ -376,7 +274,7 @@
                                 </p>
 
                                 <div class="d-flex justify-content-start">
-                                    <a href="about.html" class="custom-btn  bg-dark">
+                                    <a href="about.php" class="custom-btn  bg-dark">
                                         Contact us
                                         <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -387,7 +285,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <img src="" class="img-fluid" alt="cta-img">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
                             </div>
 
                         </div>
@@ -526,7 +424,7 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
+                <div class="col-lg-8">
                     <div class="faq-content h-100">
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">

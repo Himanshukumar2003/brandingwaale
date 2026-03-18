@@ -277,65 +277,8 @@ $data = mysqli_fetch_assoc($query);
 
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <div class="logo-section">
-                <a class="logo" href="index.html">
-                    <img src="img/log.gif">
-                </a>
-            </div>
-            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="bi bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">Services</a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="development.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-code-slash"></i></div>
-                                    <div class="service-content">
-                                        <h6>DEVELOPMENT <span class="service-arrow">↗</span></h6>
-                                        <p>Building scalable, high-performing digital platforms.</p>
-                                    </div>
-                                </a>
-                                <a href="marketing.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
-                                    <div class="service-content">
-                                        <h6>MARKETING <span class="service-arrow">↗</span></h6>
-                                        <p>Driving engagement through data and creativity.</p>
-                                    </div>
-                                </a>
-                                <a href="pr-and-advertising.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-palette"></i></div>
-                                    <div class="service-content">
-                                        <h6>PR & ADVERTISING <span class="service-arrow">↗</span></h6>
-                                        <p>Amplifying brand presence across every medium.</p>
-                                    </div>
-                                </a>
-                                <a href="branding.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-camera"></i></div>
-                                    <div class="service-content">
-                                        <h6>BRANDING <span class="service-arrow">↗</span></h6>
-                                        <p>Crafting visual identities that inspire trust.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body> <?php include 'components/navbar.php'; ?>
+
 
     <!-- HERO SECTION -->
     <section class="section border-bottom">
@@ -387,11 +330,11 @@ $data = mysqli_fetch_assoc($query);
                         <div class="sidebar-section mb-4">
                             <h4 class="sidebar-title">Our Services</h4>
                             <ul class="list-unstyled sidebar-links">
-                                <li><a href="marketing.html">Digital Marketing</a></li>
-                                <li><a href="marketing.html">SEO &amp; Analytics</a></li>
-                                <li><a href="development.html">Web Development</a></li>
-                                <li><a href="branding.html">Branding</a></li>
-                                <li><a href="pr-and-advertising.html">PR &amp; Advertising</a></li>
+                                <li><a href="marketing.php">Digital Marketing</a></li>
+                                <li><a href="marketing.php">SEO &amp; Analytics</a></li>
+                                <li><a href="development.php">Web Development</a></li>
+                                <li><a href="branding.php">Branding</a></li>
+                                <li><a href="pr-and-advertising.php">PR &amp; Advertising</a></li>
                             </ul>
                         </div>
 
@@ -475,6 +418,7 @@ $data = mysqli_fetch_assoc($query);
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
+    <?php include 'components/footer.php'; ?>
 
 </body>
 

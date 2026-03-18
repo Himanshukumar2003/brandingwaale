@@ -38,13 +38,13 @@ if (!empty($_GET['slug'])) {
     $id = intval($_GET['id']);
     $result = mysqli_query($conn, "SELECT * FROM `city` WHERE id = '$id' LIMIT 1");
 } else {
-    header('location: index.html');
+    header('location: index.php');
     exit;
 }
 
 $city = mysqli_fetch_assoc($result);
 if (!$city) {
-    header('location: index.html');
+    header('location: index.php');
     exit;
 }
 
@@ -967,64 +967,8 @@ $features     = $feature_data['features'] ?? [];
 <body>
 
     <!-- NAVBAR (same as main site) -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <div class="logo-section">
-                <a class="logo" href="index.html">
-                    <img src="img/log.gif">
-                </a>
-            </div>
-            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="bi bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">Services</a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="development.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-code-slash"></i></div>
-                                    <div class="service-content">
-                                        <h6>DEVELOPMENT <span class="service-arrow">↗</span></h6>
-                                        <p>Building scalable, high-performing digital platforms.</p>
-                                    </div>
-                                </a>
-                                <a href="marketing.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
-                                    <div class="service-content">
-                                        <h6>MARKETING <span class="service-arrow">↗</span></h6>
-                                        <p>Driving engagement through data and creativity.</p>
-                                    </div>
-                                </a>
-                                <a href="pr-and-advertising.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-palette"></i></div>
-                                    <div class="service-content">
-                                        <h6>PR & ADVERTISING <span class="service-arrow">↗</span></h6>
-                                        <p>Amplifying brand presence across every medium.</p>
-                                    </div>
-                                </a>
-                                <a href="branding.html" class="service-item">
-                                    <div class="service-icon"><i class="bi bi-camera"></i></div>
-                                    <div class="service-content">
-                                        <h6>BRANDING <span class="service-arrow">↗</span></h6>
-                                        <p>Crafting visual identities that inspire trust.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include './components/navbar.php'; ?>
+
 
 
     <!-- ══ HERO ══ -->
@@ -1055,8 +999,8 @@ $features     = $feature_data['features'] ?? [];
                 </div>
 
                 <div style="margin-top:36px; display:flex; gap:14px; flex-wrap:wrap;">
-                    <a href="contact.html" class="btn-primary-gold">Get In Touch</a>
-                    <a href="portfolio.html" style="background:transparent;color:#fff;padding:14px 32px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;border-radius:3px;border:1px solid #2a2a2a;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;"
+                    <a href="contact.php" class="btn-primary-gold">Get In Touch</a>
+                    <a href="portfolio.php" style="background:transparent;color:#fff;padding:14px 32px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;border-radius:3px;border:1px solid #2a2a2a;text-decoration:none;display:inline-block;transition:border-color .2s,color .2s;"
                         onmouseover="this.style.borderColor='#ffc107';this.style.color='#ffc107'"
                         onmouseout="this.style.borderColor='#2a2a2a';this.style.color='#fff'">
                         See Our Work
@@ -1143,6 +1087,9 @@ $features     = $feature_data['features'] ?? [];
     <?php endif; ?>
 
 
+    <?php include './components/form.php'; ?>
+
+
     <!-- ══ FAQ ══ -->
     <?php if (!empty($faqs)): ?>
         <section class="faq-section">
@@ -1185,200 +1132,13 @@ $features     = $feature_data['features'] ?? [];
     <section class="cta-banner">
         <h2>Ready to Grow Your Brand in <span><?= htmlspecialchars($city['heading']) ?></span>?</h2>
         <p>Let's build something powerful together — strategy, identity, and execution, all in one place.</p>
-        <a href="contact.html" class="btn-primary-gold">Start Your Journey</a>
+        <a href="contact.php" class="btn-primary-gold">Start Your Journey</a>
     </section>
 
 
-    <!-- ══ FOOTER ══ -->
-    <footer class="footer-main">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 footer-col">
-                    <div class="d-flex justify-content-start">
-                        <div class="footer-logo">
-                            <img src="img/log.gif" alt="Company Logo" class="img-fluid">
-                        </div>
-                    </div>
-                    <p class="footer-tagline">"Building Brands That Make a Difference" is Our Main Goal in our Company.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 footer-col">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 footer-col">
-                    <h4 class="footer-heading">Our Expertise</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Graphic Design</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 footer-col">
-                    <h4 class="footer-heading">Contact Us</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-phone-alt"></i><span>+91 98677 37785<br>+91 98183 19568</span></li>
-                        <li><i class="fas fa-envelope"></i><span>sales@brandingwaale.com</span></li>
-                        <li><i class="fas fa-map-marker-alt"></i><span>SCF 147, Second Floor, Huda Market, Sector 37, Faridabad, Haryana 121003</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="copyright">Copyright © 2025 All rights reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="footer-bottom-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-overlay" id="contactModal" onclick="if(event.target===this)closeModal()">
-        <div class="cmodal">
-            <button class="modal-close" onclick="closeModal()">&#x2715;</button>
-            <p class="modal-eyebrow">Let's Connect</p>
-            <h2 class="modal-title">Start Your <span>Journey</span></h2>
-            <p class="modal-sub">Tell us about your brand and we'll craft the perfect strategy for your market.</p>
-            <div class="modal-divider"></div>
+    <?php include './components/footer.php'; ?>
 
-            <div id="mFormContent">
-                <div class="mform-row">
-                    <div class="mform-group">
-                        <label>Full Name *</label>
-                        <input type="text" class="mform-control" placeholder="John Doe" id="mName">
-                    </div>
-                    <div class="mform-group">
-                        <label>Email Address *</label>
-                        <input type="email" class="mform-control" placeholder="john@company.com" id="mEmail">
-                    </div>
-                </div>
-                <div class="mform-row">
-                    <div class="mform-group">
-                        <label>Company</label>
-                        <input type="text" class="mform-control" placeholder="Your Company Name" id="mCompany">
-                    </div>
-                    <div class="mform-group">
-                        <label>Phone Number *</label>
-                        <div class="phone-row">
-                            <select class="phone-code" id="mPhoneCode">
-                                <option value="+91">🇮🇳 +91</option>
-                                <option value="+971">🇦🇪 +971</option>
-                                <option value="+1">🇺🇸 +1</option>
-                                <option value="+44">🇬🇧 +44</option>
-                                <option value="+61">🇦🇺 +61</option>
-                                <option value="+49">🇩🇪 +49</option>
-                                <option value="+33">🇫🇷 +33</option>
-                                <option value="+86">🇨🇳 +86</option>
-                                <option value="+55">🇧🇷 +55</option>
-                                <option value="+52">🇲🇽 +52</option>
-                                <option value="+34">🇪🇸 +34</option>
-                                <option value="+39">🇮🇹 +39</option>
-                                <option value="+31">🇳🇱 +31</option>
-                                <option value="+82">🇰🇷 +82</option>
-                                <option value="+65">🇸🇬 +65</option>
-                                <option value="+92">🇵🇰 +92</option>
-                                <option value="+880">🇧🇩 +880</option>
-                                <option value="+977">🇳🇵 +977</option>
-                                <option value="+213">🇩🇿 +213</option>
-                                <option value="+54">🇦🇷 +54</option>
-                                <option value="+43">🇦🇹 +43</option>
-                                <option value="+32">🇧🇪 +32</option>
-                                <option value="+359">🇧🇬 +359</option>
-                                <option value="+56">🇨🇱 +56</option>
-                                <option value="+57">🇨🇴 +57</option>
-                                <option value="+20">🇪🇬 +20</option>
-                                <option value="+358">🇫🇮 +358</option>
-                                <option value="+30">🇬🇷 +30</option>
-                                <option value="+36">🇭🇺 +36</option>
-                                <option value="+98">🇮🇷 +98</option>
-                                <option value="+964">🇮🇶 +964</option>
-                                <option value="+353">🇮🇪 +353</option>
-                                <option value="+972">🇮🇱 +972</option>
-                                <option value="+962">🇯🇴 +962</option>
-                                <option value="+254">🇰🇪 +254</option>
-                                <option value="+965">🇰🇼 +965</option>
-                                <option value="+961">🇱🇧 +961</option>
-                                <option value="+60">🇲🇾 +60</option>
-                                <option value="+212">🇲🇦 +212</option>
-                                <option value="+234">🇳🇬 +234</option>
-                                <option value="+47">🇳🇴 +47</option>
-                                <option value="+968">🇴🇲 +968</option>
-                                <option value="+507">🇵🇦 +507</option>
-                                <option value="+63">🇵🇭 +63</option>
-                                <option value="+48">🇵🇱 +48</option>
-                                <option value="+351">🇵🇹 +351</option>
-                                <option value="+974">🇶🇦 +974</option>
-                                <option value="+40">🇷🇴 +40</option>
-                                <option value="+7">🇷🇺 +7</option>
-                                <option value="+966">🇸🇦 +966</option>
-                                <option value="+27">🇿🇦 +27</option>
-                                <option value="+46">🇸🇪 +46</option>
-                                <option value="+41">🇨🇭 +41</option>
-                                <option value="+886">🇹🇼 +886</option>
-                                <option value="+66">🇹🇭 +66</option>
-                                <option value="+216">🇹🇳 +216</option>
-                                <option value="+90">🇹🇷 +90</option>
-                                <option value="+380">🇺🇦 +380</option>
-                                <option value="+971">🇦🇪 +971</option>
-                                <option value="+84">🇻🇳 +84</option>
-                                <option value="+967">🇾🇪 +967</option>
-                                <option value="+263">🇿🇼 +263</option>
-                            </select>
-                            <input type="tel" class="mform-control" placeholder="98765 43210" id="mPhone" style="flex:1;">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="mform-group">
-                    <label>Services Required *</label>
-                    <div class="services-list">
-                        <?php
-                        $services = ['Digital Marketing', 'Web Development', 'Mobile Development', 'UI/UX Design', 'SEO', 'Performance Marketing', 'Brand Communication', 'Content Creation', 'Social Media Marketing', 'Business Consulting', 'Others'];
-                        foreach ($services as $svc): ?>
-                            <div class="svc-item" onclick="this.classList.toggle('selected')">
-                                <div class="chk-box"><span class="chk-mark">&#10003;</span></div>
-                                <span class="svc-name"><?= htmlspecialchars($svc) ?></span>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-
-                <div class="mform-group" style="margin-top:4px;">
-                    <label>Share Your Message</label>
-                    <textarea class="mform-control" placeholder="Tell us about your project, goals, or any questions..." id="mMessage"></textarea>
-                </div>
-
-                <p class="modal-err" id="mErr">Please fill in all required fields and select at least one service.</p>
-                <button class="modal-submit" onclick="submitModalForm()">Send Message &rarr;</button>
-            </div>
-
-            <div class="modal-success" id="mSuccess">
-                <div class="success-icon-circle">&#10003;</div>
-                <h3>Message Sent!</h3>
-                <p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
-            </div>
-        </div>
-    </div>
 
     <!-- ══ LIGHTBOX ══ -->
     <div class="lightbox-overlay" id="lightbox">

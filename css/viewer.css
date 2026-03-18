@@ -426,7 +426,7 @@ iframe {
 
 /*  */
 .process-section {
-    background-image: url(https://brandemic.in/wp-content/uploads/2022/09/purple-wave.svg);
+    background-image: url(../img/bg/bg1.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -435,7 +435,6 @@ iframe {
     padding: 60px 0;
 }
 
-.process-section::after {}
 
 .process-header {
     color: var(--accent-color);

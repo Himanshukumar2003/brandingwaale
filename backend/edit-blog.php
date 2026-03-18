@@ -263,7 +263,7 @@ if (isset($_POST['submit'])) {
             </div>
 
             <h3 class="mt-3 mb-2">Seo</h3>
-            <div class="form-row  bg-light p-3 rounded">
+            <div class="form-row   p-3 rounded">
                 <label>Meta Title</label>
                 <input type="text" name="title" value="<?= htmlspecialchars($blog_detail['title']) ?>" />
 

@@ -189,11 +189,66 @@ if (isset($_POST['submit'])) {
 
             <div class="form-row">
                 <label for="content">Blog Content</label>
-                <tinymce-editor api-key="26eohrlp913qxavz9xyrl5wszw74jii703o230piigrz0ync" height="500"
+                <tinymce-editor
+                    api-key="26eohrlp913qxavz9xyrl5wszw74jii703o230piigrz0ync"
+                    height="500"
                     menubar="file edit view insert format tools table help"
                     plugins="print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media codesample table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists wordcount textpattern noneditable help charmap quickbars emoticons"
                     toolbar="undo redo | blocks fontfamily fontsize | bold italic underline strikethrough forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media table codesample | removeformat | fullscreen preview code help"
-                    name="content"></tinymce-editor>
+                    name="content"
+                    :config="{
+  skin: 'oxide-dark',
+  content_css: 'dark',
+  content_style: `
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 20px;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+      color:#ffc107;
+      font-weight:600;
+    }
+
+    p{
+      color:#e0e0e0;
+    }
+
+    a{
+      color:#ffc107;
+      text-decoration:none;
+    }
+
+    blockquote{
+      border-left:4px solid #ffc107;
+      padding-left:15px;
+      color:#ccc;
+      background:#161616;
+    }
+
+    table{
+      border-collapse:collapse;
+      width:100%;
+    }
+
+    table td, table th{
+      border:1px solid #333;
+      padding:8px;
+    }
+
+    code{
+      background:#161616;
+      padding:4px 6px;
+      border-radius:4px;
+      color:#ffc107;
+    }
+  `
+}">
+                </tinymce-editor>
             </div>
 
             <!-- Gallery Section -->
@@ -219,7 +274,7 @@ if (isset($_POST['submit'])) {
 
 
             <h3 class=" mt-3 mb-2">Seo</h3>
-            <div class="form-row p-3 rounded bg-light">
+            <div class="form-row p-3 rounded ">
                 <label for="title">Meta Title</label>
                 <input type="text" name="title" id="title" placeholder="Enter meta title" />
 

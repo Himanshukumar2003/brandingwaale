@@ -21,7 +21,7 @@
 <body>
     <!-- Main Portfolio Page -->
 
-    <?php include 'components/footer.php'; ?>
+    <?php include 'components/navbar.php'; ?>
 
 
 
@@ -33,35 +33,27 @@
                 <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
                     <h1>OUR JOURNEY</h1>
                     <p class="journey-text" data-aos="fade-left" data-aos-delay="100">
-                        After a few years of industry experience, Sandeep Gupta founded Brandingwaale Webtech in 2019
-                        from his home office, beginning with a dedicated two-member team. Recognizing the accelerating
-                        shift towards digital engagement, the company quickly evolved into a comprehensive 360° IT and
-                        marketing solutions agency.
+                        After a few years of industry experience, Sandeep Gupta founded Brandingwaale Webtech in 2019 from his home office, beginning with a dedicated two-member team. Recognizing the accelerating shift towards digital engagement, the company quickly evolved into a comprehensive 360° IT and marketing solutions agency based in Delhi NCR.
+
 
                     </p>
                     <p class="journey-text" data-aos="fade-right" data-aos-delay="300">
-                        Our services now encompass custom web and app development, strategic marketing, digital
-                        campaigns, public relations, advertising, and creative design — offering end-to-end solutions
-                        for businesses seeking growth in the digital era.
+                        Our services now encompass custom web and app development, strategic marketing, digital campaigns, public relations, advertising, and creative design — offering end-to-end solutions for businesses seeking growth in the digital era.
+
                     </p>
                     <p class="journey-text" data-aos="fade-left" data-aos-delay="500">
-                        Over the years, Brandingwaale Webtech has grown into a team of 30+ creative professionals,
-                        completing 550+ projects for 400+ clients across 20+ industries, and serving businesses in more
-                        than eight countries.
+                        Over the years, Brandingwaale Webtech has grown into a team of 20+ creative professionals, completing 700+ projects for 450+ clients across 25+ industries, and serving businesses in more than eight countries.
+
 
                     </p>
                     <p class="journey-text" data-aos="fade-right" data-aos-delay="700">
-                        To strengthen our structure and diversify our services, we registered our parent company
-                        Anantavya Techworks Private Limited, under which all our brands operate synergistically —
-                        Brandingwaale Webtech, Ninja Rankers, Wafly, BDIM, Digininjas, and 360Shoots — each dedicated to
-                        delivering specialized solutions in its domain.
+                        To strengthen our structure and diversify our services, we registered our parent company Anantavya Techworks Private Limited, under which all our brands operate synergistically — Brandingwaale Webtech, Ninja Rankers, Wafly, BDIM, Digininjas, and 360Shoots — each dedicated to delivering specialized solutions in its domain. We have also developed our own proprietary platforms — BW Task and BW Leads — built to streamline project management and lead management for our clients and internal teams.
+
                     </p>
 
 
                     <p class="journey-text" data-aos="fade-right" data-aos-delay="700">
-                        Our journey from a modest beginning to a leading result-oriented agency stands as a testament to
-                        our dedication, innovation, and continuous growth. We remain committed to delivering excellence
-                        with passion and to empowering more businesses in the years ahead.
+                        Our journey from a modest beginning to a leading result-oriented agency in Delhi NCR stands as a testament to our dedication, innovation, and continuous growth. We remain committed to delivering excellence with passion and to empowering more businesses across Delhi, Noida, Gurgaon, and Faridabad in the years ahead.
                     </p>
                 </div>
 
@@ -99,8 +91,8 @@
                                 <h4 class="step-title">Founded the Vision
                                 </h4>
                                 <p class="step-description">
-                                    Brandingwaale Webtech began with a small, passionate team dedicated to helping
-                                    businesses go digital.
+                                    Brandingwaale Webtech launched in Delhi NCR with a small, passionate team dedicated to helping businesses grow digitally.
+
 
                                 </p>
                             </div>
@@ -108,33 +100,33 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="step-item" data-aos="fade-up" data-aos-delay="300">
                                 <div class="step-number">2022</div>
-                                <h4 class="step-title">Expanding Horizons</h4>
+                                <h4 class="step-title">Expanding & Growing</h4>
                                 <p class="step-description">
-                                    Evolved into a 360° IT and marketing agency, serving diverse industries with
-                                    creative and tech-driven solutions.
+                                    Evolved into a 360° IT and marketing agency, surpassing 400+ clients and 550+ projects across diverse industries.
+
 
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="step-item" data-aos="fade-up" data-aos-delay="500">
-                                <div class="step-number">2023</div>
-                                <h4 class="step-title">Global Growth
+                                <div class="step-number">2025</div>
+                                <h4 class="step-title">A New Chapter Begins
                                 </h4>
                                 <p class="step-description">
-                                    Surpassed 400 clients and 550+ projects, extending our services to multiple
-                                    countries.
+                                    Registered Anantavya Techworks Pvt. Ltd., uniting Brandingwaale Webtech, Ninja Rankers, Wafly, BDIM, Digininjas, and 360Shoots.
+
 
                                 </p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="step-item" data-aos="fade-up" data-aos-delay="700">
-                                <div class="step-number">2025</div>
-                                <h4 class="step-title">A New Chapter Begins</h4>
+                                <div class="step-number">2026</div>
+                                <h4 class="step-title">Scaling New Heights </h4>
                                 <p class="step-description">
-                                    Registered Anantavya Techworks Pvt. Ltd. — the parent company uniting our brands:
-                                    Brandingwaale Webtech, Ninja Rankers, Wafly, BDIM, Digininjas, and 360Shoots.
+                                    Launched proprietary platforms BW Task and BW Leads, crossing 700+ projects and serving businesses across 8+ countries.
+
 
                                 </p>
                             </div>
@@ -152,15 +144,15 @@
                 <div class="col-lg-6">
                     <h6 class="highlight" data-aos="fade-left" data-aos-delay="100">our approach
                     </h6>
-                    <h2 data-aos="fade-right" data-aos-delay="300">Crafting <span class="highlight"> impactful</span>
+                    <h2 data-aos="fade-right" data-aos-delay="300">
+                        Crafting
+                        <span class="highlight"> impactful</span>
                         digital experiences
                     </h2>
                 </div>
                 <div class="col-lg-6">
-                    <p data-aos="fade-left" data-aos-delay="300">We blend creativity, strategy, and technology to design
-                        digital experiences that connect, engage,
-                        and inspire. From concept to completion, we deliver tailored solutions that elevate brands and
-                        drive results.
+                    <p data-aos="fade-left" data-aos-delay="300">We blend creativity, strategy, and technology to design digital experiences that connect, engage, and inspire. From concept to completion, we deliver tailored solutions that elevate brands and drive measurable results.
+
 
 
                     </p>
@@ -174,8 +166,8 @@
                             <i class="fas fa-bullseye card-icon"></i>
                             <h3 class="card-title">Our Mission</h3>
                             <p class="card-text">
-                                We aim to deliver transformative digital experiences that inspire trust, creativity, and
-                                long-term value for our partners and communities.
+                                We aim to deliver transformative digital experiences that inspire trust, fuel creativity, and create long-term value for our clients, partners, and communities.
+
                             </p>
                         </div>
                     </div>
@@ -186,9 +178,8 @@
                             <i class="fas fa-eye card-icon"></i>
                             <h3 class="card-title">Our Vision</h3>
                             <p class="card-text">
-                                To become a global leader in technology-driven innovation, empowering businesses to
-                                thrive
-                                in an ever-evolving digital world.
+                                To become a globally recognized leader in technology-driven innovation, empowering businesses to thrive and scale in an ever-evolving digital world.
+
                             </p>
                         </div>
                     </div>
@@ -199,8 +190,8 @@
                             <i class="fas fa-star card-icon"></i>
                             <h3 class="card-title">Our Aim</h3>
                             <p class="card-text">
-                                We focus on excellence, pushing boundaries with every project while staying rooted in
-                                integrity and client-first thinking.
+                                We focus on excellence, pushing boundaries with every project while staying firmly rooted in integrity, transparency, and client-first thinking.
+
                             </p>
                         </div>
                     </div>
@@ -283,22 +274,22 @@
                 <div class="col-lg-2 col-md-6 footer-col">
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="portfolio.php">Portfolio</a></li>
+                        <li><a href="service.php">Service</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-col">
                     <h4 class="footer-heading">Our Expertise</h4>
                     <ul class="footer-links">
-                        <li><a href="service-details.html">Web Development</a></li>
-                        <li><a href="service-details.html">Graphic Design</a></li>
-                        <li><a href="service-details.html">Branding</a></li>
-                        <li><a href="service-details.html">Social Media Marketing</a></li>
-                        <li><a href="service-details.html">Digital Marketing</a></li>
+                        <li><a href="service-details.php">Web Development</a></li>
+                        <li><a href="service-details.php">Graphic Design</a></li>
+                        <li><a href="service-details.php">Branding</a></li>
+                        <li><a href="service-details.php">Social Media Marketing</a></li>
+                        <li><a href="service-details.php">Digital Marketing</a></li>
                     </ul>
                 </div>
 
@@ -322,6 +313,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script src="js/index.js"></script>

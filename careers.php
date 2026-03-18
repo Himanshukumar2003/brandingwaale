@@ -1,3 +1,27 @@
+<?php
+include 'backend/db.php';
+
+// Get selected category
+$cat_id = isset($_GET['category']) ? (int)$_GET['category'] : 0;
+
+// Fetch categories
+$categories = mysqli_query($conn, "SELECT * FROM job_categories ORDER BY name ASC");
+
+// Fetch jobs (with filter)
+if ($cat_id > 0) {
+    $jobs = mysqli_query($conn, "SELECT j.*, jc.name as category_name 
+        FROM jobs j 
+        LEFT JOIN job_categories jc ON j.category_id = jc.id
+        WHERE j.category_id = $cat_id
+        ORDER BY j.id DESC");
+} else {
+    $jobs = mysqli_query($conn, "SELECT j.*, jc.name as category_name 
+        FROM jobs j 
+        LEFT JOIN job_categories jc ON j.category_id = jc.id
+        ORDER BY j.id DESC");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -460,355 +484,135 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <?php include 'components/navbar.php'; ?>
+
+
+    <header class="service-header section">
         <div class="container">
-            <div class="logo-section">
-                <a class="logo" href="index.html">
-                    <img src="img/log.gif">
-                </a>
-            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h5 class="label" data-aos=" fade-up" data-aos-delay="100">
+                        We're Hiring
+                    </h5>
+                    <h1 class="section-title" data-aos="fade-up" data-aos-delay="300">
+                        Don't Find a Job. Find Your
 
-            <button class="navbar-toggler mobile-toggle" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-                <i class="bi bi-list"></i>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle  " href="#" role="button">
-                            Services
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="development.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-code-slash"></i>
 
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            DEVELOPMENT
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Building scalable, high-performing digital platforms.</p>
-                                    </div>
-                                </a>
-
-                                <a href="marketing.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-layout-text-window-reverse"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            MARKETING
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Driving engagement through data and creativity.
-                                        </p>
-                                    </div>
-                                </a>
-
-                                <a href="pr-and-advertising.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-palette"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            PR & ADVERTISING
-
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Amplifying brand presence across every medium.
-                                        </p>
-                                    </div>
-                                </a>
-
-                                <a href="branding.html" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-camera"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            BRANDING
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Crafting visual identities that inspire trust.
-
-                                        </p>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Creative Studio</a>
-                    </li> -->
-
-                    <li class="nav-item">
-                        <a class="nav-link active   ````````    `   ``````````````````````````````````````````````````````````````````````````````````````````````````                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          " href="careers.html">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blogs</a>
-                    </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
-                            Resources
-                        </a>
-                        <div class="dropdown-menu">
-                            <div class="services-grid">
-                                <a href="#" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-journal-text"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            Blog
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Latest insights and industry trends.</p>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="service-item">
-                                    <div class="service-icon">
-                                        <i class="bi bi-download"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h6>
-                                            Downloads
-                                            <span class="service-arrow">↗</span>
-                                        </h6>
-                                        <p>Free resources and templates.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <section class="section border-bottom">
-        <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <h6 class="highlight">What Defines Us</h6>
-                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
-                </div>
-                <div class="col-lg-6">
-                    <p>
-                        We are pioneers in driving technological advancement and personal growth through innovative
-                        solutions and exceptional work culture, fostering creativity and professional success.
+                        <span class="highlight">Creative Home.</span>
+                    </h1>
+                    <p data-aos="fade-up" data-aos-delay="500">
+                        At Brandingwaale Webtech, we don't hire just People— we build a tribe of thinkers, makers, and relentless problem-solvers. If you wake up excited about brands, ideas, and the internet, you already belong here.
                     </p>
+                    <p data-aos="fade-up" data-aos-delay="700">
+                        We believe great work happens when passion meets purpose. At Brandingwaale Webtech, you won’t just clock in and out—you’ll collaborate on meaningful projects, push creative boundaries, and grow alongside a team that values innovation and individuality. Whether you're a designer, developer, strategist, or storyteller, this is your space to learn, create, and make a real impact every single day.
+                    </p>
+
+
+
+                    <!-- <button class="cta-btn" data-aos="fade-up" data-aos-delay="800">Get Started</button> -->
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card-custom card-accent value-card">
-                        <div class="card-heading">
+                <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
 
-                            <h3 class="card-title">OUR VISION</h3>
-                            <i class="fas fa-eye"></i>
-
-                        </div>
-                        <p>To be a leading digital transformation company that empowers brands to achieve unprecedented
-                            growth through innovative technology solutions and creative strategies.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class=" value-card mission-card">
-                        <div class="card-heading">
-                            <h3 class="card-title">OUR MISSION</h3>
-
-                            <i class="fas fa-rocket"></i>
-
-                        </div>
-                        <p>Our mission is to deliver exceptional digital experiences that drive business growth and
-                            create lasting value for our clients through cutting-edge technology and innovative
-                            solutions.</p>
-                    </div>
+                    <img src="img/bg/career-page.png" alt="Branding Services Illustration" class="img-fluid"
+                        data-aos="zoom-in" data-aos-duration="1200">
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
 
-    <div class="why-join-us  section ">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-
-                <div class="col-lg-6">
-
-                    <div class="why-us">
-                        <div class="heading">
-                            <div class="label">OUR PROCESS</div>
-                            <h1>
-                                Beyond
-                                <span class="highlight">Branding</span>
-                            </h1>
-                            <br>
-
-                        </div>
-                        <div class="services-process-step">
-                            <div>
-                                <div class="step-title">Innovative Spirit</div>
-                                <div class="step-description">
-                                    We thrive on creativity and encourage out-of-the-box thinking. Our team is dedicated
-                                    to pushing boundaries and exploring new possibilities in digital marketing.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="separator-line"></div>
-
-                        <div class="services-process-step">
-                            <div>
-                                <div class="step-title">Collaborative Environment</div>
-                                <div class="step-description">
-                                    Collaboration is at the heart of everything we do. We believe that diverse
-                                    perspectives lead to the best solutions, and we foster an inclusive environment
-                                    where everyone's voice is heard.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="separator-line"></div>
-
-                        <div class="services-process-step">
-                            <div>
-                                <div class="step-title">Growth-Oriented</div>
-                                <div class="step-description">
-                                    Personal and professional growth is important to us. We offer continuous learning
-                                    opportunities and support career development to help you reach your full potential.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
     <section class="benefits-section section">
         <div class="container">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h6 class="highlight">What Defines Us</h6>
-                    <h1>EMPOWERING GROWTH WITH INNOVATION</h1>
+                    <h6 class="highlight">Not Just a Workplace. A Launchpad.</h6>
+                    <h2>WHY BRANDINGWAALE?</h2>
                 </div>
                 <div class="col-lg-6">
                     <p>
-                        We are pioneers in driving technological advancement and personal growth through innovative
-                        solutions and exceptional work culture, fostering creativity and professional success.
+                        At Brandingwaale Webtech, growth isn’t defined by time — it’s defined by impact. We’ve built a culture where talent moves fast, ideas are valued, and every individual gets the opportunity to create meaningful work that truly matters.
                     </p>
                 </div>
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
+
+                <!-- Grow Without Limits -->
+                <div class="col-lg-3 col-md-6">
                     <div class="benefit-card">
                         <div class="benefit-icon">
-                            <i class="fas fa-rocket"></i>
+                            <i class="fas fa-fire"></i>
                         </div>
-                        <h5 class="benefit-title">Dynamic Work Environment</h5>
+                        <h5 class="benefit-title">Grow Without Limits</h5>
                         <p class="benefit-description">
-                            Experience a fast-paced and engaging workplace where innovation is encouraged.
+                            No rigid hierarchies. No waiting your turn. If you have the skills and the hunger, the opportunities are yours to take.
                         </p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="benefit-title">Career Development</h4>
-                        <p class="benefit-description">
-                            Benefit from ongoing training and professional development programs designed to enhance your
-                            skills.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h4 class="benefit-title">Flexible Work Options</h4>
-                        <p class="benefit-description">
-                            Enjoy flexibility with remote and hybrid work opportunities that support work-life balance
-                            and personal productivity.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4 class="benefit-title">Supportive Team</h4>
-                        <p class="benefit-description">
-                            Join a team that values collaboration and offers support to help you succeed in your role
-                            and beyond.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h4 class="benefit-title">Competitive Benefits</h4>
-                        <p class="benefit-description">
-                            Receive a comprehensive benefits package including health insurance, paid time off, and
-                            other.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
+                <!-- Real Brands -->
+                <div class="col-lg-3 col-md-6">
                     <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h4 class="benefit-title">Innovative Culture</h4>
+                        <h5 class="benefit-title">Work on Real Brands</h5>
                         <p class="benefit-description">
-                            Join a forward-thinking team that encourages creativity, problem-solving, and staying ahead
-                            of industry trends.
+                            From startups to enterprises — your work reaches real audiences, real markets, and makes a real difference from day one.
                         </p>
                     </div>
                 </div>
+
+                <!-- Team -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h5 class="benefit-title">A Team That Gets It</h5>
+                        <p class="benefit-description">
+                            20+ creative minds who challenge, support, and push each other to do their best work every single day.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ownership -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h5 class="benefit-title">Build. Experiment. Own It.</h5>
+                        <p class="benefit-description">
+                            Pitch ideas, experiment freely, and own your work end to end. Your contributions are seen, valued, and celebrated.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+    <!-- <div class="row mb-4">
+    <div class="col-lg-4">
+        <form method="GET">
+            <select name="category" class="form-select" onchange="this.form.submit()">
+                <option value="0">All Categories</option>
 
+                <?php while ($cat = mysqli_fetch_assoc($categories)): ?>
+                    <option value="<?= $cat['id'] ?>" 
+                        <?= ($cat_id == $cat['id']) ? 'selected' : '' ?>>
+                        <?= $cat['name'] ?>
+                    </option>
+                <?php endwhile; ?>
 
-    <section class="positions-section section">
+            </select>
+        </form>
+    </div>
+</div> -->
+
+    <section class="positions-section section" id="job">
         <div class="container">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
@@ -820,73 +624,54 @@
                         We are pioneers in driving technological advancement and personal growth through innovative
                         solutions and exceptional work culture, fostering creativity and professional success.
                     </p>
+
+
                 </div>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">MARKETING</span>
-                        <h4>Marketing Specialist</h4>
-                        <p class="sub-category mb-3">New York, NY</p>
-                        <p>We're looking for a creative marketing specialist to join our dynamic team and help drive our
-                            brand forward.</p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="Marketing Specialist">Apply Now <i class="fas fa-arrow-right"></i></a>
+
+                <?php if (mysqli_num_rows($jobs) > 0): ?>
+
+                    <?php while ($job = mysqli_fetch_assoc($jobs)): ?>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="position-card">
+
+                                <span class="position-tag">
+                                    <?= strtoupper($job['category_name']) ?>
+                                </span>
+
+                                <h4><?= htmlspecialchars($job['title']) ?></h4>
+
+                                <p class="sub-category mb-3">
+                                    <?= htmlspecialchars($job['location']) ?>
+                                </p>
+
+                                <p>
+                                    <?= substr(strip_tags($job['description']), 0, 120) ?>...
+                                </p>
+
+                                <a href="#"
+                                    class="btn-apply"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#applicationModal"
+                                    data-position="<?= htmlspecialchars($job['title']) ?>">
+                                    Apply Now <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+
+                <?php else: ?>
+
+                    <div class="col-12 text-center">
+                        <p>No jobs found in this category.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">DESIGN</span>
-                        <h4>UX/UI Designer</h4>
-                        <p class="sub-category mb-3">San Francisco, CA</p>
-                        <p>Join our design team to create exceptional user experiences and innovative digital solutions.
-                        </p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="UX/UI Designer">Apply Now <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">CONTENT</span>
-                        <h4>Content Writer</h4>
-                        <p class="sub-category mb-3">Remote</p>
-                        <p>We need a talented content writer to create engaging content that resonates with our
-                            audience.</p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="Content Writer">Apply Now <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">DEVELOPMENT</span>
-                        <h4>Social Media Manager</h4>
-                        <p class="sub-category mb-3">Los Angeles, CA</p>
-                        <p>Manage our social media presence and engage with our community across various platforms.</p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="Social Media Manager">Apply Now <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">DESIGN</span>
-                        <h4>Graphic Designer</h4>
-                        <p class="sub-category mb-3">Chicago, IL</p>
-                        <p>Create stunning visual designs that communicate our brand message effectively across all
-                            channels.</p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="Graphic Designer">Apply Now <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="position-card">
-                        <span class="position-tag">MARKETING</span>
-                        <h4>Digital Marketing Manager</h4>
-                        <p class="sub-category mb-3">Austin, TX</p>
-                        <p>Lead our digital marketing efforts and drive growth through innovative online strategies.</p>
-                        <a href="#" class="btn-apply" data-bs-toggle="modal" data-bs-target="#applicationModal"
-                            data-position="Digital Marketing Manager">Apply Now <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+
+                <?php endif; ?>
+
             </div>
         </div>
     </section>
@@ -977,6 +762,53 @@
         </div>
     </div>
     </div>
+
+
+
+    <section class="cta-section section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12">
+                    <div class="cta-card">
+                        <div class="row ">
+                            <div class="col-md-7">
+                                <!-- <div class="caption-text">CAPTION HERE</div> -->
+                                <h2 class="main-heading  text-white">Think You Belong Here Anyway?
+
+                                </h2>
+                                <p class="  text-white w-100">
+                                    We're always open to meeting extraordinary people. Send us your portfolio, resume, or just a note about what you do — and we'll reach out if there's a fit.
+
+                                </p>
+
+                                <p>
+                                    <b>Email: </b>
+                                    <a href="mailto:recruitment@brandingwaale.com" class="text-white">
+                                        recruitment@brandingwaale.com
+                                    </a>
+                                </p>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#job" class="custom-btn  ">
+                                        Apply Now→
+
+                                        <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" class="arrow-path"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php include 'components/footer.php'; ?>
 
 

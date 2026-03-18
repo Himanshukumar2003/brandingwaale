@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
 
-                    <img src="img/download.svg" alt="Branding Services Illustration" class="img-fluid"
+                    <img src="img/bg/Development.png" alt="Branding Services Illustration" class="img-fluid"
                         data-aos="zoom-in" data-aos-duration="1200">
                 </div>
             </div>
@@ -72,101 +72,7 @@
 
 
 
-    <section class="branding-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-header">
-                        <h2 class="section-title text-white">
-                            DEVELOPMENT <br> <span>PROJECTS</span>
-                        </h2>
-                        <a href="portfolio.html" class="view-all-btn">VIEW ALL PROJECTS</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-description">
-                        <p>While innovation fuels everything we do, our real satisfaction lies in building digital
-                            platforms that empower brands to grow.
-                            From dynamic websites to complex applications, each project is crafted with precision,
-                            performance, and purpose.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row ">
-                <div class="col-12">
-                    <div class="swiper projectsSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-
-                        <!-- Pagination -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="process-section">
 
@@ -180,7 +86,7 @@
                             <span class="highlight">Development</span>
                         </h2>
                         <br>
-                        <a href="portfolio.html" class="view-projects-btn">
+                        <a href="portfolio.php" class="view-projects-btn">
                             VIEW ALL PROJECTS <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -264,71 +170,74 @@
             </div>
 
             <!-- Bootstrap Grid Layout for the industries cards -->
-            <div class="row ">
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fashion"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Website Designing & Development</h5>
-                        </div>
-                    </div>
+            <div class="cards-grid">
+
+                <!-- Development -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">01 / DEVELOPMENT</span>
+                    <h2>Website Designing<br>& Development</h2>
+                    <p>Build fast, sleek websites and powerful web applications that drive results — from custom CMS
+                        builds to
+                        full-stack platforms engineered for scale.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg travel"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Web & Mobile App Development</h5>
-                        </div>
-                    </div>
+
+                <!-- Web & Mobile -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">02 / DEVELOPMENT</span>
+                    <h2>Web & Mobile<br>App Development</h2>
+                    <p>From native iOS & Android to cross-platform apps, we craft mobile experiences that are intuitive,
+                        performant,
+                        and built for modern users.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg hospitality"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Customized CRM & Lead Management</h5>
-                        </div>
-                    </div>
+
+                <!-- CRM -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">03 / DEVELOPMENT</span>
+                    <h2>Customized CRM &<br>Lead Management</h2>
+                    <p>Tailored CRM solutions that streamline your sales pipeline, automate follow-ups, and give your
+                        team a single
+                        source of truth for every lead.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg logistics"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>E-commerce & Web Portals</h5>
-                        </div>
-                    </div>
+
+                <!-- E-commerce -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">04 / DEVELOPMENT</span>
+                    <h2>E-Commerce &<br>Web Portals</h2>
+                    <p>High-converting storefronts and enterprise web portals — secure, scalable, and designed to turn
+                        browsers into
+                        buyers.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg agriculture"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Landing Page Designing</h5>
-                        </div>
-                    </div>
+
+                <!-- Landing Pages -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">05 / DEVELOPMENT</span>
+                    <h2>Landing Page<br>Designing</h2>
+                    <p>Precision-crafted landing pages with clear messaging and conversion-focused design that turns ad
+                        clicks into
+                        qualified leads.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <!-- New Items from second row -->
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg astrology"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Website Re-Designing</h5>
-                        </div>
-                    </div>
+
+                <!-- LMS -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">06 / DEVELOPMENT</span>
+                    <h2>LMS<br>Development</h2>
+                    <p>Custom Learning Management Systems built for educators, coaches, and enterprises — feature-rich,
+                        scalable,
+                        and easy to manage.</p>
+                    <a href="contact.php" class="cta-btn">Contact Us <span class="arrow">→</span></a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fmcg"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>LMS Development</h5>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -357,7 +266,7 @@
                                 </p>
 
                                 <div class="d-flex justify-content-start">
-                                    <a href="about.html" class="custom-btn  bg-dark">
+                                    <a href="about.php" class="custom-btn  bg-dark">
                                         Contact us
                                         <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -368,7 +277,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <img src="" class="img-fluid" alt="cta-img">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
                             </div>
 
                         </div>
@@ -507,7 +416,7 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
+                <div class="col-lg-8">
                     <div class="faq-content h-100">
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">

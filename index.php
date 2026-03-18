@@ -110,8 +110,8 @@
 
     <div class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right" data-aos-duration="800">
+            <div class="row g-4">
+                <div class="col-md-6  order-2 order-md-1" data-aos="fade-right" data-aos-duration="800">
                     <h2 data-aos="fade-up" data-aos-delay="200">About Us</h2>
                     <p data-aos="fade-up" data-aos-delay="300"> Welcome to our digital marketing agency! We are a team
                         of experienced professionals who
@@ -130,7 +130,7 @@
 
                         and detailed reports to keep you informed about the impact of our marketing efforts.</p>
                     <div class="btn-section d-flex justify-content-start" data-aos="fade-up" data-aos-delay="500">
-                        <a href="about.html" class="custom-btn">
+                        <a href="about.php" class="custom-btn">
                             About us
                             <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -141,7 +141,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-duration="800">
+                <div class="col-md-6  order-1 order-md-2" data-aos="fade-left" data-aos-duration="800">
                     <div class="d-flex justify-content-center align-items-center   overflow-hidden">
                         <img src="img/about.jpeg" class="img-fluid about-img">
                     </div>
@@ -192,13 +192,12 @@
                                                 <li> LMS Development</li>
                                             </ul>
 
-                                            <a href="service-details.html" class="learn-more"> LEARN MORE <i
+                                            <a href="development.php" class="learn-more"> LEARN MORE <i
                                                     class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                            class="sticky-card-img w-100 h-100">
+                                        <img src="img/development.png" class="sticky-card-img w-100 h-100">
                                     </div>
 
                                 </div>
@@ -228,13 +227,12 @@
                                             </ul>
 
 
-                                            <a href="service-details.html" class="learn-more"> LEARN MORE <i
+                                            <a href="marketing.php" class="learn-more"> LEARN MORE <i
                                                     class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                            class="sticky-card-img w-100 h-100">
+                                        <img src="img/marketing.png" class="sticky-card-img w-100 h-100">
                                     </div>
 
                                 </div>
@@ -264,13 +262,12 @@
                                                 <li> Media Planning</li>
                                             </ul>
 
-                                            <a href="service-details.html" class="learn-more"> LEARN MORE <i
+                                            <a href="pr-and-advertising.php" class="learn-more"> LEARN MORE <i
                                                     class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                            class="sticky-card-img w-100 h-100">
+                                        <img src="img/advertising.png" class="sticky-card-img w-100 h-100">
                                     </div>
 
                                 </div>
@@ -299,13 +296,12 @@
                                             </ul>
 
 
-                                            <a href="service-details.html" class="learn-more"> LEARN MORE <i
+                                            <a href="branding.php" class="learn-more"> LEARN MORE <i
                                                     class="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <img src="img/brandemic_eximius_thumbnail-scaled.webp"
-                                            class="sticky-card-img w-100 h-100">
+                                        <img src="img/Branding.png" class="sticky-card-img w-100 h-100">
                                     </div>
 
                                 </div>
@@ -615,7 +611,7 @@
 
                             <div class="btn-section mt-5 d-flex justify-content-start" data-aos="fade-up"
                                 data-aos-delay="500">
-                                <a href="contact.html" class="custom-btn">
+                                <a href="contact.php" class="custom-btn">
                                     Contect Us
                                     <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -650,124 +646,338 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
-                    <div class="faq-content h-100">
+                <div class="col-md-8">
+                    <div class="faq-content pr-5">
+
+
+
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">
-                                <h3>What is branding, and why is it important for my business?</h3>
-                                <div class="faq-icon">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                                <h3>What branding services do you offer in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
                             </div>
                             <div class="faq-answer">
-                                <p>Branding encompasses the visual and verbal elements that represent
-                                    your business,
-                                    including
-                                    your
-                                    logo, color scheme, messaging, and overall identity. It's important
-                                    because it helps
-                                    differentiate your business from competitors, builds trust and
-                                    credibility with
-                                    customers,
-                                    and
-                                    creates emotional connections that drive loyalty and repeat
-                                    business.</p>
+                                <p>We provide end-to-end branding services in Delhi NCR including logo designing, label
+                                    designing, packaging designing, brand guidelines, UI/UX designing, motion graphics,
+                                    explainer videos, and content creation. Our branding agency in Delhi helps
+                                    businesses build powerful visual identities that inspire trust and drive recognition
+                                    across every touchpoint.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question" onclick="toggleFAQ(this)">
-                                <h3>How do I know if my brand needs a refresh or revitalization?</h3>
-                                <div class="faq-icon">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                                <h3>Which is the best logo designing company in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
                             </div>
                             <div class="faq-answer">
-                                <p>Signs that your brand may need a refresh include declining customer
-                                    engagement,
-                                    outdated
-                                    visual
-                                    elements, inconsistent messaging across platforms, or when your
-                                    business has evolved
-                                    beyond
-                                    your
-                                    current brand identity. If your brand no longer reflects your
-                                    company's values or
-                                    resonates
-                                    with
-                                    your target audience, it's time for a revitalization.</p>
+                                <p>We are a top-rated logo designing company in Delhi NCR, crafting unique, scalable,
+                                    and meaningful logos for startups, SMEs, and established brands. Every logo is
+                                    designed from scratch — tailored to your industry, audience, and brand personality,
+                                    with unlimited revisions until you're fully satisfied.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question" onclick="toggleFAQ(this)">
-                                <h3>What is the difference between a brand strategy and a brand
-                                    identity?</h3>
-                                <div class="faq-icon">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                                <h3>Do you provide company profile designing services in Delhi?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
                             </div>
                             <div class="faq-answer">
-                                <p>Brand strategy is the comprehensive plan that defines your brand's
-                                    purpose,
-                                    positioning,
-                                    and
-                                    messaging to achieve business goals. Brand identity is the visual
-                                    and tangible
-                                    expression of
-                                    that strategy, including logos, colors, typography, and design
-                                    elements. Strategy is
-                                    the
-                                    foundation, while identity is how that strategy comes to life
-                                    visually.</p>
+                                <p>Yes, we offer professional company profile designing services in Delhi NCR. A
+                                    well-designed company profile builds instant credibility with clients and investors.
+                                    We design print-ready and digital company profiles that highlight your brand story,
+                                    services, achievements, and value proposition in a visually compelling format.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question" onclick="toggleFAQ(this)">
-                                <h3>How do I maintain consistency in my branding efforts?</h3>
-                                <div class="faq-icon">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                                <h3>What is the cost of brochure designing in Delhi?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
                             </div>
                             <div class="faq-answer">
-                                <p>Maintain consistency by creating comprehensive brand guidelines that
-                                    document your
-                                    visual
-                                    elements, tone of voice, and messaging standards. Train your team on
-                                    these
-                                    guidelines,
-                                    use
-                                    templates for common materials, conduct regular brand audits, and
-                                    ensure all
-                                    touchpoints
-                                    reflect
-                                    your brand identity consistently across digital and physical
-                                    platforms.</p>
+                                <p>Our brochure designing packages in Delhi NCR are affordable and customized based on
+                                    number of pages, design complexity, and print specifications. We design bi-fold,
+                                    tri-fold, and multi-page brochures for all industries — from real estate and
+                                    healthcare to retail and education — that are both print-ready and digitally
+                                    optimized.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
                             <div class="faq-question" onclick="toggleFAQ(this)">
-                                <h3>How long does it take to see results from branding initiatives?</h3>
-                                <div class="faq-icon">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                                <h3>Do you offer packaging and label designing services in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
                             </div>
                             <div class="faq-answer">
-                                <p>Branding results vary depending on the scope and implementation.
-                                    Initial awareness
-                                    and
-                                    recognition improvements can be seen within 3-6 months, while deeper
-                                    brand
-                                    perception
-                                    changes
-                                    and customer loyalty typically develop over 6-12 months. Long-term
-                                    brand equity and
-                                    market
-                                    positioning benefits often take 1-2 years to fully materialize.</p>
+                                <p>Yes! We are a leading packaging and label designing agency in Delhi NCR. We create
+                                    custom packaging designs for FMCG, food &amp; beverage, cosmetics, pharma, and
+                                    retail brands. Our designs are market-shelf-ready, regulation-compliant, and crafted
+                                    to attract customers at the point of purchase.</p>
                             </div>
                         </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can you design custom flyers, posters, and marketing creatives in Delhi?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely. We offer complete graphic designing services in Delhi NCR including flyer
+                                    designing, poster designing, social media creatives, banners, standees, exhibition
+                                    displays, and any custom designing requirement. Our creative team delivers
+                                    high-impact visuals that communicate your message clearly and memorably.</p>
+                            </div>
+                        </div>
+
+                        <!-- DIGITAL MARKETING & SEO -->
+
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Which is the best digital marketing agency in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We are a full-service digital marketing agency in Delhi NCR offering SEO, SEM, SMM,
+                                    GMB optimization, WhatsApp automation, personal branding, UGC ads, and ATL/BTL/TTL
+                                    marketing. Our data-driven strategies are built to generate measurable results —
+                                    more traffic, more leads, and more revenue for your business.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How can SEO help my business rank on Google in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>SEO (Search Engine Optimization) helps your website appear at the top of Google
+                                    search results when potential customers search for your services in Delhi, Noida,
+                                    Gurgaon, or Faridabad. Our SEO services include keyword research, on-page
+                                    optimization, technical SEO, local SEO, link building, and content strategy — all
+                                    focused on driving organic traffic and qualified leads.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is local SEO and why does my Delhi business need it?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Local SEO optimizes your online presence so your business appears in "near me"
+                                    searches and Google Maps results in Delhi NCR. If you run a local business —
+                                    restaurant, clinic, salon, retail store, or service provider — local SEO ensures
+                                    that customers in your area find you first. We optimize your website, GMB profile,
+                                    citations, and reviews for maximum local visibility.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is GMB Optimization and how does it help Delhi NCR businesses?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Google My Business (GMB) optimization ensures your business appears prominently in
+                                    local search results and Google Maps. We optimize your GMB profile with relevant
+                                    keywords, business categories, photos, posts, Q&amp;A, and review management. For
+                                    businesses targeting customers in Delhi, Noida, Gurgaon, or Faridabad, GMB
+                                    optimization is one of the highest-ROI strategies available.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you offer Social Media Marketing (SMM) services in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide complete social media marketing services in Delhi NCR across
+                                    Instagram, Facebook, LinkedIn, YouTube, and Twitter/X. Our services include content
+                                    creation, community management, paid social campaigns, influencer collaborations,
+                                    and performance analytics. We help brands build engaged audiences and convert
+                                    followers into customers.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is WhatsApp Automation and how can it benefit my business?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>WhatsApp Automation allows businesses to send personalized messages, product
+                                    catalogs, order updates, and promotional campaigns to thousands of customers
+                                    instantly via WhatsApp Business API. As a WhatsApp automation service provider in
+                                    Delhi NCR, we help businesses automate lead follow-ups, customer support,
+                                    appointment reminders, and sales funnels — dramatically improving response rates and
+                                    conversions.</p>
+                            </div>
+                        </div>
+
+                        <!-- PR & ADVERTISING -->
+                        <div class="faq-category-label">PR &amp; Advertising</div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What PR and advertising services do you provide in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer comprehensive PR and advertising services in Delhi NCR including digital
+                                    advertising, print advertising, outdoor advertising (hoardings, transit ads), cinema
+                                    campaigns, radio campaigns, media buying, and media planning. We help brands amplify
+                                    their presence and reach their target audience across every medium — online and
+                                    offline.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Can you create a Wikipedia page for my business or personal brand in Delhi?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide Wikipedia page creation services for businesses, founders, and public
+                                    figures in Delhi NCR. A Wikipedia page establishes authority, boosts credibility,
+                                    and significantly enhances your brand's online presence. Our team of expert
+                                    Wikipedia editors follows all editorial guidelines to create and publish verified,
+                                    well-sourced Wikipedia articles.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is a Google Knowledge Panel and how can I get one for my brand?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A Google Knowledge Panel is the information box that appears on the right side of
+                                    Google search results for brands, businesses, and public figures. It signals
+                                    authority and trust to both users and search engines. We specialize in Google
+                                    Knowledge Panel creation and optimization for businesses and personal brands in
+                                    Delhi NCR — handling entity creation, verification, and ongoing management.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you offer outdoor and cinema advertising services in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We provide outdoor advertising services including hoarding placements, transit
+                                    advertising, metro branding, and airport advertising across Delhi NCR. We also
+                                    manage cinema advertising campaigns across PVR, INOX, and Cinepolis multiplexes in
+                                    Delhi, Noida, Gurgaon, and Faridabad — perfect for reaching a premium, captive
+                                    audience.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Which is the best website development company in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We are a top website development company in Delhi NCR offering end-to-end services
+                                    including website designing &amp; development, landing page designing, e-commerce
+                                    development, web &amp; mobile app development, CRM &amp; lead management systems,
+                                    LMS development, and website redesigning. We build fast, SEO-friendly,
+                                    mobile-responsive websites that are designed to convert visitors into customers.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How much does website designing cost in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Website designing costs in Delhi NCR vary based on the type of website, number of
+                                    pages, features required, and design complexity. A basic business website starts at
+                                    an affordable price point, while custom e-commerce platforms and web applications
+                                    are priced based on scope. We offer transparent pricing with no hidden charges —
+                                    contact us for a free consultation and quote.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you develop e-commerce websites and mobile apps in Delhi?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! We develop fully functional e-commerce websites and mobile apps for businesses
+                                    in Delhi NCR. Our e-commerce solutions support product catalogs, payment gateways,
+                                    inventory management, order tracking, and customer dashboards. We also build native
+                                    and cross-platform mobile apps for iOS and Android, helping Delhi businesses expand
+                                    their digital reach.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>What is a CRM system and does your agency build custom CRMs in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>A CRM (Customer Relationship Management) system helps businesses manage leads, track
+                                    customer interactions, automate follow-ups, and improve sales conversions. We build
+                                    fully customized CRM and lead management systems for businesses in Delhi NCR —
+                                    tailored to your specific sales process, team size, and industry requirements.</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Why should I choose your agency for my business in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We are a full-service creative and digital agency in Delhi NCR offering branding,
+                                    graphic designing, web development, digital marketing, PR, and advertising — all
+                                    under one roof. Our team combines creativity with data-driven strategy to deliver
+                                    measurable results. From startups in Noida to enterprises in Gurgaon, we've helped
+                                    hundreds of Delhi NCR businesses grow their brand and revenue.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>How long does it take to see results from digital marketing in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Paid campaigns (Google Ads, Meta Ads) deliver results within days of going live. SEO
+                                    for Delhi NCR typically shows significant ranking improvements in 3–6 months
+                                    depending on competition and keyword difficulty. Branding initiatives improve brand
+                                    recall and credibility within weeks of implementation. We provide monthly
+                                    performance reports so you can track every rupee of your marketing investment.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h3>Do you work with startups and small businesses in Delhi NCR?</h3>
+                                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely. We work with businesses of all sizes — from early-stage startups and
+                                    local SMEs to large enterprises across Delhi, Noida, Gurgaon, and Faridabad. We
+                                    offer scalable packages designed to fit different budgets without compromising on
+                                    quality. Whether you need a logo, a website, or a complete marketing strategy, we
+                                    have a solution built for you.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -790,7 +1000,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/index.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
                 duration: 800,
                 offset: 100,

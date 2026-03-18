@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-6 header-image" data-aos="fade-left" data-aos-duration="1200">
 
-                    <img src="img/download.svg" alt="Branding Services Illustration" class="img-fluid"
+                    <img src="img/bg/Branding.png" alt="Branding Services Illustration" class="img-fluid"
                         data-aos="zoom-in" data-aos-duration="1200">
                 </div>
             </div>
@@ -70,103 +70,7 @@
 
 
 
-    <section class="branding-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-header">
-                        <h2 class="section-title text-white">
-                            BRANDING
-                            <br> <span>PROJECTS</span>
-                        </h2>
-                        <a href="portfolio.html" class="view-all-btn">VIEW ALL PROJECTS</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-description">
-                        <p>While creativity fuels our passion, our true reward lies in helping brands find their voice.
-                            Every project we create reflects a perfect blend of strategy, storytelling, and design
-                            excellence.
-                            Explore our branding projects — where identity meets imagination and ideas turn into impact.
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row ">
-                <div class="col-12">
-                    <div class="swiper projectsSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <a href="service-details.html">
-                                    <div class="project-card">
-                                        <img src="img/brandemic-blitz-thumbnail-1536x1036.webp" class="img-fluid">
-                                        <div class="project-info">
-                                            <h3 class="project-title">LVNG</h3>
-                                            <p class="project-description">Modern interior design brand</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-
-                        <!-- Pagination -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <div class="process-section">
 
@@ -180,7 +84,7 @@
                             <span class="highlight">Branding</span>
                         </h2>
                         <br>
-                        <a href="portfolio.html" class="view-projects-btn">
+                        <a href="portfolio.php" class="view-projects-btn">
                             VIEW ALL PROJECTS <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -278,86 +182,80 @@
             </div>
 
             <!-- Bootstrap Grid Layout for the industries cards -->
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fashion"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Logo Designing</h5>
-                        </div>
-                    </div>
+            <div class="cards-grid">
+
+                <!-- Logo Designing -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">01 / DESIGN</span>
+                    <h2>Logo<br>Designing</h2>
+                    <p>We create unique, memorable logos that reflect your brand’s identity and stand the test of time. Designed from scratch, built to perform across every platform.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg travel"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Label Designing</h5>
-                        </div>
-                    </div>
+                <!-- Label Designing -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">02 / DESIGN</span>
+                    <h2>Label<br>Designing</h2>
+                    <p>Eye-catching, print-ready labels that not only inform but sell. We ensure your product stands out on shelves and builds instant trust.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg hospitality"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Packaging Designing</h5>
-                        </div>
-                    </div>
+                <!-- Packaging Designing -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">03 / DESIGN</span>
+                    <h2>Packaging<br>Designing</h2>
+                    <p>Custom packaging designs that grab attention and influence buying decisions. Built to elevate your product and strengthen your brand presence.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg logistics"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>UI/UX Designing</h5>
-                        </div>
-                    </div>
+                <!-- UI UX -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">04 / DESIGN</span>
+                    <h2>UI/UX<br>Designing</h2>
+                    <p>We design intuitive, visually refined experiences for websites and apps that feel seamless and guide users toward meaningful actions.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg agriculture"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Brand Guidelines</h5>
-                        </div>
-                    </div>
+                <!-- Brand Book -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">05 / DESIGN</span>
+                    <h2>Brand<br>Book</h2>
+                    <p>Comprehensive brand guidelines to ensure consistency across all touchpoints — from visuals to tone, everything aligned under one identity.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg astrology"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Motion Graphics</h5>
-                        </div>
-                    </div>
+                <!-- Motion Graphics -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">06 / DESIGN</span>
+                    <h2>Motion<br>Graphics</h2>
+                    <p>Engaging motion content from animated logos to social media creatives that capture attention and communicate your message effectively.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg fmcg"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Explainer Videos</h5>
-                        </div>
-                    </div>
+                <!-- Explainer Videos -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">07 / DESIGN</span>
+                    <h2>Explainer<br>Videos</h2>
+                    <p>We turn complex ideas into simple, engaging stories with videos that educate, captivate, and drive conversions.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
-                    <div class="industries-card">
-                        <div class="card-bg design"></div>
-                        <div class="depth-indicator"></div>
-                        <div class="card-content">
-                            <h5>Content Creation</h5>
-                        </div>
-                    </div>
+                <!-- Content Creation -->
+                <div class="sub-service-card">
+                    <div class="card-deco"></div>
+                    <span class="card-number">08 / DESIGN</span>
+                    <h2>Content<br>Creation</h2>
+                    <p>Strategy-driven content across platforms — from social posts to blogs and ad copies — crafted to grow your brand consistently.</p>
+                    <a href="contact.php" class="cta-btn">Get In Touch <span class="arrow">→</span></a>
                 </div>
+
             </div>
 
         </div>
@@ -387,7 +285,7 @@
                                 </p>
 
                                 <div class="d-flex justify-content-start">
-                                    <a href="about.html" class="custom-btn  bg-dark">
+                                    <a href="about.php" class="custom-btn  bg-dark">
                                         Contact us
                                         <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -398,7 +296,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <img src="" class="img-fluid" alt="cta-img">
+                                <img src="img/bg/cta.png" class="img-fluid cta-img" alt="cta-img">
                             </div>
 
                         </div>
@@ -537,7 +435,7 @@
                 </div>
 
                 <!-- FAQ Content -->
-                <div class="col-8">
+                <div class="col-lg-8">
                     <div class="faq-content h-100">
                         <div class="faq-item active">
                             <div class="faq-question" onclick="toggleFAQ(this)">

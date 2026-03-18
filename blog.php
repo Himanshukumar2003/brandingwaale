@@ -1,3 +1,11 @@
+<?php
+include('backend/db.php');
+
+
+$blogs = mysqli_query($conn, "SELECT * FROM blogs WHERE status='1' ORDER BY id DESC");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +30,7 @@
 
 <body>
 
-    <?php include 'components/footer.php'; ?>
+    <?php include 'components/navbar.php'; ?>
 
 
     <section class="section border-bottom">
@@ -45,65 +53,51 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="blog-card">
-                        <img src="img/gyrus-brandemic-11-1536x898.webp" alt="Blog Image" class="blog-image img-fluid">
-                        <div class="blog-content">
-                            <p class="blog-meta">SEO & Analytics • <span>2 Jan, 2025</span></p>
-                            <h5 class="blog-title">How to Measure ROI in Digital Marketing Effectively</h5>
-                            <p class="blog-description">
-                                Measuring Return on Investment (ROI) is a critical aspect of evaluating the succ...
-                            </p>
-                            <div class="btn-section d-flex justify-content-start">
-                                <div class="btn-section d-flex justify-content-start">
-                                    <a href="blog-details.html" class="view-more-btn  custom-btn">View More</a>
+
+                <?php if (mysqli_num_rows($blogs) > 0): ?>
+
+                    <?php while ($blog = mysqli_fetch_assoc($blogs)): ?>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="blog-card">
+
+                                <img src="backend/<?= $blog['image'] ?>"
+                                    alt="<?= htmlspecialchars($blog['title']) ?>"
+                                    class="blog-image img-fluid">
+
+                                <div class="blog-content">
+
+
+
+                                    <h5 class="blog-title">
+                                        <?= htmlspecialchars($blog['heading']) ?>
+                                    </h5>
+
+                                    <p class="blog-description">
+                                        <?= substr(strip_tags($blog['short_description']), 0, 100) ?>...
+                                    </p>
+
+                                    <div class="btn-section d-flex justify-content-start">
+                                        <a href="blogs.php/<?= $blog['slug'] ?>"
+                                            class="view-more-btn custom-btn">
+                                            View More
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
 
-                    </div>
+                    <?php endwhile; ?>
 
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-card">
-                        <img src="img/gyrus-brandemic-11-1536x898.webp" alt="Blog Image" class="blog-image img-fluid">
-                        <div class="blog-content">
-                            <p class="blog-meta">SEO & Analytics • <span>2 Jan, 2025</span></p>
-                            <h5 class="blog-title">How to Measure ROI in Digital Marketing Effectively</h5>
-                            <p class="blog-description">
-                                Measuring Return on Investment (ROI) is a critical aspect of evaluating the succ...
-                            </p>
-                            <div class="btn-section d-flex justify-content-start">
-                                <a href="blog-details.html" class="view-more-btn  custom-btn">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
+                <?php else: ?>
 
+                    <div class="col-12 text-center">
+                        <p>No blogs found.</p>
                     </div>
 
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-card">
-                        <img src="img/gyrus-brandemic-11-1536x898.webp" alt="Blog Image" class="blog-image img-fluid">
-                        <div class="blog-content">
-                            <p class="blog-meta">SEO & Analytics • <span>2 Jan, 2025</span></p>
-                            <h5 class="blog-title">How to Measure ROI in Digital Marketing Effectively</h5>
-                            <p class="blog-description">
-                                Measuring Return on Investment (ROI) is a critical aspect of evaluating the succ...
-                            </p>
-                            <div class="btn-section d-flex justify-content-start">
-                                <a href="blog-details.html" class="view-more-btn  custom-btn">View More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
+                <?php endif; ?>
 
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>
